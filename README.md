@@ -29,7 +29,6 @@ ohyes-notes.github.io/
 ## 计划
 
 - [ ] markdownlint支持
-
 - [ ] 开发支持渲染output标签的插件
-
 - [ ] 侧边栏目录展开和折叠
+- [ ] 样式修改(字体，颜色)
