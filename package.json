@@ -1,8 +1,35 @@
 {
   "name": "ohyes-notes.github.io",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:karoldy/ohyes-notes.github.io.git",
-  "author": "sujuntao <sujuntao@zeek.one>",
-  "license": "MIT"
+  "version": "0.0.1",
+  "description": "A docsify.js plugin for rendering tabbed content from markdown",
+  "author": "karoldy@163.com",
+  "license": "MIT",
+  "homepage": "https://karoldy.github.io/ohyes-notes.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karoldy/ohyes-notes.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karoldy/ohyes-notes.github.io/issues"
+  },
+  "keywords": [
+    "docs",
+    "docsify",
+    "markdown"
+  ],
+  "browserslist": [
+    "ie >= 10"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "docsify serve docs",
+    "lint:md": "markdownlint . --ignore node_modules"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.4",
+    "markdownlint-cli": "^0.31.1"
+  }
 }
