@@ -27,3 +27,49 @@ console.log(1);
 ```
 
 <!-- tabs:end -->
+
+<!-- tabs:start -->
+
+#### **Rendered**
+
+Body text
+
+**Bold text**
+
+*Italic text*
+
+~~Strikethrough~~
+
+<mark>Marked text</mark>
+
+<pre>Preformatted text</pre>
+
+<small>Small Text</small>
+
+This is <sub>subscript</sub>
+
+This is <sup>superscript</sup>
+
+#### **Markdown**
+
+```markdown
+Body text
+
+**Bold text**
+
+*Italic text*
+
+~~Strikethrough~~
+
+<mark>Marked text</mark>
+
+<pre>Preformatted text</pre>
+
+<small>Small Text</small>
+
+This is <sub>subscript</sub>
+
+This is <sup>superscript</sup>
+```
+
+<!-- tabs:end -->
