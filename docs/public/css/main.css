@@ -1,0 +1,84 @@
+:root {
+  --base-font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  --code-font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+/* .markdown-section a {
+  color: var(--theme-color);
+}
+
+.markdown-section a:hover {
+  color: var(--theme-color);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+table {
+  padding: 0;
+  word-break: initial;
+}
+table tr {
+  border: 1px solid #dfe2e5;
+  margin: 0;
+  padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+  background-color:#f2f2f2;
+  
+}
+table th {
+  font-weight: bold;
+  border: 1px solid #dfe2e5;
+  border-bottom: 0;
+  margin: 0;
+  padding: 6px 13px;
+}
+table td {
+  border: 1px solid #dfe2e5;
+  margin: 0;
+  padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+  margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-section hr {
+  border-bottom: 1px solid black;
+}
+
+.markdown-section code,
+.markdown-section output:after,
+.markdown-section pre {
+  font-family: Monaco,Roboto Mono,courier,monospace;
+}
+
+.markdown-section pre {
+  padding: 0;
+  white-space: pre-wrap;
+}
+
+.markdown-section table {
+  display: table;
+}
+
+.docsify-tabs__tab {
+  font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+/*------------*/
+.no-suppot-h5 {
+  color:  orange;
+}
