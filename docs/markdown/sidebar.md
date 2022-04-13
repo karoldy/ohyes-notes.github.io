@@ -15,3 +15,4 @@
   * [数学公式](/markdown/#math)
   * [画图](/markdown/#mermaid)
   * [html](/markdown/#html)
+  * [更新日志](/markdown/#changelog)

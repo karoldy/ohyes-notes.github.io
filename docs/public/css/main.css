@@ -3,14 +3,6 @@
   --code-font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
 
-/* .markdown-section a {
-  color: var(--theme-color);
-}
-
-.markdown-section a:hover {
-  color: var(--theme-color);
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -72,6 +64,11 @@ table td:last-child {
 
 .markdown-section table {
   display: table;
+}
+
+.markdown-section iframe {
+  height: 200px;
+  padding: 1.7rem 1.4rem;
 }
 
 .docsify-tabs__tab {

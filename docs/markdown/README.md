@@ -7,7 +7,8 @@
 #### **斜体**
 
 语法:
-```
+
+```tex
 *斜体文本*
 
 _斜体文本_
@@ -25,7 +26,7 @@ _斜体文本_
 
 语法:
 
-```
+```tex
 **加粗文本**
 ```
 
@@ -39,7 +40,7 @@ _斜体文本_
 
 语法:
 
-```
+```tex
 ~~删除文本~~
 ```
 
@@ -53,7 +54,7 @@ _斜体文本_
 
 语法:
 
-```
+```tex
 ==标记文本==
 ```
 
@@ -67,7 +68,7 @@ _斜体文本_
 
 语法:
 
-```
+```tex
 这是^上标^
 ```
 
@@ -82,7 +83,7 @@ _斜体文本_
 
 语法:
 
-```
+```tex
 这是~下标~
 ```
 
@@ -98,7 +99,7 @@ _斜体文本_
 
 ## 标题 :id=title
 
-```
+```tex
 # 一级标题
 ## 二级标题
 ### 三级标题
@@ -121,7 +122,7 @@ _斜体文本_
 
 ## 链接 :id=link
 
-```
+```tex
 [链接名称](url)
 ```
 
@@ -135,23 +136,23 @@ _斜体文本_
 
 ## 图片 :id=image
 
-```
+```tex
 ![图片名称](url)
 ```
 
 <output>
-	<img src="../public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+	<img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
 </output>
 
 带链接的图片
 
-```
+```tex
 [![image](图片地址)](url)
 ```
 
 <output>
 	<a href="https://github.com/karoldy/" target="_blank" rel="noopener">
-    <img src="../public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+    <img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
   </a>
 </output>
 
@@ -159,7 +160,7 @@ _斜体文本_
 
 ## 分割线 :id=hr
 
-```
+```tex
 ***
 
 ---
@@ -177,7 +178,7 @@ ___
 
 ## 引用 :id=blockquote
 
-```
+```tex
 > 引用的文本
 ```
 
@@ -195,7 +196,7 @@ ___
 
 语法:
 
-```
+```tex
 - 1
 	- 1-1 
 - 2
@@ -233,7 +234,7 @@ ___
 
 语法:
 
-```
+```tex
 1. 苹果
    1. 红苹果
 2. 香蕉
@@ -274,7 +275,7 @@ ___
 
 ## 表格 :id=table
 
-```
+```tex
 |表头1|表头2|
 |:---|:---|
 |内容1|内容2|
@@ -305,7 +306,7 @@ ___
 
 使用`---:`居右
 
-```
+```tex
 |表头1|表头2|表头3|
 |:---:|:---|---:|
 |内容1|内容2|内容3|
@@ -334,7 +335,7 @@ ___
 
 ## 注脚 :id=footnotes
 
-```
+```tex
 一个文本(有注脚)[^1]
 
 <!-- 文末添加 -->
@@ -343,9 +344,9 @@ ___
 
 ---
 
-## 待办事项 id=todo
+## 待办事项 :id=todo
 
-```
+```tex
 - [ ] 未完成的任务
 - [x] 完成的任务
 	- [ ] 任务2-1
@@ -381,7 +382,7 @@ ___
 
 语法:
 
-````
+````tex
 ```js
 console.log('测试');
 ```
@@ -402,7 +403,7 @@ console.log('测试');
 
 语法:
 
-```
+```tex
 `console.log('测试')`
 ```
 
@@ -422,27 +423,25 @@ Markdown Preview Enhanced使用[KaTex](https://katex.org/)或者[MathJax](https:
 
 KaTeX 拥有比 MathJax 更快的性能，但是它却少了很多 MathJax 拥有的特性。你可以查看 KaTeX supported functions/symbols 来了解 KaTeX 支持那些符号和函数。
 
-```
+```tex
 $$
-f(x) = sin(x) + 12
+  f(x) = sin(x) + 12
 $$
 ```
 
 <output>
-<iframe style="border: 0;" frameborder="0" scrolling="no" src="../markdown/example/math.html"></iframe>
+<iframe style="border: 0;" frameborder="0" scrolling="no" src="https://karoldy.github.io/ohyes-notes.github.io/example/markdown-math.html"></iframe>
 </output>
 
 渲染在docsify显示，语法如下：
 
-````
+````tex
 ```math
 f(x) = sin(x) + 12
 ```
 ````
 
 ---
-
-
 
 ## 画图 :id=mermaid
 
@@ -454,7 +453,7 @@ Typora-Markdown内置了[Mermaid](https://mermaid-js.github.io/mermaid/)画图�
 
 语法:
 
-````
+````tex
 ```mermaid
 pie
   "React" : 200
@@ -476,7 +475,7 @@ pie
 
 语法:
 
-````
+````tex
 ```mermaid
 flowchart LR
   A[Hard] -->|Text| B(Round)
@@ -500,7 +499,7 @@ flowchart LR
 
 语法:
 
-````
+````tex
 ```mermaid
 gantt
   dateFormat  YYYY-MM-DD
@@ -605,3 +604,10 @@ gantt
 </output>
 
 <!-- tabs:end -->
+
+## 更新日志 :id=changelog
+
+|author|time|type|
+|:---|:---|:---|
+|OhYes|2022-04-10|初稿|
+|OhYes|2022-04-13|修改格式，加入docsify-tabs|
