@@ -140,7 +140,7 @@ _斜体文本_
 ```
 
 <output>
-	<img src="../public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+	<img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
 </output>
 
 带链接的图片
@@ -151,7 +151,7 @@ _斜体文本_
 
 <output>
 	<a href="https://github.com/karoldy/" target="_blank" rel="noopener">
-    <img src="../public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+    <img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
   </a>
 </output>
 
@@ -343,7 +343,7 @@ ___
 
 ---
 
-## 待办事项 id=todo
+## 待办事项 :id=todo
 
 ```
 - [ ] 未完成的任务
@@ -429,7 +429,7 @@ $$
 ```
 
 <output>
-<iframe style="border: 0;" frameborder="0" scrolling="no" src="../markdown/example/math.html"></iframe>
+<iframe style="border: 0;" frameborder="0" scrolling="no" src="https://karoldy.github.io/ohyes-notes.github.io/example/markdown-math.html"></iframe>
 </output>
 
 渲染在docsify显示，语法如下：
@@ -605,3 +605,10 @@ gantt
 </output>
 
 <!-- tabs:end -->
+
+## 更新日志 :id=changelog
+
+|author|time|type|
+|:---|:---|:---|
+|OhYes|2022-04-10|初稿|
+|OhYes|2022-04-13|修改格式，加入docsify-tabs|

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>OhYes Note</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -25,18 +25,25 @@
     name: 'OhYes Docs',
     repo: 'karoldy/ohyes-notes.github.io',
     // logo: '/public/image/favicon.png',
-    search: 'auto',
     homepage: 'index.md',
     coverpage: 'covepage.md',
     loadNavbar: 'navbar.md',
     loadSidebar: 'sidebar.md',
+    auto2top: true,
+    executeScript: true,
+    maxLevel: 3,
+    subMaxLevel: 3,
     alias: {
       '/.*/navbar.md': '/navbar.md',
       // '/.*/sidebar.md': '/sidebar.md'
     },
-    subMaxLevel: 6,
+    search: {
+      depth: 3,
+      noData: 'No results!',
+      placeholder: 'Search...'
+    },
     plugins: [
-      function(hook) {
+      function (hook) {
         var footer = [
           '<hr/>',
           '<footer>',
