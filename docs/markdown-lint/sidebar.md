@@ -48,4 +48,4 @@
   * [MD045](/markdown-lint/#md045)
   * [MD046](/markdown-lint/#md046)
   * [MD047](/markdown-lint/#md047)
-  * [参考](/markdown-lit/#reference)
+  * [参考](/markdown-lint/#reference)

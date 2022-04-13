@@ -2,6 +2,7 @@
 
   * [首页](/#index)
   * [html](html/)
+  * [html5](html5/)
 
 * 官方文档
 

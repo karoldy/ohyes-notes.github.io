@@ -6,6 +6,8 @@
 
 [Html](html/)
 
+[Html5](html5/)
+
 [Markdown语法](markdown/)
 
 [MarkdownLint规则](markdown-lint/)

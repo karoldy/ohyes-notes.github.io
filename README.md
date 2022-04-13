@@ -22,32 +22,17 @@ ohyes-notes.github.io/
 
 ```tex
 docs
-├── example                # 实例
-│   └──...
-├── public                 # 静态资源
-│   ├── js
-│   │   └── ...
-│   ├── css
-│   │   └── ...
-│   └── image
-│       └── ...
-├── html                   # html
-│   ├── ...
-│   ├── sidebar.md
-│   └── README.md
-├── markdown               # markdown笔记
-│   ├── ...
-│   ├── sidebar.md
-│   └── README.md
-├── markdown-lint          # markdown-lint笔记
-│   ├── ...
-│   ├── sidebar.md
-│   └── README.md
-├── navbar.md              # 导航栏
-├── sidebar.md             # 侧边栏
-├── covepage.md            # 封面
-├── index.md               # 首页
-└── index.html             # docsify配置 git page 入口
+├── example/                # 实例
+├── public/                 # 静态资源
+├── html/                   # html
+├── html5/                  # html
+├── markdown/               # markdown笔记
+├── markdown-lint/          # markdown-lint笔记
+├── navbar.md               # 导航栏
+├── sidebar.md              # 侧边栏
+├── covepage.md             # 封面
+├── index.md                # 首页
+└── index.html              # docsify配置 git page 入口
 ```
 
 ## 代办事项
@@ -55,8 +40,9 @@ docs
 ### 笔记/文章
 
 - [x] markdown + lint
+- [x] html笔记
+- [ ] html5笔记
 - [ ] vim命令 + 操作
-- [ ] html笔记
 
 ### 功能
 
