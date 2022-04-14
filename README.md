@@ -26,6 +26,7 @@ docs
 ├── public/                 # 静态资源
 ├── html/                   # html
 ├── html5/                  # html
+├── vim-docs/               # vim笔记
 ├── markdown/               # markdown笔记
 ├── markdown-lint/          # markdown-lint笔记
 ├── navbar.md               # 导航栏
@@ -39,10 +40,13 @@ docs
 
 ### 笔记/文章
 
-- [x] markdown + lint
-- [x] html笔记
-- [ ] html5笔记
-- [ ] vim命令 + 操作
+- [x] Markdown + lint
+- [ ] Git
+- [ ] Vim
+- [ ] Html笔记
+- [ ] Html5笔记
+- [ ] Css
+- [ ] JavaScript
 
 ### 功能
 

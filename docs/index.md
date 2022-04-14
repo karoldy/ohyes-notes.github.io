@@ -4,9 +4,13 @@
 
 ## 文档
 
-[Html](html/)
+<!-- [Html](html/) -->
 
-[Html5](html5/)
+<!-- [Html5](html5/) -->
+
+<!-- [git](git-docs/) -->
+
+<!-- [Vim](vim-docs/) -->
 
 [Markdown语法](markdown/)
 

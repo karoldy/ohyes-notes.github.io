@@ -1,6 +1,6 @@
 {
   "name": "ohyes-notes.github.io",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A markdown note for rendering html content from docsify",
   "author": {
     "name": "OhYes",
@@ -29,11 +29,15 @@
   "devDependencies": {
     "docsify-cli": "^4.4.4",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "markdownlint-cli": "^0.31.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "markdownlint ./docs"
+      "pre-commit": "link-staged"
     }
+  },
+  "lint-staged": {
+    "docs/*.md": "markdownlint ./docs"
   }
 }

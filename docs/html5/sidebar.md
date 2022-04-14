@@ -15,6 +15,6 @@
   * [语义元素](/html5/semantic)
   * [应用程序缓存](/html5/manifest)
   * [Web Storage](/html5/web-storage)
-  * [Web SQL](/html/web-sql)
+  * [Web SQL](/html5/web-sql)
   * [Web Workers](/html5/web-workers)
   * [Web Socket](/html5/web-socket)
