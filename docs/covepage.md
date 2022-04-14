@@ -1,6 +1,6 @@
 ![logo](public/image/logo.svg)
 
-# Study Docs <small>0.0.1</small>
+# Study Docs <small>0.1.0</small>
 
 > 简介
 

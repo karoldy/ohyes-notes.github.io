@@ -1,6 +1,6 @@
 {
   "name": "ohyes-notes.github.io",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A markdown note for rendering html content from docsify",
   "author": {
     "name": "OhYes",
@@ -38,6 +38,6 @@
     }
   },
   "lint-staged": {
-    "*.md": ["markdownlint ./docs"]
+    "docs/*.md": "markdownlint ./docs"
   }
 }
