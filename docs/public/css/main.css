@@ -47,8 +47,15 @@ table td:last-child {
   margin-bottom: 0;
 }
 
-.markdown-section hr {
-  border-bottom: 1px solid black;
+
+/* 重写docsify markdown的样式 */
+
+.markdown-section a {
+  text-decoration: unset;
+}
+
+.markdown-section a:hover {
+  text-decoration: underline;
 }
 
 .markdown-section code,
@@ -78,4 +85,17 @@ table td:last-child {
 /*------------*/
 .no-suppot-h5 {
   color:  orange;
+}
+
+/* css文档的样式 */
+.g-color-light {
+  color: #C30;
+}
+
+.g-color-css3-change {
+  color: #6a5acd !important;
+}
+
+.g-color-css3-new {
+  color: #f60 !important;
 }
