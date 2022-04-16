@@ -9,20 +9,74 @@
 
 |选择器|名称|版本|描述
 |:---|:---|:---|:---|
-|[*](#universal-selector)|通配选择器|CSS2|所有元素对象|
-|[E](#type-selector)|标签选择器|CSS1|以文档语言对象类型作为选择器|
-|[E#myid](#id-selector)|id选择器|CSS1|以唯一标识器id属性等于myid的E对象作为选择器|
-|[E.myclass](#class-selector)|class选择器|CSS1|以class属性包含myclass的E对象作为选择器|
+|[*](#universal)|通配选择器|CSS2|所有元素对象|
+|[E](#type)|标签选择器|CSS1|以文档语言对象类型作为选择器|
+|[E#myid](#_id)|id选择器|CSS1|以唯一标识器id属性等于myid的E对象作为选择器|
+|[E.myclass](#_class)|class选择器|CSS1|以class属性包含myclass的E对象作为选择器|
 
-## 通配选择器 :id=universal-selector
+## 通配选择器 :id=universal
 
-[universal-selector.md](./element-selectors/universal-selector.md ':include')
+### 语法
+
+```css
+* {
+  sRules
+}
+```
+
+### 说明
+
+**选定所有对象**
+
+通常不建议使用通配选择器，因为它会遍历并命中文档中所有的元素，出于性能考虑，需酌情使用
+
+### 兼容性
+
+IE6及更早浏览器并不支持通配选择器(*)，而是将它忽略了，所以也变相的能看到效果
+
+|浏览器|版本
+|:---|:---|
+|IE|<span style="color: red;">6.0<sup>#1</sup>;</span> 7.0+|
+|Firefox|2.0+|
+|Chrome|4.0+|
+|Safari|3.1+|
+|Opera|3.5+|
+|iOS Safari|3.2+|
+|Android Browser|2.1+|
+|Android Chrome|18.0+|
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<h1>标题</h1>
+<p>正文内容</p>
+```
+
+#### **css**
+
+```css
+* {
+  color: #f00;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果:
+
+<output>
+  <h1 style="color: #f00;">标题</h1>
+  <p style="color: #f00;">正文内容</p>
+</output>
+
 
 ---
 
-## 标签选择器 :id=type-selector
-
-标签选择器也叫类型选择器
+## 标签选择器/类型选择器 :id=type
 
 ### 语法
 
@@ -37,8 +91,6 @@ E {
 ### 说明
 
 **以文档语言对象类型作为选择器**
-
-- 类型选择器(Type Selector)
 
 ### 兼容性
 
@@ -86,11 +138,10 @@ p {
   <p style="color: #f00;">正文内容</p>
 </output>
 
+
 ---
 
-## id选择器 :id=id-selector
-
-id选择器也叫id选择符
+## id选择器 :id=_id
 
 ### 语法
 
@@ -103,8 +154,6 @@ E#myid {
 ### 说明
 
 **以唯一标识器id属性等于myid的E对象作为选择器**
-
-- ID选择器(ID Selector)
 
 ### 兼容性
 
@@ -155,7 +204,7 @@ p#content {
 
 ---
 
-## 类选择器 :id=class-selector
+## 类选择器 :id=_class
 
 ### 语法
 
@@ -169,9 +218,7 @@ E.myclass {
 
 **以class属性包含myclass的E对象作为选择器**
 
-- 类选择器(Class Selector)
-
-- 不同于ID选择器的唯一性，类选择器可以同时定义多个,如:
+不同于ID选择器的唯一性，类选择器可以同时定义多个, 如:
 
 <!-- tabs:start -->
 
