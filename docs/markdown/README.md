@@ -429,9 +429,14 @@ $$
 $$
 ```
 
-<output>
-<iframe style="border: 0;" frameborder="0" scrolling="no" src="https://karoldy.github.io/ohyes-notes.github.io/example/markdown-math.html"></iframe>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="no"
+  frameborder="0"
+  src="https://karoldy.github.io/ohyes-notes.github.io/example/markdown/math.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 渲染在docsify显示，语法如下：
 
@@ -604,10 +609,3 @@ gantt
 </output>
 
 <!-- tabs:end -->
-
-## 更新日志 :id=changelog
-
-|author|time|type|
-|:---|:---|:---|
-|OhYes|2022-04-10|初稿|
-|OhYes|2022-04-13|修改格式，加入docsify-tabs|

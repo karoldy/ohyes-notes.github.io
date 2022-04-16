@@ -206,6 +206,7 @@ Mozilla 程序从 Gecko 1.8 (Firefox 1.5) 开始支持`<canvas>`, Internet Explo
 在html5中，拖放是标准的一部分，任何元素都能够拖放
 
 语法:
+
 ```html
 <div draggable="true"></div>
 ```

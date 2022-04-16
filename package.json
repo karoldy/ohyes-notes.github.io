@@ -38,6 +38,6 @@
     }
   },
   "lint-staged": {
-    "docs/*.md": "markdownlint ./docs"
+    "docs/**/*.md": "markdownlint ./docs"
   }
 }

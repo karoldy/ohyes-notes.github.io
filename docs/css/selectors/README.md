@@ -9,24 +9,40 @@ css `选择器`也可以叫`选择符`
 
 ## 元素选择器 Element Selectors
 
-[*](/css/selectors/element-selectors#universal-selector)
+[* 通配选择器](/css/selectors/element#universal)
 
-[E](/css/selectors/element-selectors#type-selector)
+[E 标签选择器/类型选择器/元素选择器](/css/selectors/element#type)
 
-[E#myid](/css/selectors/element-selectors#id-selector)
+[E#myid id选择器](/css/selectors/element#_id)
 
-[E.mycalss](/css/selectors/element-selectors#id-selector#class-selector)
+[E.mycalss 类选择器](/css/selectors/element#id-selector#_class)
 
-## 关系选择器
+## 关系选择器 Relationship Selectors
+
+[E F 包含选择器](/css/selectors/relationship#descendant)
+
+[E>F 子选择器](/css/selectors/relationship#child)
+
+[E+F 相邻选择器](/css/selectors/relationship#adjacent-sibling)
+
+[E~F 兄弟选择器](/css/selectors/relationship#general-sibling)
 
 ## 属性选择器
+
+[E[att]](#one)
+
+[E[att="val"]](/css/selectors/attribute#two)
+
+[E[att~="val"]](/css/selectors/attribute#three)
+
+[E[att\|="val"]](/css/selectors/attribute#four)
+
+[<span class="g-color-css3-new">E[att^="val"]</span>](/css/selectors/attribute#five)
+
+[<span class="g-color-css3-new">E[att$="val"]</span>](/css/selectors/attribute#six)
+
+[<span class="g-color-css3-new">E[att\*="val"]</span>](/css/selectors/attribute#seven)
 
 ## 伪类选择器
 
 ## 伪对象选择器
-
-## 更新日志
-
-|author|time|type|
-|:---|:---|:---|
-|OhYes|2022-04-16|初稿|

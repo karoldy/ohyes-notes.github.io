@@ -88,6 +88,7 @@ table td:last-child {
 }
 
 /* css文档的样式 */
+
 .g-color-light {
   color: #C30;
 }
@@ -98,4 +99,9 @@ table td:last-child {
 
 .g-color-css3-new {
   color: #f60 !important;
+}
+
+/* 输出iframe的样式 */
+.output-iframe {
+  padding: 0 !important;
 }
