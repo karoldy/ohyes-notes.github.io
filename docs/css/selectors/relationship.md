@@ -228,7 +228,7 @@ E>F {
 
 |浏览器|版本
 |:---|:---|
-|IE|<span style="color: red;">6.0</span>> 7.0+|
+|IE|<span style="color: red;">6.0</span> 7.0+|
 |Firefox|2.0+|
 |Chrome|4.0+|
 |Safari|3.1+|

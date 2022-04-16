@@ -29,12 +29,20 @@ css `选择器`也可以叫`选择符`
 
 ## 属性选择器
 
+[E[att]](#one)
+
+[E[att="val"]](/css/selectors/attribute#two)
+
+[E[att~="val"]](/css/selectors/attribute#three)
+
+[E[att\|="val"]](/css/selectors/attribute#four)
+
+[<span class="g-color-css3-new">E[att^="val"]</span>](/css/selectors/attribute#five)
+
+[<span class="g-color-css3-new">E[att$="val"]</span>](/css/selectors/attribute#six)
+
+[<span class="g-color-css3-new">E[att\*="val"]</span>](/css/selectors/attribute#seven)
+
 ## 伪类选择器
 
 ## 伪对象选择器
-
-## 更新日志
-
-|author|time|type|
-|:---|:---|:---|
-|OhYes|2022-04-16|初稿|

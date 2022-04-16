@@ -263,7 +263,7 @@ IE6及更早浏览器并不支持多类选择器，形如：.a.b {}
 
 |浏览器|版本
 |:---|:---|
-|IE|<span style="color: red;">6.0<sup>#1</sup>;</span> 7.0+|
+|IE|<span style="color: red;">6.0</span> 7.0+|
 |Firefox|2.0+|
 |Chrome|4.0+|
 |Safari|3.1+|
