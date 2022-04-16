@@ -114,7 +114,7 @@ a:link {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="/example/css/selectors/pseudo-classes-link.html"
+  src="example/css/selectors/pseudo-classes-link.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -195,7 +195,7 @@ a:visited {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="/example/css/selectors/pseudo-classes-visited.html"
+  src="example/css/selectors/pseudo-classes-visited.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -285,7 +285,7 @@ div:hover {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="/example/css/selectors/pseudo-classes-hover.html"
+  src="example/css/selectors/pseudo-classes-hover.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -374,7 +374,7 @@ div:active {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="/example/css/selectors/pseudo-classes-active.html"
+  src="example/css/selectors/pseudo-classes-active.html"
 >
   浏览器不支持iframe
 </iframe>

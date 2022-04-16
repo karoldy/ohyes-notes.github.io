@@ -433,7 +433,7 @@ $$
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="https://karoldy.github.io/ohyes-notes.github.io/example/markdown/math.html"
+  src="example/markdown/math.html"
 >
   浏览器不支持iframe
 </iframe>
