@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .test {
+      color: black;
+      color: yellow\0;
+      *color: blue;
+      _color: red;
+    }
+    html:root .test {
+      color: purple\0;
+    }
+  </style>
+</head>
+<body>
+  <p>段落颜色<p>
+</body>
+</html>
