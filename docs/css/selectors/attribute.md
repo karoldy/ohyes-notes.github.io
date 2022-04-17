@@ -2,8 +2,6 @@
 
 # 属性选择器
 
-为防止`<output>`标签内的样式覆盖docsify的样式，本章的例子使用以`data-`开头的属性是自定义属性
-
 <p class="g-color-light">
   <strong class="g-color-css3-change">紫色</strong> 链接表示该属性在CSS3有修改或者增加了新的属性值；
   <strong class="g-color-css3-new">橙色</strong> 链接表示该属性是CSS3新增属性
@@ -12,15 +10,15 @@
 
 |选择器|版本|描述|
 |:---|:---|:---|
-|[E[att]](#one)|CSS2|选择具有att属性的E元素|
-|[E[att="val"]](#two)|CSS2|选择具有att属性且属性值等于val的E元素|
-|[E[att~="val"]](#three)|CSS2|选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素|
-|[E[att\|="val"]](#four)|CSS2|选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择|
-|[<span class="g-color-css3-new">E[att^="val"]</span>](#five)|CSS3|选择具有att属性且属性值为以val开头的字符串的E元素|
-|[<span class="g-color-css3-new">E[att$="val"]</span>](#six)|CSS3|选择具有att属性且属性值为以val结尾的字符串的E元素|
-|[<span class="g-color-css3-new">E[att\*="val"]</span>](#seven)|CSS3|选择具有att属性且属性值为包含val的字符串的E元素|
+|[E[att]](#_1)|CSS2|选择具有att属性的E元素|
+|[E[att="val"]](#_2)|CSS2|选择具有att属性且属性值等于val的E元素|
+|[E[att~="val"]](#_3)|CSS2|选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素|
+|[E[att\|="val"]](#_4)|CSS2|选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择|
+|[<span class="g-color-css3-new">E[att^="val"]</span>](#_5)|CSS3|选择具有att属性且属性值为以val开头的字符串的E元素|
+|[<span class="g-color-css3-new">E[att$="val"]</span>](#_6)|CSS3|选择具有att属性且属性值为以val结尾的字符串的E元素|
+|[<span class="g-color-css3-new">E[att\*="val"]</span>](#_7)|CSS3|选择具有att属性且属性值为包含val的字符串的E元素|
 
-## E[att] :id=one
+## E[att] :id=_1
 
 ### 语法
 
@@ -39,14 +37,14 @@ E[att] {
 #### **html**
 
 ```html
-<div data-one-title="one">1</div>
+<div title="1">1</div>
 <div>2</div>
 ```
 
 #### **css**
 
 ```css
-div[data-one-title] {
+div[title] {
   color: #f00;
 }
 ```
@@ -55,17 +53,16 @@ div[data-one-title] {
 
 运行结果
 
-<output>
-  <style>
-    div[data-one-title] {
-      color: #f00;
-    }
-  </style>
-  <div data-one-title="1">1</div>
-  <div>2</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/1.html"
+>
+  浏览器不支持iframe
+</iframe>
 
-!> 此例，将会命中第一个div，因为匹配到了 data-one-title 属性
+!> 此例，将会命中第一个div，因为匹配到了 title 属性
 
 ### 兼容性
 
@@ -90,17 +87,17 @@ div[data-one-title] {
 
 ```html
 <ul>
-	<li><span data-one-title="1">1</span></li>
-	<li><span>2</span></li>
-	<li><span data-one-title="3">3</span></li>
-	<li><span>4</span></li>
+  <li><a href="#1" class="external">外部链接</a></li>
+  <li><a href="#1">内部链接</a></li>
+  <li><a href="#1" class="external">外部链接</a></li>
+  <li><a href="#1">内部链接</a></li>
 </ul>
 ```
 
 #### **css**
 
 ```css
-span[data-one-title] {
+a[class] {
   color: #f00;
 }
 ```
@@ -109,23 +106,18 @@ span[data-one-title] {
 
 运行结果
 
-<output>
-  <style>
-    span[data-one-title] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li><span data-one-title="1">1</span></li>
-    <li><span>2</span></li>
-    <li><span data-one-title="3">3</span></li>
-    <li><span>4</span></li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/2.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att="val"] :id=two
+## E[att="val"] :id=_2
 
 ### 语法
 
@@ -195,18 +187,18 @@ input[type="text"] {
 
 ```html
 <ul>
-	<li><span title="external">1</span></li>
-	<li><span>2</span></li>
-	<li><span title="external">3</span></li>
-	<li><span>4</span></li>
+  <li><a href="#2" class="external">外部链接</a></li>
+  <li><a href="#2">内部链接</a></li>
+  <li><a href="#2" class="external">外部链接</a></li>
+  <li><a href="#2">内部链接</a></li>
 </ul>
 ```
 
 #### **css**
 
 ```css
-span[title="external"] {
-	color: #f00;
+a[class="external"] {
+  color: #f00;
 }
 ```
 
@@ -214,23 +206,18 @@ span[title="external"] {
 
 运行结果
 
-<output>
-  <style>
-    span[title="external"] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li><span title="external">1</span></li>
-    <li><span>2</span></li>
-    <li><span title="external">3</span></li>
-    <li><span>4</span></li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/3.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att\~="val"] :id=three
+## E[att\~="val"] :id=_3
 
 ### 语法
 
@@ -249,15 +236,15 @@ E[att~="val"] {
 #### **html**
 
 ```html
-<div class="three-a">1</div>
-<div class="three-b">2</div>
-<div class="three-a three-b">3</div>
+<div class="a">1</div>
+<div class="b">2</div>
+<div class="a b">3</div>
 ```
 
 #### **css**
 
 ```css
-div[class~="three-a"] {
+div[class~="a"] {
 	border: 2px solid #000;
 }
 ```
@@ -266,18 +253,16 @@ div[class~="three-a"] {
 
 运行结果
 
-<output>
-  <style>
-    div[class~="three-a"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <div class="three-a">1</div>
-  <div class="three-b">2</div>
-  <div class="three-a three-b">3</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/4.html"
+>
+  浏览器不支持iframe
+</iframe>
 
-!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值中有一个值为three-a
+!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值中有一个值为a
 
 ### 兼容性
 
@@ -302,18 +287,18 @@ div[class~="three-a"] {
 
 ```html
 <ul>
-	<li><span class="three-a">1</span></li>
-	<li><span class="three-b">1</span></li>
-	<li><span class="three-a three-c">1</span></li>
-	<li><span class="three-d">1</span></li>
+  <li><a href="#3" class="external txt">外部链接</a></li>
+  <li><a href="#3" class="txt">内部链接</a></li>
+  <li><a href="#3" class="external txt">外部链接</a></li>
+  <li><a href="#3" class="txt">内部链接</a></li>
 </ul>
 ```
 
 #### **css**
 
 ```css
-span[class~="three-a"] {
-	border: 2px solid #000;
+a[class~="external"] {
+  color: #f00;
 }
 ```
 
@@ -321,23 +306,18 @@ span[class~="three-a"] {
 
 运行结果
 
-<output>
-  <style>
-    span[class~="three-a"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <ul>
-    <li><span class="three-a">1</span></li>
-    <li><span class="three-b">1</span></li>
-    <li><span class="three-a three-c">1</span></li>
-    <li><span class="three-d">1</span></li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/5.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att|="val"] :id=four
+## E[att|="val"] :id=_4
 
 ### 语法
 
@@ -358,16 +338,16 @@ E[att|="val"] {
 #### **html**
 
 ```html
-<div class="four1">0</div>
-<div class="four1-a four2">1</div>
-<div class="four3">2</div>
-<div class="four4">3</div>
+<div class="a">0</div>
+<div class="a-test">1</div>
+<div class="b-test">2</div>
+<div class="c-test">3</div>
 ```
 
 #### **css**
 
 ```css
-div[class|="four1"] {
+div[class|="a"] {
 	border: 2px solid #000;
 }
 ```
@@ -376,19 +356,16 @@ div[class|="four1"] {
 
 运行结果
 
-<output>
-  <style>
-    div[class|="four1"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <div class="four1">0</div>
-  <div class="four1-a four2">1</div>
-  <div class="four3">2</div>
-  <div class="four4">3</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/6.html"
+>
+  浏览器不支持iframe
+</iframe>
 
-!> 在这个例子中，前2个div将会被命中：<br/>第1个div，拥有class属性，并且值为four1，所以被命中；<br/>第2个div，拥有class属性，值是four1开头并紧跟着连接符“-”，所以被命中；
+!> 在这个例子中，前2个div将会被命中：<br/>第1个div，拥有class属性，并且值为a，所以被命中；<br/>第2个div，拥有class属性，值是a开头并紧跟着连接符“-”，所以被命中；
 
 ### 兼容性
 
@@ -413,15 +390,14 @@ div[class|="four1"] {
 
 ```html
 <ul>
-	<li class="test1-abc">列表项目</li>
-	<li class="test2-abc">列表项目</li>
-	<li class="test3">列表项目</li>
-	<li class="test3-abc">列表项目</li>
-	<li class="test4-abc">列表项目</li>
-	<li class="test5-abc">列表项目</li>
-	<li class="test6-abc">列表项目</li>
+	<li class="test1-abc">列表项目1</li>
+	<li class="test2-abc">列表项目2</li>
+	<li class="test3">列表项目3</li>
+	<li class="test3-abc">列表项目4</li>
+	<li class="test4-abc">列表项目5</li>
+	<li class="test5-abc">列表项目6</li>
+	<li class="test6-abc">列表项目7</li>
 </ul>
-
 ```
 
 #### **css**
@@ -436,26 +412,18 @@ li[class|="test3"] {
 
 运行结果
 
-<output>
-  <style>
-    li[class|="test3"] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li class="test1-abc">列表项目</li>
-    <li class="test2-abc">列表项目</li>
-    <li class="test3">列表项目</li>
-    <li class="test3-abc">列表项目</li>
-    <li class="test4-abc">列表项目</li>
-    <li class="test5-abc">列表项目</li>
-    <li class="test6-abc">列表项目</li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/7.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att^="val"] :id=five
+## E[att^="val"] :id=_5
 
 ### 语法
 
@@ -474,15 +442,15 @@ E[att^="val"] {
 #### **html**
 
 ```html
-<div title="abc">1</div>
-<div title="acb">2</div>
-<div title="bac">3</div>
+<div class="abc">1</div>
+<div class="acb">2</div>
+<div class="bac">3</div>
 ```
 
 #### **css**
 
 ```css
-div[title^="a"] {
+div[class^="a"] {
 	border: 2px solid #f00;
 }
 ```
@@ -491,16 +459,14 @@ div[title^="a"] {
 
 运行结果
 
-<output>
-  <style>
-    div[title^="a"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <div title="abc">1</div>
-  <div title="acb">2</div>
-  <div title="bac">3</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/8.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 !> 此例，将会命中1, 2两个div，因为匹配到了class属性，且属性值以a开头
 
@@ -548,25 +514,18 @@ li[class^="a"] {
 
 运行结果
 
-<output>
-  <style>
-    li[class^="a"] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li class="abc">列表项目</li>
-    <li class="acb">列表项目</li>
-    <li class="bac">列表项目</li>
-    <li class="bca">列表项目</li>
-    <li class="cab">列表项目</li>
-    <li class="cba">列表项目</li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/9.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att$="val"] :id=six
+## E[att$="val"] :id=_6
 
 ### 语法
 
@@ -585,15 +544,15 @@ E[att$="val"] {
 #### **html**
 
 ```html
-<div class="six123">1</div>
-<div class="six2">2</div>
-<div class="five123">3</div>
+<div class="abc">1</div>
+<div class="acb">2</div>
+<div class="bac">3</div>
 ```
 
 #### **css**
 
 ```css
-div[class$="23"] {
+div[class$="c"] {
 	border: 2px solid #000;
 }
 ```
@@ -602,18 +561,16 @@ div[class$="23"] {
 
 运行结果
 
-<output>
-  <style>
-    div[class$="23"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <div class="six123">1</div>
-  <div class="six2">2</div>
-  <div class="five123">3</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/10.html"
+>
+  浏览器不支持iframe
+</iframe>
 
-!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值以23结尾
+!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值以c结尾
 
 ### 兼容性
 
@@ -638,19 +595,19 @@ div[class$="23"] {
 
 ```html
 <ul>
-	<li class="efg">列表项目</li>
-	<li class="acb">列表项目</li>
-	<li class="bac">列表项目</li>
-	<li class="hjk">列表项目</li>
-	<li class="cab">列表项目</li>
-	<li class="ezk">列表项目</li>
+	<li class="abc">列表项目1</li>
+	<li class="acb">列表项目2</li>
+	<li class="bac">列表项目3</li>
+	<li class="bca">列表项目4</li>
+	<li class="cab">列表项目5</li>
+	<li class="cba">列表项目6</li>
 </ul>
 ```
 
 #### **css**
 
 ```css
-li[class$="k"] {
+li[class$="a"] {
 	color: #f00;
 }
 ```
@@ -659,25 +616,18 @@ li[class$="k"] {
 
 运行结果
 
-<output>
-  <style>
-    li[class$="k"] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li class="efg">列表项目</li>
-    <li class="jkl">列表项目</li>
-    <li class="bac">列表项目</li>
-    <li class="hjk">列表项目</li>
-    <li class="cab">列表项目</li>
-    <li class="ezk">列表项目</li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/11.html"
+>
+  浏览器不支持iframe
+</iframe>
 
 ---
 
-## E[att*="val"] :id=seven
+## E[att*="val"] :id=_7
 
 ### 语法
 
@@ -696,16 +646,16 @@ E[att*="val"] {
 #### **html**
 
 ```html
-<div class="opq">1</div>
-<div class="qaq">2</div>
-<div class="nql">3</div>
+<div class="abc">1</div>
+<div class="acb">2</div>
+<div class="bac">3</div>
 ```
 
 #### **css**
 
 ```css
-div[class*="q"] {
-	border: 2px solid #f00;
+div[class*="b"] {
+	border: 2px solid #000;
 }
 ```
 
@@ -713,18 +663,16 @@ div[class*="q"] {
 
 运行结果
 
-<output>
-  <style>
-    div[class*="q"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <div class="opq">1</div>
-  <div class="qaq">2</div>
-  <div class="nql">3</div>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/12.html"
+>
+  浏览器不支持iframe
+</iframe>
 
-!> 此例，将会命中所有div，因为匹配到了class属性，且属性值中都包含了q
+!> 此例，将会命中所有div，因为匹配到了class属性，且属性值中都包含了b
 
 ### 兼容性
 
@@ -749,19 +697,19 @@ div[class*="q"] {
 
 ```html
 <ul>
-	<li class="sev">列表项目</li>
-	<li class="ven">列表项目</li>
-	<li class="hello">列表项目</li>
-	<li class="hi">列表项目</li>
-	<li class="welcome">列表项目</li>
-	<li class="hahah">列表项目</li>
+	<li class="abc">列表项目1</li>
+	<li class="acb">列表项目2</li>
+	<li class="bac">列表项目3</li>
+	<li class="bca">列表项目4</li>
+	<li class="cab">列表项目5</li>
+	<li class="cba">列表项目6</li>
 </ul>
 ```
 
 #### **css**
 
 ```css
-li[class*="h"] {
+li[class*="a"] {
 	color: #f00;
 }
 ```
@@ -770,18 +718,11 @@ li[class*="h"] {
 
 运行结果
 
-<output>
-  <style>
-    li[class*="h"] {
-      color: #f00;
-    }
-  </style>
-  <ul>
-    <li class="sev">列表项目</li>
-    <li class="ven">列表项目</li>
-    <li class="hello">列表项目</li>
-    <li class="hi">列表项目</li>
-    <li class="welcome">列表项目</li>
-    <li class="hahah">列表项目</li>
-  </ul>
-</output>
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="example/css/selectors/attribute/13.html"
+>
+  浏览器不支持iframe
+</iframe>

@@ -40,13 +40,28 @@ docs
 
 ### 笔记/文章
 
-- [x] Markdown + lint
-- [ ] Git
-- [ ] Vim
-- [ ] Html笔记
-- [ ] Html5笔记
-- [ ] Css
-- [ ] JavaScript
+- Markdown + lint
+	- [x] 目录
+	- [x] 笔记
+
+- Git
+	 - [ ] 目录
+	 - [ ] 笔记
+
+- Vim
+	- [ ] 目录
+	- [ ] 笔记
+
+- Html笔记
+	- [ ] 目录
+
+- Css
+	- [x] 目录
+	- [ ] 属性
+	- [x] 选择器
+
+- JavaScript
+	- [ ] 目录
 
 ### 功能
 

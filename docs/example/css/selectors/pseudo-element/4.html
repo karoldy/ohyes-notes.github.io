@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    p {
+      position: relative;
+      color: #f00;
+      font-size: 14px;
+      font-size: 0\9;
+      *font-size: 14px;
+    }
+
+    p:after {
+      position: absolute;
+      left: 0;
+      background: #fff;
+      color: #000;
+      content: "如果你的能看到这段文字，说明你的浏览器只支持E:after";
+      font-size: 14px;
+    }
+
+    p::after {
+      position: absolute;
+      left: 0;
+      background: #fff;
+      color: #000;
+      content: "如果你的能看到这段文字，说明你的浏览器支持E:after和E::after";
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <p>Sorry, 你的浏览器不支持E:after和E::after</p>
+</body>
+</html>
