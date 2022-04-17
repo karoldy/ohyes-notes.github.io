@@ -10,9 +10,9 @@
 
 <!-- [git](git-docs/) -->
 
-<!-- [Vim](vim-docs/) -->
-
 [Css](css/)
+
+[Vim](vim-docs/)
 
 [Markdown语法](markdown/)
 
