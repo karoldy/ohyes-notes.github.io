@@ -1,6 +1,13 @@
 :root {
-  --base-font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-  --code-font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  --base-font-family: Monaco, Menlo, Consolas, Inconsolata;
+  --code-font-family: Monaco, Menlo, Consolas, Inconsolata;
+}
+
+@font-face {
+  font-family: "Open Monaco";
+  src: url('../fonts/Monaco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -9,7 +16,7 @@
 }
 
 body {
-  font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-family: 'Open Monaco', Menlo, Consolas, Inconsolata;
 }
 
 table {
@@ -61,7 +68,7 @@ table td:last-child {
 .markdown-section code,
 .markdown-section output:after,
 .markdown-section pre {
-  font-family: Monaco,Roboto Mono,courier,monospace;
+  font-family: 'Open Monaco', Menlo;
 }
 
 .markdown-section pre {
@@ -79,7 +86,7 @@ table td:last-child {
 }
 
 .docsify-tabs__tab {
-  font-family: Monaco, Menlo, Consolas, Inconsolata, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-family: 'Open Monaco', Menlo, Consolas, Inconsolata;
 }
 
 /*------------*/

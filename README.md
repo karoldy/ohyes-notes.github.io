@@ -25,10 +25,10 @@ docs
 ├── example/                # 实例
 ├── public/                 # 静态资源
 ├── html/                   # html
-├── html5/                  # html
-├── vim-docs/               # vim笔记
-├── markdown/               # markdown笔记
-├── markdown-lint/          # markdown-lint笔记
+├── css/                    # css
+├── vim-docs/               # vim
+├── markdown/               # markdown
+├── markdown-lint/          # markdown-lint
 ├── navbar.md               # 导航栏
 ├── sidebar.md              # 侧边栏
 ├── covepage.md             # 封面
@@ -45,8 +45,8 @@ docs
 	- [x] 笔记
 
 - Git
-	 - [ ] 目录
-	 - [ ] 笔记
+	- [ ] 目录
+	- [ ] 笔记
 
 - Vim
 	- [ ] 目录
@@ -111,7 +111,7 @@ tsconfig.json 还有很多配置，详细请查看官网，这里是我觉的最
 
 ```json
 {
-	"compilerOptions": {
+  "compilerOptions": {
     "target": "es5",
     "module": "esnext",
     "baseUrl": "./",
@@ -182,9 +182,9 @@ exports.default = tasks;
 
 ```json
 {
-	"scripts": {
-		"build": "gulp"
-	}
+  "scripts": {
+    "build": "gulp"
+  }
 }
 ```
 
