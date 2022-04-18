@@ -1,6 +1,5 @@
 * MarkdownLint
 
-  * [返回上一级](/#index)
   * [MD001](/markdown-lint/#md001)
   * [MD002](/markdown-lint/#md002)
   * [MD003](/markdown-lint/#md003)

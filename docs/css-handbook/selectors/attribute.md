@@ -1,4 +1,4 @@
-[选择器列表](/css/selectors/)
+[CSS手册](/css-handbook/) / [选择器](/css-handbook/selectors/) / [属性选择器](/css-handbook/selectors/attribute)
 
 # 属性选择器
 

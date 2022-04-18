@@ -27,7 +27,7 @@ window.$docsify = {
       var footer = [
         '<hr/>',
         '<footer>',
-        '<span><a href="https://github.com/karoldy" target="_blank">karol</a> &copy;2022.</span>',
+        '<span><a href="https://github.com/karoldy" target="_blank">Ohyes</a> &copy;2022.</span>',
         '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
         '</footer>'
       ].join('');

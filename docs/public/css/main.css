@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Open Monaco', Menlo, Consolas, Inconsolata;
+  font-family: Monaco, 'Open Monaco', Menlo, Consolas, Inconsolata;
 }
 
 table {
@@ -68,7 +68,7 @@ table td:last-child {
 .markdown-section code,
 .markdown-section output:after,
 .markdown-section pre {
-  font-family: 'Open Monaco', Menlo;
+  font-family: Monaco, 'Open Monaco', Menlo;
 }
 
 .markdown-section pre {
@@ -86,7 +86,7 @@ table td:last-child {
 }
 
 .docsify-tabs__tab {
-  font-family: 'Open Monaco', Menlo, Consolas, Inconsolata;
+  font-family: Monaco, 'Open Monaco', Menlo, Consolas, Inconsolata;
 }
 
 /*------------*/
