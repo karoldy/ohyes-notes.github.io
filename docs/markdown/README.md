@@ -433,7 +433,7 @@ $$
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/markdown/math.html"
+  src="markdown/example/math.html"
 >
   浏览器不支持iframe
 </iframe>

@@ -4,10 +4,10 @@
 
 > 简介
 
-- Html,Css,JavaScript
-- 无需生成 html 文件
-- Markdown
+- Html, Css, JavaScript
+- TypeScript, NodeJs, Webpack, 
+- Vue, Angular, React
+- Git, Vim, Markdown
 
 [GitHub](https://github.com/karoldy/ohyes-notes.github.io/)
 [Get Started](#index)
-

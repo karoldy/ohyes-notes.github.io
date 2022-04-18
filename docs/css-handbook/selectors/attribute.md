@@ -57,7 +57,7 @@ div[title] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/1.html"
+  src="css-handbook/example/selectors/attribute/1.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -110,7 +110,7 @@ a[class] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/2.html"
+  src="css-handbook/example/selectors/attribute/2.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -210,7 +210,7 @@ a[class="external"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/3.html"
+  src="css-handbook/example/selectors/attribute/3.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -257,7 +257,7 @@ div[class~="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/4.html"
+  src="css-handbook/example/selectors/attribute/4.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -310,7 +310,7 @@ a[class~="external"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/5.html"
+  src="css-handbook/example/selectors/attribute/5.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -360,7 +360,7 @@ div[class|="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/6.html"
+  src="css-handbook/example/selectors/attribute/6.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -416,7 +416,7 @@ li[class|="test3"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/7.html"
+  src="css-handbook/example/selectors/attribute/7.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -463,7 +463,7 @@ div[class^="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/8.html"
+  src="css-handbook/example/selectors/attribute/8.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -518,7 +518,7 @@ li[class^="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/9.html"
+  src="css-handbook/example/selectors/attribute/9.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -565,7 +565,7 @@ div[class$="c"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/10.html"
+  src="css-handbook/example/selectors/attribute/10.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -620,7 +620,7 @@ li[class$="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/11.html"
+  src="css-handbook/example/selectors/attribute/11.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -667,7 +667,7 @@ div[class*="b"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/12.html"
+  src="css-handbook/example/selectors/attribute/12.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -722,7 +722,7 @@ li[class*="a"] {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/attribute/13.html"
+  src="css-handbook/example/selectors/attribute/13.html"
 >
   浏览器不支持iframe
 </iframe>

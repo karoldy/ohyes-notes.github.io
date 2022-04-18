@@ -3,6 +3,7 @@ mermaid.initialize({ startOnLoad: false });
 window.$docsify = {
   name: 'OhYes Docs',
   repo: 'karoldy/ohyes-notes.github.io',
+  themeColor: 'rgb(30, 140, 189)',
   homepage: 'index.md',
   coverpage: 'covepage.md',
   loadNavbar: 'navbar.md',
