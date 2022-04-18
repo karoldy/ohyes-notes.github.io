@@ -1,3 +1,5 @@
+[首页](/#index) / [Markdown](/markdown/)
+
 # Markdown语法 :id=markdown <!-- {docsify-ignore-all} -->
 
 ## 字体效果 :id=font

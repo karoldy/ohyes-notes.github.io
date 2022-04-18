@@ -1,3 +1,5 @@
+[首页](/#index) / [MarkdownLint](/markdown-lint/)
+
 # MarkdownLint <!-- {docsify-ignore-all} -->
 
 ## MD001 :id=md001
@@ -10,7 +12,7 @@
 
 ```json
 {
-	"MD001": false
+  "MD001": false
 }
 ```
 
@@ -28,9 +30,9 @@
 
 ```json
 {
-	"MD002": {
-		"level": "1"
-	}
+  "MD002": {
+    "level": "1"
+  }
 }
 ```
 
@@ -53,9 +55,9 @@
 
 ```json
 {
-	"MD003": {
-		"style": "consistent"
-	}
+  "MD003": {
+    "style": "consistent"
+  }
 }
 ```
 
@@ -79,9 +81,9 @@
 
 ```json
 {
-	"MD004": {
-		"style": "consistent"
-	}
+  "MD004": {
+    "style": "consistent"
+  }
 }
 ```
 
@@ -96,7 +98,7 @@
 
 ```json
 {
-	"MD005": false
+  "MD005": false
 }
 ```
 
@@ -110,7 +112,7 @@
 
 ```json
 {
-	"MD006": false
+  "MD006": false
 }
 ```
 
@@ -128,9 +130,9 @@
 
 ```json
 {
-	"MD007": {
-		"ident": 2
-	}
+  "MD007": {
+    "ident": 2
+  }
 }
 ```
 
@@ -153,10 +155,10 @@
 
 ```json
 {
-	"MD009": {
-		"br_spaces": 2,
-		"list_item_empty_lines": true
-	}
+  "MD009": {
+    "br_spaces": 2,
+    "list_item_empty_lines": true
+  }
 }
 ```
 
@@ -174,9 +176,9 @@
 
 ```json
 {
-	"MD010": {
-		"code_blocks": true
-	}
+  "MD010": {
+    "code_blocks": true
+  }
 }
 ```
 
@@ -190,7 +192,7 @@
 
 ```json
 {
-	"MD011": false
+  "MD011": false
 }
 ```
 
@@ -208,9 +210,9 @@
 
 ```json
 {
-	"MD012": {
-		"maximum": 1
-	}
+  "MD012": {
+    "maximum": 1
+  }
 }
 ```
 
@@ -232,13 +234,13 @@
 
 ```json
 {
-	"MD013": {
-		"line_length": 80,
-		"heading_line_length": 80,
-		"code_blocks": true,
-		"tables": true,
-		"hesdings": true
-	}
+  "MD013": {
+    "line_length": 80,
+    "heading_line_length": 80,
+    "code_blocks": true,
+    "tables": true,
+    "hesdings": true
+  }
 }
 ```
 
@@ -252,7 +254,7 @@
 
 ```json
 {
-	"MD014": true
+  "MD014": true
 }
 ```
 
@@ -287,10 +289,10 @@ hello world
 
 ```json
 {
-	"MD003": {
-		"style": "atx"
-	},
-	"MD018": true
+  "MD003": {
+    "style": "atx"
+  },
+  "MD018": true
 }
 ```
 
@@ -304,10 +306,10 @@ hello world
 
 ```json
 {
-	"MD003": {
-		"style": "atx"
-	},
-	"MD019": true
+  "MD003": {
+    "style": "atx"
+  },
+  "MD019": true
 }
 ```
 
@@ -321,10 +323,10 @@ hello world
 
 ```json
 {
-	"MD003": {
-		"style": "atx_closed"
-	},
-	"MD020": true
+  "MD003": {
+    "style": "atx_closed"
+  },
+  "MD020": true
 }
 ```
 
@@ -338,10 +340,10 @@ hello world
 
 ```json
 {
-	"MD003": {
-		"style": "atx_closed"
-	},
-	"MD021": true
+  "MD003": {
+    "style": "atx_closed"
+  },
+  "MD021": true
 }
 ```
 
@@ -360,10 +362,10 @@ hello world
 
 ```json
 {
-	"MD022": {
-		"lines_above": 1,
-		"lines_below": 1
-	}
+  "MD022": {
+    "lines_above": 1,
+    "lines_below": 1
+  }
 }
 ```
 
@@ -379,7 +381,7 @@ hello world
 
 ```json
 {
-	"MD023": false
+  "MD023": false
 }
 ```
 
@@ -397,9 +399,9 @@ hello world
 
 ```json
 {
-	"MD024": {
-		"siblings_only": false
-	}
+  "MD024": {
+    "siblings_only": false
+  }
 }
 ```
 
@@ -418,10 +420,10 @@ hello world
 
 ```json
 {
-	"MD025": {
-		"level": 1,
-		"front_matter_title": ""
-	}
+  "MD025": {
+    "level": 1,
+    "front_matter_title": ""
+  }
 }
 ```
 
@@ -439,9 +441,9 @@ hello world
 
 ```json
 {
-	"MD026": {
-		"punctuation": ".,;:!?"
-	}
+  "MD026": {
+    "punctuation": ".,;:!?"
+  }
 }
 ```
 
@@ -457,7 +459,7 @@ hello world
 
 ```json
 {
-	"MD027": false
+  "MD027": false
 }
 ```
 
@@ -471,7 +473,7 @@ hello world
 
 ```json
 {
-	"MD028": false
+  "MD028": false
 }
 ```
 
@@ -492,9 +494,9 @@ hello world
 
 ```json
 {
-	"MD029": {
-		"style": "one_or_ordered"
-	}
+  "MD029": {
+    "style": "one_or_ordered"
+  }
 }
 ```
 
@@ -524,12 +526,12 @@ hello world
 
 ```json
 {
-	"MD030": {
-		"ul_single": 1,
-		"ol_single": 1,
-		"ul_multi": 1,
-		"ol_multi": 1
-	}
+  "MD030": {
+    "ul_single": 1,
+    "ol_single": 1,
+    "ul_multi": 1,
+    "ol_multi": 1
+  }
 }
 ```
 
@@ -543,7 +545,7 @@ hello world
 
 ```json
 {
-	"MD031": false
+  "MD031": false
 }
 ```
 
@@ -558,7 +560,7 @@ hello world
 
 ```json
 {
-	"MD032": false
+  "MD032": false
 }
 ```
 
@@ -576,7 +578,7 @@ hello world
 
 ```json
 {
-	"MD033": ["html", "body"]
+  "MD033": ["html", "body"]
 }
 ```
 
@@ -590,7 +592,7 @@ hello world
 
 ```json
 {
-	"MD034": false
+  "MD034": false
 }
 ```
 
@@ -608,9 +610,9 @@ hello world
 
 ```json
 {
-	"MD035": {
-		"style": "consistent"
-	}
+  "MD035": {
+    "style": "consistent"
+  }
 }
 ```
 
@@ -628,9 +630,9 @@ hello world
 
 ```json
 {
-	"MD036": {
-		"punctuation": ".,;:!?"
-	}
+  "MD036": {
+    "punctuation": ".,;:!?"
+  }
 }
 ```
 
@@ -646,7 +648,7 @@ hello world
 
 ```json
 {
-	"MD037": false
+  "MD037": false
 }
 ```
 
@@ -660,7 +662,7 @@ hello world
 
 ```json
 {
-	"MD038": false
+  "MD038": false
 }
 ```
 
@@ -678,7 +680,7 @@ hello world
 
 ```json
 {
-	"MD039": false
+  "MD039": false
 }
 ```
 
@@ -692,7 +694,7 @@ hello world
 
 ```json
 {
-	"MD040": false
+  "MD040": false
 }
 ```
 
@@ -711,10 +713,10 @@ hello world
 
 ```json
 {
-	"MD041": {
-		"level": 1,
-		"front_matter_title": ""
-	}
+  "MD041": {
+    "level": 1,
+    "front_matter_title": ""
+  }
 }
 ```
 
@@ -728,7 +730,7 @@ hello world
 
 ```json
 {
-	"MD042": false
+  "MD042": false
 }
 ```
 
@@ -746,12 +748,12 @@ hello world
 
 ```json
 {
-	"MD043": [
-		"# head",
+  "MD043": [
+    "# head",
     "## item",
     "### detail",
     "*"
-	]
+  ]
 }
 ```
 
@@ -773,10 +775,10 @@ hello world
 
 ```json
 {
-	"MD044": {
-		"names": ["JavaScript"],
-		"code_blocks": true
-	}
+  "MD044": {
+    "names": ["JavaScript"],
+    "code_blocks": true
+  }
 }
 ```
 
@@ -790,7 +792,7 @@ hello world
 
 ```json
 {
-	"MD045": false
+  "MD045": false
 }
 ```
 
@@ -810,7 +812,7 @@ hello world
 
 ```json
 {
-	"MD046": { "style": "consistent" }
+  "MD046": { "style": "consistent" }
 }
 ```
 
@@ -824,7 +826,7 @@ hello world
 
 ```json
 {
-	"MD047": false
+  "MD047": false
 }
 ```
 

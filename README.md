@@ -230,9 +230,9 @@ module.exports = {
 
 ```json
 {
-	"scripts": {
-		"test": "jest"
-	}
+  "scripts": {
+    "test": "jest"
+  }
 }
 ```
 
@@ -281,9 +281,9 @@ module.exports = {
 
 ```json
 {
-	"scripts": {
-		"lint": "eslint --ext .ts src/"
-	}
+  "scripts": {
+    "lint": "eslint --ext .ts src/"
+  }
 }
 ```
 

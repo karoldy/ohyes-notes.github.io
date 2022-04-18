@@ -1,4 +1,4 @@
-[选择器列表](/css/selectors/)
+[CSS手册](/css-handbook/) / [选择器](/css-handbook/selectors/) / [伪类选择器](/css-handbook/selectors/pseudo-classes)
 
 # 伪类选择器
 

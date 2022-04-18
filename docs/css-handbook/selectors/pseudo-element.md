@@ -1,6 +1,6 @@
-[选择器列表](/css/selectors/)
+[CSS手册](/css-handbook/) / [选择器](/css-handbook/selectors/) / [伪对象选择器](/css-handbook/selectors/pseudo-element)
 
-# 伪对象选择符
+# 伪对象选择器
 
 <p class="g-color-light">
   <strong class="g-color-css3-change">紫色</strong> 链接表示该属性在CSS3有修改或者增加了新的属性值；
@@ -41,7 +41,7 @@ E:first-letter/E::first-letter {
 
 ### 兼容性
 
-![兼容性](../../public/image/first-letter.png)
+![兼容性](https://secure2.wostatic.cn/static/dk5dya57VW6P4PC7Y3BFXj/first-letter.png?auth_key=1650272946-q8cGtwWqfa1uxkhj1DJ6mP-0-9679eedfb25477588c8155a8fca86a91&image_process=resize,w_824/format,webp)
 
 1. E:first-letter选择符不能紧挨着规则集大括号，需留有空格或换行
 
@@ -121,7 +121,7 @@ E:first-line/E::first-line {
 
 ### 兼容性
 
-![兼容性](../../public/image/first-letter.png)
+![兼容性](https://secure2.wostatic.cn/static/dk5dya57VW6P4PC7Y3BFXj/first-letter.png?auth_key=1650272946-q8cGtwWqfa1uxkhj1DJ6mP-0-9679eedfb25477588c8155a8fca86a91&image_process=resize,w_824/format,webp)
 
 1. E:first-line选择符不能紧挨着规则集大括号，需留有空格或换行
 
@@ -194,7 +194,7 @@ CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修�
 
 ### 兼容性
 
-![兼容性](../../public/image/before.png)
+![兼容性](https://secure2.wostatic.cn/static/h7EiiBHrRmG2yzPY21Dh12/before.png?auth_key=1650273022-eHkq8o68xyviY88kB73u7x-0-9777d11ba15dd739e72d112fa1aa67f6&image_process=resize,w_1476/format,webp)
 
 1. 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::before
 
@@ -280,7 +280,7 @@ CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修�
 
 ### 兼容性
 
-![兼容性](../../public/image/before.png)
+![兼容性](https://secure2.wostatic.cn/static/h7EiiBHrRmG2yzPY21Dh12/before.png?auth_key=1650273022-eHkq8o68xyviY88kB73u7x-0-9777d11ba15dd739e72d112fa1aa67f6&image_process=resize,w_1476/format,webp)
 
 1. 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::after
 
@@ -414,7 +414,7 @@ input::-moz-placeholder { /*Firefox19+*/
 
 ### 兼容性
 
-![兼容性](../../public/image/placeholder.png)
+![兼容性](https://secure2.wostatic.cn/static/hspRCGvkh2C1mAX5bNm5Qm/placeholder.png?auth_key=1650273082-9pEYBgFwjut4mAdr2jToU4-0-611712b76b782c614867ad22c4863af1&image_process=resize,w_750/format,webp)
 
 1. ::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类
 
