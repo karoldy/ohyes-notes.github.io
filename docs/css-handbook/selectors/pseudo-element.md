@@ -92,7 +92,7 @@ p::first-letter {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/1.html"
+  src="css-handbook/example/selectors/pseudo-element/1.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -169,7 +169,7 @@ p::first-line {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/2.html"
+  src="css-handbook/example/selectors/pseudo-element/2.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -255,7 +255,7 @@ p::before {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/3.html"
+  src="css-handbook/example/selectors/pseudo-element/3.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -343,7 +343,7 @@ p::after {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/4.html"
+  src="css-handbook/example/selectors/pseudo-element/4.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -405,7 +405,7 @@ input::-moz-placeholder { /*Firefox19+*/
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/5.html"
+  src="css-handbook/example/selectors/pseudo-element/5.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -453,7 +453,7 @@ input::-moz-placeholder { /*Firefox19+*/
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/5.html"
+  src="css-handbook/example/selectors/pseudo-element/5.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -522,7 +522,7 @@ p::selection {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-element/6.html"
+  src="css-handbook/example/selectors/pseudo-element/6.html"
 >
   浏览器不支持iframe
 </iframe>

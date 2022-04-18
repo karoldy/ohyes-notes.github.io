@@ -112,7 +112,7 @@ a:link {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/1.html"
+  src="css-handbook/example/selectors/pseudo-classes/1.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -193,7 +193,7 @@ a:visited {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/2.html"
+  src="css-handbook/example/selectors/pseudo-classes/2.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -283,7 +283,7 @@ div:hover {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/3.html"
+  src="css-handbook/example/selectors/pseudo-classes/3.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -372,7 +372,7 @@ div:active {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/4.html"
+  src="css-handbook/example/selectors/pseudo-classes/4.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -454,7 +454,7 @@ input:focus {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/5.html"
+  src="css-handbook/example/selectors/pseudo-classes/5.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -520,7 +520,7 @@ p:lang(en) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/6.html"
+  src="css-handbook/example/selectors/pseudo-classes/6.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -576,7 +576,7 @@ E:not(s) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/7.html"
+  src="css-handbook/example/selectors/pseudo-classes/7.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -627,7 +627,7 @@ p:not(.abc) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/8.html"
+  src="css-handbook/example/selectors/pseudo-classes/8.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -680,7 +680,7 @@ html:root .test {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/9.html"
+  src="css-handbook/example/selectors/pseudo-classes/9.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -732,7 +732,7 @@ html:root {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/10.html"
+  src="css-handbook/example/selectors/pseudo-classes/10.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -782,7 +782,7 @@ li:first-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/11.html"
+  src="css-handbook/example/selectors/pseudo-classes/11.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -809,7 +809,7 @@ p:first-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/12.html"
+  src="css-handbook/example/selectors/pseudo-classes/12.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -839,7 +839,7 @@ p:first-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/13.html"
+  src="css-handbook/example/selectors/pseudo-classes/13.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -898,7 +898,7 @@ li:first-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/14.html"
+  src="css-handbook/example/selectors/pseudo-classes/14.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -949,7 +949,7 @@ p:last-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/15.html"
+  src="css-handbook/example/selectors/pseudo-classes/15.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -975,7 +975,7 @@ p:last-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/16.html"
+  src="css-handbook/example/selectors/pseudo-classes/16.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1034,7 +1034,7 @@ li:last-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/17.html"
+  src="css-handbook/example/selectors/pseudo-classes/17.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1110,7 +1110,7 @@ li:only-child {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/18.html"
+  src="css-handbook/example/selectors/pseudo-classes/18.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1178,7 +1178,7 @@ E:nth-child(n) {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/19.html"
+  src="css-handbook/example/selectors/pseudo-classes/19.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1230,7 +1230,7 @@ E:nth-child(n) {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/20.html"
+  src="css-handbook/example/selectors/pseudo-classes/20.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1271,7 +1271,7 @@ p:nth-child(2) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/21.html"
+  src="css-handbook/example/selectors/pseudo-classes/21.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1294,7 +1294,7 @@ p:nth-child(3) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/22.html"
+  src="css-handbook/example/selectors/pseudo-classes/22.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1317,7 +1317,7 @@ p:nth-child(4) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/23.html"
+  src="css-handbook/example/selectors/pseudo-classes/23.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1368,7 +1368,7 @@ p:nth-of-type(1) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/24.html"
+  src="css-handbook/example/selectors/pseudo-classes/24.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1426,7 +1426,7 @@ li:nth-child(2) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/25.html"
+  src="css-handbook/example/selectors/pseudo-classes/25.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1487,7 +1487,7 @@ p:nth-last-child(2) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/26.html"
+  src="css-handbook/example/selectors/pseudo-classes/26.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1536,7 +1536,7 @@ p:nth-last-of-type(1) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/27.html"
+  src="css-handbook/example/selectors/pseudo-classes/27.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1594,7 +1594,7 @@ li:nth-last-child(1) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/28.html"
+  src="css-handbook/example/selectors/pseudo-classes/28.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1651,7 +1651,7 @@ E:first-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/29.html"
+  src="css-handbook/example/selectors/pseudo-classes/29.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1695,7 +1695,7 @@ E:first-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/30.html"
+  src="css-handbook/example/selectors/pseudo-classes/30.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1749,7 +1749,7 @@ E:first-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/31.html"
+  src="css-handbook/example/selectors/pseudo-classes/31.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1806,7 +1806,7 @@ E:last-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/32.html"
+  src="css-handbook/example/selectors/pseudo-classes/32.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1850,7 +1850,7 @@ E:last-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/33.html"
+  src="css-handbook/example/selectors/pseudo-classes/33.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1904,7 +1904,7 @@ p:last-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/34.html"
+  src="css-handbook/example/selectors/pseudo-classes/34.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1956,7 +1956,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/35.html"
+  src="css-handbook/example/selectors/pseudo-classes/35.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1988,7 +1988,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/36.html"
+  src="css-handbook/example/selectors/pseudo-classes/36.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2021,7 +2021,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/37.html"
+  src="css-handbook/example/selectors/pseudo-classes/37.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2074,7 +2074,7 @@ p:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/38.html"
+  src="css-handbook/example/selectors/pseudo-classes/38.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2131,7 +2131,7 @@ E:nth-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/39.html"
+  src="css-handbook/example/selectors/pseudo-classes/39.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2175,7 +2175,7 @@ E:nth-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/40.html"
+  src="css-handbook/example/selectors/pseudo-classes/40.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2230,7 +2230,7 @@ E:nth-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/41.html"
+  src="css-handbook/example/selectors/pseudo-classes/41.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2289,7 +2289,7 @@ E:nth-last-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/42.html"
+  src="css-handbook/example/selectors/pseudo-classes/42.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2335,7 +2335,7 @@ E:nth-last-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/43.html"
+  src="css-handbook/example/selectors/pseudo-classes/43.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2390,7 +2390,7 @@ E:nth-last-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/44.html"
+  src="css-handbook/example/selectors/pseudo-classes/44.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2458,7 +2458,7 @@ p:empty {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/45.html"
+  src="css-handbook/example/selectors/pseudo-classes/45.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2540,7 +2540,7 @@ input:checked + span:after {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/46.html"
+  src="css-handbook/example/selectors/pseudo-classes/46.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2622,7 +2622,7 @@ input[type="text"]:disabled {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/47.html"
+  src="css-handbook/example/selectors/pseudo-classes/47.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2704,7 +2704,7 @@ input[type="text"]:disabled {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/47.html"
+  src="css-handbook/example/selectors/pseudo-classes/47.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2751,7 +2751,7 @@ E:target {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/48.html"
+  src="css-handbook/example/selectors/pseudo-classes/48.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2866,7 +2866,7 @@ h2,p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/49.html"
+  src="css-handbook/example/selectors/pseudo-classes/49.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2936,7 +2936,7 @@ div {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/50.html"
+  src="css-handbook/example/selectors/pseudo-classes/50.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -3007,7 +3007,7 @@ div {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/51.html"
+  src="css-handbook/example/selectors/pseudo-classes/51.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -3078,7 +3078,7 @@ div {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/pseudo-classes/52.html"
+  src="css-handbook/example/selectors/pseudo-classes/52.html"
 >
   浏览器不支持iframe
 </iframe>

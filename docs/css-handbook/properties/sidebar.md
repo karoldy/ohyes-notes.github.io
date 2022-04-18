@@ -1,6 +1,6 @@
 * 属性
 
-  * [返回上一级](/css/)
+  * [返回上一级](/css-handbook/)
   * [定位](position)
   * [布局](layout)
   * [尺寸与补白](dimension)

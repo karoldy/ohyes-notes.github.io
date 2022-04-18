@@ -57,7 +57,7 @@ E F {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/1.html"
+  src="css-handbook/example/selectors/relationship/1.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -87,7 +87,7 @@ E F {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/2.html"
+  src="css-handbook/example/selectors/relationship/2.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -142,7 +142,7 @@ ul li {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/3.html"
+  src="css-handbook/example/selectors/relationship/3.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -193,7 +193,7 @@ E>F {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/4.html"
+  src="css-handbook/example/selectors/relationship/4.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -258,7 +258,7 @@ E>F {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/5.html"
+  src="css-handbook/example/selectors/relationship/5.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -304,7 +304,7 @@ h3 + p {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/6.html"
+  src="css-handbook/example/selectors/relationship/6.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -330,7 +330,7 @@ h3 ~ p {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="example/css/selectors/relationship/7.html"
+  src="css-handbook/example/selectors/relationship/7.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -383,7 +383,7 @@ p + p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/relationship/8.html"
+  src="css-handbook/example/selectors/relationship/8.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -431,7 +431,7 @@ h3 ~ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/relationship/9.html"
+  src="css-handbook/example/selectors/relationship/9.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -462,7 +462,7 @@ h3 ~ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/relationship/10.html"
+  src="css-handbook/example/selectors/relationship/10.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -498,7 +498,7 @@ h3 ~ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/relationship/11.html"
+  src="css-handbook/example/selectors/relationship/11.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -559,7 +559,7 @@ p ~ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="example/css/selectors/relationship/12.html"
+  src="css-handbook/example/selectors/relationship/12.html"
 >
   浏览器不支持iframe
 </iframe>
