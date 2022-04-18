@@ -25,17 +25,23 @@ Line four
 
 `x` 命令会删除光标下的字符，在这种情况下使用 `.` 命令“重复上次修改”时，就会让Vim删除光标下的字符。
 
+![例子](https://secure2.wostatic.cn/static/kREQve7x9BtNcivh5By6AG/1.gif?auth_key=1650298201-acWjbedLZYk7cLoQLYmdyJ-0-375cf785532f873036e84168910c00e6&image_process=resize,w_760)
+
 > 提示: 按 <kbd>u</kbd> 可以撤销上一次的操作，多按几次恢复初始状态
 
 `dd` 命令会删除光标当前行，按 `dd` 后再按 `.` 也会删除当前行
 
+![例子](https://secure2.wostatic.cn/static/qjxLwEaPKyTHrkhHVzvJMq/2.gif?auth_key=1650298230-amr6PyoNwKwcvp6GUZQh4w-0-5b3f5b8ca0a053529a7c66d12fcff7a1&image_process=resize,w_760)
+
 最后 `>G` 命令会增加从当前行到文档末尾处的缩进层级。可以按 `>G` 后换一行使用 `.`，看看效果
 
-!> `x`、`dd` 以及 `>` 命令都是在普通模式中执行的命令，不过，每次进入插入模式，也会形成一次修改。从进入插入模式的那一刻起(按 `i`)，直到按 `esc` 回到普通模式为止，vim会记录每一个按键操作。做出这样一个修改后再用 `.` 命令的话，它将会重新执行所有这些按键操作
+![例子](https://secure2.wostatic.cn/static/fykYnD55RQrrbTAnast1Cf/3.gif?auth_key=1650298259-7Piu1PcN5Gdm9kzoKocJoi-0-3e7781155be8a7fc02e1aee20f8d3a1d&image_process=resize,w_760)
+
+!> `x`、`dd` 以及 `>` 命令都是在普通模式中执行的命令，不过，每次进入插入模式，也会形成一次修改。从进入插入模式的那一刻起(按 `i`)，直到按 `<Esc>` 回到普通模式为止，vim会记录每一个按键操作。做出这样一个修改后再用 `.` 命令的话，它将会重新执行所有这些按键操作
 
 `.` 命令是一个微型的宏
 
-Vim可以录制任意数目的按键操作，然后在以后重复执行它们。这让我们可以把最常重复的工作流程录制下来，并用一个按键重放它们。可以把 `.` 命令当成一个很小的宏
+Vim可以录制任意数目的按键操作，然后在以后重复执行它们。这让我们可以把最常重复的工作流程录制下来，并用一个按键重放它们。可以把 `.` 命令当成一个很小的宏，另外还将会在[技巧9]()以及[技巧23]()中学到 `.` 命令的一些最佳应用技巧
 
 ---
 
@@ -43,7 +49,7 @@ Vim可以录制任意数目的按键操作，然后在以后重复执行它们�
 
 对于在行尾添加内容这样的常见操作，如添加分号，Vim提供了一个专门的命令，可以把两步操作合并为一步
 
-我们想在每行的结尾添加一个分号。要实现这一点，先得把光标移到行尾，然后切换到插入模式进行修改。`$` 命令可以完成移动动作，接着就可以执行 `a;< Esc >` 完成修改了
+我们想在每行的结尾添加一个分号。要实现这一点，先得把光标移到行尾，然后切换到插入模式进行修改。`$` 命令可以完成移动动作，接着就可以执行 `a`;\<Esc> 完成修改了
  
 要完成全部修改，也可以对下面两行做完全相同的操作，不过那样做会错过这里将要提到的小窍门。由于 `.` 命令可以重复上次的修改，因此不必重复之前的操作，而是执行两次 `j$.`
 
@@ -55,6 +61,8 @@ var bar = 'a'
 var foobar = foo + bar
 ```
 
+![例子](https://secure2.wostatic.cn/static/3Kz5bwYL4gzNi2wND49bzo/4.gif?auth_key=1650298561-mnh5doxwHs6voxWeQqVsjJ-0-6ba5f01841a38a864cefad7149616cae&image_process=resize,w_760)
+
 ### 减少无关的移动
 
 `a` 命令在当前光标之后添加内容， `A` 命令则在当前行的结尾添加内容。不管光标当前处于什么位置，输入 `A` 都会进入插入模式，并把光标移到行尾。
@@ -64,6 +72,8 @@ var foobar = foo + bar
 用 `A` 来代替 `$a`，大大提升了 `.` 命令的效率。不必再把光标移到行尾，只需保证它位于该行内就行了（可在任意位置）。现在可以重复执行足够多次的 `j.` ，完成对后续行的修改。
 
 一键移动，另一键操作，真是太完美了！请留意这种应用模式，因为我们即将在更多的例子中看到它的身影。
+
+![例子](https://secure2.wostatic.cn/static/gh9JtPMrQ1S1rvWeXgkA2h/5.gif?auth_key=1650298584-DGRA7DwDcN1qYoZekJaBh-0-158794ea83a31191e3e3f9cca24aa946&image_process=resize,w_760)
 
 ### 一箭双雕
 
@@ -100,7 +110,7 @@ var foo = "method(" + argument1 + "," + argument2 + ")";
 
 ### 使修改可重复
 
-按 `f+` 定位到第一个 + 号的位置，按 `s <Space> + <Space> <Esc>` ，按 `;` 按 `.` 按 `;.`，按 `;.`
+![例子](https://secure2.wostatic.cn/static/ayTr6hDuch1GiKQwVu7Da5/6.gif?auth_key=1650298767-85DV1nBtkXMNR3HReQzRW9-0-0c355fded1ac41e81f8038ca0d9cb007&image_process=resize,w_760)
 
 知识点:
 
@@ -155,11 +165,9 @@ Vim提供了一个 :substitute 命令专门用于查找替换任务， 不过用
 在下面这段文本中，每一行都出现了单词“content”
 
 ```text
-asdaldas;ld content asd;alskda;ldkas;d
-
-adasd content askdas;djaslkdjalksjda;sd asda
-
-1111231as;kdalsdk;la;am.,mc. alsdkasl; content ...
+...We're waiting for content before the site can go live...
+...If you are content with this, let's go ahead with it...
+...We'll launch as soon as we have the content...
 ```
 
 假设想用单词“copy”（意义同“copywriting”）来替代“content”。也许你会想，这太简单了，只要用替换命令就行了，像下面这样：
@@ -184,13 +192,13 @@ adasd content askdas;djaslkdjalksjda;sd asda
 
 或者，可以简单地把光标移到这个单词上，然后按 * 键。以下面的操作为例
 
-![例子](/example/1.gif)
+![例子](https://secure2.wostatic.cn/static/wG5MTQfQXktQk7YJhtKZW/7.gif?auth_key=1650300017-p78CJ7aJywBpsfWhXihzPT-0-ae9461c1716cc867ae58ca27e2ea5633&image_process=resize,w_760)
 
 ### 使修改可重复
 
 当光标位于“content”的开头时，就可以着手修改它。这包括两步操作：首先要删除单词“content”，然后输入替代的单词。
 
-`cw` 命令会删除从光标位置到单词结尾的字符，并进入插入模式，然后就可以输入单词“copy”了。Vim会把我们离开插入模式之前的全部按键操作都记录下来，因此整个 `cwcopy<Esc>`会被当成一个修改。也就是说，执行 `.` 命令会删除从光标到当前单词结尾间的字符，并把它修改为“copy”。
+`cw` 命令会删除从光标位置到单词结尾的字符，并进入插入模式，然后就可以输入单词“copy”了。Vim会把我们离开插入模式之前的全部按键操作都记录下来，因此整个 `cw`copy\<Esc>`会被当成一个修改。也就是说，执行 `.` 命令会删除从光标到当前单词结尾间的字符，并把它修改为“copy”。
 
 ### 合而为一
 
@@ -202,7 +210,7 @@ adasd content askdas;djaslkdjalksjda;sd asda
 
 ### 回顾前面3个 . 命令编辑任务
 
-在技巧2中，我们想在一系列行的结尾添加分号。我们先用 `A`;<Esc> 修改了第一行，做完这步准备后，就可以使用 `.` 命令对后续行重复此修改。我们使用了 `j` 命令在行间移动，要完成剩余的修改，只需简单地按足够多次 `j.` 就可以了。
+在技巧2中，我们想在一系列行的结尾添加分号。我们先用 `A`;\<Esc> 修改了第一行，做完这步准备后，就可以使用 `.` 命令对后续行重复此修改。我们使用了 `j` 命令在行间移动，要完成剩余的修改，只需简单地按足够多次 `j.` 就可以了。
 
 在技巧3中，我们想为每个 + 号的前后各添加一个空格。先用 `f+` 命令跳到目标字符上，然后用 `s` 命令把一个字符替换成3个，做完这步准备后，就可以按若干次 `;.` 完成此任务。
 
