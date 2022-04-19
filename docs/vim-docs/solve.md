@@ -25,17 +25,17 @@ Line four
 
 `x` 命令会删除光标下的字符，在这种情况下使用 `.` 命令“重复上次修改”时，就会让Vim删除光标下的字符。
 
-![例子1](example/solve/1.gif)
+![例子1](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/1.gif)
 
 > 提示: 按 <kbd>u</kbd> 可以撤销上一次的操作，多按几次恢复初始状态
 
 `dd` 命令会删除光标当前行，按 `dd` 后再按 `.` 也会删除当前行
 
-![例子2](example/solve/2.gif)
+![例子2](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/2.gif)
 
 最后 `>G` 命令会增加从当前行到文档末尾处的缩进层级。可以按 `>G` 后换一行使用 `.`，看看效果
 
-![例子3](example/solve/3.gif)
+![例子3](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/4.gif)
 
 !> `x`、`dd` 以及 `>` 命令都是在普通模式中执行的命令，不过，每次进入插入模式，也会形成一次修改。从进入插入模式的那一刻起(按 `i`)，直到按 `<Esc>` 回到普通模式为止，vim会记录每一个按键操作。做出这样一个修改后再用 `.` 命令的话，它将会重新执行所有这些按键操作
 
@@ -61,7 +61,7 @@ var bar = 'a'
 var foobar = foo + bar
 ```
 
-![例子4](example/solve/4.gif)
+![例子4](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/4.gif)
 
 ### 减少无关的移动
 
@@ -73,7 +73,7 @@ var foobar = foo + bar
 
 一键移动，另一键操作，真是太完美了！请留意这种应用模式，因为我们即将在更多的例子中看到它的身影。
 
-![例子5](example/solve/5.gif)
+![例子5](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/5.gif)
 
 ### 一箭双雕
 
@@ -110,7 +110,7 @@ var foo = "method(" + argument1 + "," + argument2 + ")";
 
 ### 使修改可重复
 
-![例子6](example/solve/6.gif)
+![例子6](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/6.gif)
 
 知识点:
 
@@ -192,7 +192,7 @@ Vim提供了一个 :substitute 命令专门用于查找替换任务， 不过用
 
 或者，可以简单地把光标移到这个单词上，然后按 * 键。以下面的操作为例
 
-![例子7](example/solve/7.gif)
+![例子7](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/7.gif)
 
 ### 使修改可重复
 
