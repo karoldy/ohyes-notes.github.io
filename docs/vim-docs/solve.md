@@ -25,17 +25,17 @@ Line four
 
 `x` 命令会删除光标下的字符，在这种情况下使用 `.` 命令“重复上次修改”时，就会让Vim删除光标下的字符。
 
-![例子](https://secure2.wostatic.cn/static/kREQve7x9BtNcivh5By6AG/1.gif?auth_key=1650298201-acWjbedLZYk7cLoQLYmdyJ-0-375cf785532f873036e84168910c00e6&image_process=resize,w_760)
+![例子1](example/solve/1.gif)
 
 > 提示: 按 <kbd>u</kbd> 可以撤销上一次的操作，多按几次恢复初始状态
 
 `dd` 命令会删除光标当前行，按 `dd` 后再按 `.` 也会删除当前行
 
-![例子](https://secure2.wostatic.cn/static/qjxLwEaPKyTHrkhHVzvJMq/2.gif?auth_key=1650298230-amr6PyoNwKwcvp6GUZQh4w-0-5b3f5b8ca0a053529a7c66d12fcff7a1&image_process=resize,w_760)
+![例子2](example/solve/2.gif)
 
 最后 `>G` 命令会增加从当前行到文档末尾处的缩进层级。可以按 `>G` 后换一行使用 `.`，看看效果
 
-![例子](https://secure2.wostatic.cn/static/fykYnD55RQrrbTAnast1Cf/3.gif?auth_key=1650298259-7Piu1PcN5Gdm9kzoKocJoi-0-3e7781155be8a7fc02e1aee20f8d3a1d&image_process=resize,w_760)
+![例子3](example/solve/3.gif)
 
 !> `x`、`dd` 以及 `>` 命令都是在普通模式中执行的命令，不过，每次进入插入模式，也会形成一次修改。从进入插入模式的那一刻起(按 `i`)，直到按 `<Esc>` 回到普通模式为止，vim会记录每一个按键操作。做出这样一个修改后再用 `.` 命令的话，它将会重新执行所有这些按键操作
 
@@ -61,7 +61,7 @@ var bar = 'a'
 var foobar = foo + bar
 ```
 
-![例子](https://secure2.wostatic.cn/static/3Kz5bwYL4gzNi2wND49bzo/4.gif?auth_key=1650298561-mnh5doxwHs6voxWeQqVsjJ-0-6ba5f01841a38a864cefad7149616cae&image_process=resize,w_760)
+![例子4](example/solve/4.gif)
 
 ### 减少无关的移动
 
@@ -73,7 +73,7 @@ var foobar = foo + bar
 
 一键移动，另一键操作，真是太完美了！请留意这种应用模式，因为我们即将在更多的例子中看到它的身影。
 
-![例子](https://secure2.wostatic.cn/static/gh9JtPMrQ1S1rvWeXgkA2h/5.gif?auth_key=1650298584-DGRA7DwDcN1qYoZekJaBh-0-158794ea83a31191e3e3f9cca24aa946&image_process=resize,w_760)
+![例子5](example/solve/5.gif)
 
 ### 一箭双雕
 
@@ -110,7 +110,7 @@ var foo = "method(" + argument1 + "," + argument2 + ")";
 
 ### 使修改可重复
 
-![例子](https://secure2.wostatic.cn/static/ayTr6hDuch1GiKQwVu7Da5/6.gif?auth_key=1650298767-85DV1nBtkXMNR3HReQzRW9-0-0c355fded1ac41e81f8038ca0d9cb007&image_process=resize,w_760)
+![例子6](example/solve/6.gif)
 
 知识点:
 
@@ -192,7 +192,7 @@ Vim提供了一个 :substitute 命令专门用于查找替换任务， 不过用
 
 或者，可以简单地把光标移到这个单词上，然后按 * 键。以下面的操作为例
 
-![例子](https://secure2.wostatic.cn/static/wG5MTQfQXktQk7YJhtKZW/7.gif?auth_key=1650300017-p78CJ7aJywBpsfWhXihzPT-0-ae9461c1716cc867ae58ca27e2ea5633&image_process=resize,w_760)
+![例子7](example/solve/7.gif)
 
 ### 使修改可重复
 

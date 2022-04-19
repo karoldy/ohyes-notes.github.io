@@ -72,6 +72,20 @@ docs
 - [ ] 开发支持渲染output标签的插件
 - [ ] 侧边栏目录展开和折叠
 
+### 其他
+
+- 搭建verdaccio私库 or git packages 私库
+
+  - [参考1](https://blog.csdn.net/qq_24734285/article/details/118294103)
+
+  - [参考2](https://www.cnblogs.com/xiaonian8/p/14973941.html)
+
+- 创建github 图床
+
+  - [参考]()
+
+- 使用licecap 录制gif动图，添加热键显示
+
 ## 分支管理
 
 `master` 主分支, git pages 的稳定分支，受保护，不接受更改
