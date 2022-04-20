@@ -1,7 +1,7 @@
 var num = 0;
 mermaid.initialize({ startOnLoad: false });
 window.$docsify = {
-  name: 'OhYes Docs',
+  name: 'Docs',
   repo: 'karoldy/ohyes-notes.github.io',
   themeColor: 'rgb(30, 140, 189)',
   homepage: 'index.md',
@@ -27,7 +27,7 @@ window.$docsify = {
       var footer = [
         '<hr/>',
         '<footer>',
-        '<span><a href="https://github.com/karoldy" target="_blank">Ohyes</a> &copy;2022.</span>',
+        '<span><a href="https://github.com/karoldy" target="_blank">Karol</a> &copy;2022.</span>',
         '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
         '</footer>'
       ].join('');

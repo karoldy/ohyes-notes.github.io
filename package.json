@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A markdown note for rendering html content from docsify",
   "author": {
-    "name": "OhYes",
+    "name": "Karol",
     "email": "karoldy@163.com"
   },
   "license": "MIT",
@@ -27,9 +27,6 @@
     "lint:md": "markdownlint ./docs"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
     "docsify-cli": "^4.4.4",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
