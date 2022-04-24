@@ -63,7 +63,7 @@ var bar = 'a'
 var foobar = foo + bar
 ```
 
-操作: <kbd>$</kbd> -> <kbd>a</kbd> -> <kbd>;</kbd> -> <kbd>esc</kbd> -> <kbd>j</kbd> -> <kbd>$</kbd> -> <kbd>.</kbd> -> <kbd>j</kbd> -> <kbd>$</kbd> -> <kbd>.</kbd>
+操作: <kbd>$</kbd> -> <kbd>a</kbd> -> <kbd>;</kbd> -> <kbd>esc</kbd> -> <kbd>j$.</kbd> -> <kbd>j$.</kbd>
 
 ![例子2-1](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/2-1.gif)
 
@@ -73,7 +73,7 @@ var foobar = foo + bar
 
 `A` 把 `$a` 封装成了一个按键操作。
 
-操作: <kbd>A</kbd> -> <kbd>;</kbd> -> <kbd>esc</kbd> + <kbd>j</kbd> -> <kbd>.</kbd> -> <kbd>j</kbd> -> <kbd>.</kbd>
+操作: <kbd>A</kbd> -> <kbd>;</kbd> -> <kbd>esc</kbd> + <kbd>j.</kbd> -> <kbd>j.</kbd>
 
 ![例子2-2](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/2-2.gif)
 
@@ -114,11 +114,11 @@ var foo = "method(" + argument1 + "," + argument2 + ")";
 
 `s` 命令把两个操作合并为一个: 它先删除光标下的字符，然后进入insert模式。
 
-操作: <kbd>f</kbd> -> <kbd>+</kbd> -> <kbd>s</kbd> + <kbd>space</kbd> -> <kbd>+</kbd> -> <kbd>space</kbd> -> <kbd>esc</kbd> -> <kbd>;</kbd> -> <kbd>.</kbd> -> <kbd>;</kbd> -> <kbd>.</kbd> -> <kbd>;</kbd> -> <kbd>.</kbd>
+操作: <kbd>f+</kbd> -> <kbd>s</kbd> + <kbd>space + space</kbd> -> <kbd>esc</kbd> -> <kbd>;.</kbd> -> <kbd>;.</kbd> -> <kbd>;.</kbd>
 
 ![例子3](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/3.gif)
 
-
+---
 
 ## 技巧4 执行、重复、回退
 
@@ -166,6 +166,6 @@ Vim提供了一个 :substitute 命令专门用于查找替换任务， 不过用
 
 `cw` 命令会删除从光标位置到单词结尾的字符，并进入插入模式，然后就可以输入单词“copy”了。Vim会把我们离开插入模式之前的全部按键操作都记录下来，因此整个 `cw`copy\<Esc> 会被当成一个修改。也就是说，执行 `.` 命令会删除从光标到当前单词结尾间的字符，并把它修改为“copy”。
 
-操作: <kbd>光标移动到content</kbd> -> <kbd>*</kbd> -> <kbd>c</kbd> + <kbd>w</kbd> -> <kbd>输入copy</kbd> -> <kbd>esc</kbd> -> <kbd>n</kbd> -> <kbd>.</kbd> -> <kbd>n</kbd> -> <kbd>.</kbd>
+操作: <kbd>光标移动到content</kbd> -> <kbd>*</kbd> -> <kbd>cw</kbd> -> <kbd>输入copy</kbd> -> <kbd>esc</kbd> -> <kbd>n.</kbd> -> <kbd>n.</kbd>
 
 ![例子5](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/solve/5.gif)
