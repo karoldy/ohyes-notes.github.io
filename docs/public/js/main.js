@@ -13,6 +13,7 @@ window.$docsify = {
   relativePath: true,
   maxLevel: 3,
   subMaxLevel: 2,
+  topMargin: 90,
   alias: {
     '/.*/navbar.md': '/navbar.md',
     // '/.*/sidebar.md': '/sidebar.md'
@@ -21,6 +22,12 @@ window.$docsify = {
     depth: 3,
     noData: 'No results!',
     placeholder: 'Search...'
+  },
+  pagination: {
+    previousText: '上一节',
+    nextText: '下一节',
+    crossChapter: true,
+    crossChapterText: true,
   },
   plugins: [
     function (hook) {
