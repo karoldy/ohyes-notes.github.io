@@ -13,7 +13,6 @@ window.$docsify = {
   relativePath: true,
   maxLevel: 3,
   subMaxLevel: 2,
-  topMargin: 90,
   alias: {
     '/.*/navbar.md': '/navbar.md',
     // '/.*/sidebar.md': '/sidebar.md'
@@ -21,7 +20,13 @@ window.$docsify = {
   search: {
     depth: 3,
     noData: 'No results!',
-    placeholder: 'Search...'
+    placeholder: 'Search...',
+    paths: 'auto',
+    placeholder: '🔍 搜索',
+    noData: '😒 找不到结果',
+    // Headline depth, 1 - 6
+    depth: 6,
+    maxAge: 86400000, // 过期时间，单位毫秒，默认一天
   },
   pagination: {
     previousText: '上一节',
