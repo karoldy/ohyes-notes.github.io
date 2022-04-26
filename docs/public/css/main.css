@@ -1,6 +1,8 @@
 :root {
   --base-font-family: Monaco, Menlo, Consolas, Inconsolata;
   --code-font-family: Monaco, Menlo, Consolas, Inconsolata;
+
+  --highlightColor: #d22778;
 }
 
 @font-face {
@@ -74,6 +76,16 @@ table td:last-child {
 .markdown-section pre {
   padding: 0;
   white-space: pre-wrap;
+}
+
+.markdown-section code {
+  border-radius: 2px;
+  color: var(--highlightColor);
+  font-size: .9rem;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+  font-weight: 700;
 }
 
 .markdown-section table {

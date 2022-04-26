@@ -10,4 +10,4 @@
 - Git, Vim, Markdown
 
 [GitHub](https://github.com/karoldy/ohyes-notes.github.io/)
-[Get Started](#index)
+[开始阅读](#index)
