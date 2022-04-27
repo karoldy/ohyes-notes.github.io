@@ -28,7 +28,7 @@ March
 
 操作: <kbd>viw</kbd> -> <kbd>c</kbd> -> <kbd>输入April</kbd>
 
-![20]()
+![20](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/20.gif)
 
 参见 (`: h Select-mode`)
 
@@ -72,7 +72,7 @@ Select from here to here
 
 操作 <kbd>vbb</kbd> -> <kbd>o</kbd> -> <kbd>e</kbd>
 
-![21]()
+![21](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/21.gif)
 
 ---
 
@@ -104,7 +104,7 @@ fib(42)
 
 操作: <kbd>Vj</kbd> -> <Kbd>>.</kbd>
 
-![22]()
+![22](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/22.gif)
 
 ---
 
@@ -126,7 +126,7 @@ fib(42)
 
 操作: <kbd>vit</kbd> -> <kbd>U</kbd> -> <kbd>j.</kbd> -> <kbd>j.</kbd>
 
-![23-1]()
+![23-1](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/23-1.gif)
 
 发现了吧，最后的结果看起来有点怪
 
@@ -144,7 +144,7 @@ fib(42)
 
 操作: <kbd>gUit</kbd> -> <kbd>j.</kbd> -> <kbd>j.</kbd>
 
-![23-2]()
+![23-2](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/23-2.gif)
 
 ---
 
@@ -165,13 +165,7 @@ Visual mode      44
 
 操作: <kbd>ctrl</kbd> -> <kbd>v</kbd> -> <kbd>3j</kbd> -> <kbd>x...</kbd> -> <kbd>gv</kbd> -> <kbd>r|</kbd> -> <kbd>yyp</kbd> -> <kbd>Vr-</kbd>
 
-![24]()
-
-<!-- 这里可以在列块选中模式下进入插入模式进行多行操作，例如多行注释
-
-操作: <kbd>ctrl</kbd> -> <kbd>v</kbd> -> <kbd>I</kbd> -> <kbd>输入文本</kbd> -> <kbd>esc</kbd> -> <kbd>j</kbd>
-
-![24-2]() -->
+![24](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/24.gif)
 
 ---
 
@@ -182,8 +176,8 @@ Visual mode      44
 操作文本
 
 ```css
-li.one a { background-image: url('/image/sprite.png'); }
-li.two a { background-image: url('/image/sprite.png'); }
+li.one   a { background-image: url('/image/sprite.png'); }
+li.two   a { background-image: url('/image/sprite.png'); }
 li.three a { background-image: url('/image/sprite.png'); }
 ```
 
@@ -191,7 +185,7 @@ li.three a { background-image: url('/image/sprite.png'); }
 
 操作: <kbd>ctrl</kbd> -> <kbd>v</kbd> -> <kbd>jje</kbd> -> <kbd>c</kbd> -> <kbd>输入component</kbd> -> <kbd>esc</kbd> -> <kbd>j</kbd>
 
-![25]()
+![25](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/25.gif)
 
 ---
 
@@ -211,4 +205,4 @@ var foobar = foo + bar
 
 操作: <kbd>ctrl</kbd> -> <kbd>v</kbd> -> <kbd>jj$</kbd> -> <kbd>A;</kbd> -> <kbd>esc</kbd> -> <kbd>j</kbd>
 
-![26]()
+![26](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/26.gif)

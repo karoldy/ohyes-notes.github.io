@@ -20,7 +20,7 @@
 |`<C-w>`|删除前一个单词|
 |`<C-u>`|删至行首|
 
-![13]()
+![13](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/13.gif)
 
 ?> 这些模式不是插入模式独有的，甚至也不是 vim 独有的，在 vim 的命令模式中，以及在 bash shell 中，也可以使用它们
 
@@ -36,7 +36,7 @@
 |`<C-[>`|切换到普通模式|
 |`<C-o>`|切换到插入模式|
 
-![14]()
+![14](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/14.gif)
 
 ---
 
@@ -53,9 +53,9 @@ Read Drew Neil's
 
 把文本的两个单词插入到最后一行，以补全该行，由于已经出现过，所以把它复制到一个寄存器，然后在插入模式添加到第二行结尾
 
-操作: <kbd>yt,</kbd> -> <kbd>jA空格键</kbd> -> <kbd>ctrl</kbd> -> <kbd>r</kbd> -> <kbd>0</kbd> -> <kbd>.</kbd> -> <kbd>esc</kbd>
+操作: <kbd>yt,</kbd> -> <kbd>jA空格键</kbd> -> <kbd>ctrl+r</kbd> -> <kbd>0</kbd> -> <kbd>.</kbd> -> <kbd>esc</kbd>
 
-![15]()
+![15](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/15.gif)
 
 ---
 
@@ -71,7 +71,7 @@ Read Drew Neil's
 
 操作: <kbd>A</kbd> -> <kbd>ctrl</kbd> -> <kbd>r</kbd> -> <Kbd>=</kbd> -> <kbd>6*35</kbd> -> <kbd>enter</kbd>
 
-![16]()
+![16](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/16.gif)
 
 ---
 
@@ -119,7 +119,7 @@ the line length doesn't change.
 
 操作: <kbd>f.</kbd> -> <kbd>R</kbd> -> <kbd>,</kbd> -> <kbd>space</kbd> -> <kbd>b</kbd> -> <kbd>esc</kbd>
 
-![19]()
+![19](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/vim/mode/19.gif)
 
 ### 虚拟替换模式替换制表符
 
