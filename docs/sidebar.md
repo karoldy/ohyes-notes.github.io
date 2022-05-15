@@ -7,7 +7,7 @@
 
 * 技能
 
-  * [Vim](vim-docs/)
+  <!-- * [Vim](vim-docs/) -->
   * [Markdown](markdown/)
 
 * 官方文档
