@@ -1,7 +1,7 @@
 var num = 0;
 mermaid.initialize({ startOnLoad: false });
 window.$docsify = {
-  name: 'Docs',
+  name: 'Note',
   repo: 'karoldy/ohyes-notes.github.io',
   themeColor: 'rgb(30, 140, 189)',
   homepage: 'index.md',
