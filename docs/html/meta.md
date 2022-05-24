@@ -1,3 +1,5 @@
+[首页](/) / [html](/html/) / [元信息](/html/meta)
+
 # 头部
 
 `<head>`元素包含了所有的头部标签元素。在`<head>`元素中你可以插入脚本(scripts)，样式文件(css)，以及各种meta信息。可以添加在头部区域的元素标签为：`<title>`，`<style>`，`<meta>`，`<link>`，`<script>`，`<noscript>`和`<base>`

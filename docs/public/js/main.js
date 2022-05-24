@@ -1,14 +1,14 @@
 var num = 0;
 mermaid.initialize({ startOnLoad: false });
 window.$docsify = {
-  name: 'Docs',
+  name: 'Note',
   repo: 'karoldy/ohyes-notes.github.io',
   themeColor: 'rgb(30, 140, 189)',
   homepage: 'index.md',
   // coverpage: 'covepage.md',
-  loadNavbar: 'navbar.md',
+  // loadNavbar: 'navbar.md',
   loadSidebar: 'sidebar.md',
-  routerMode: 'history',
+  // routerMode: 'history',
   auto2top: true,
   executeScript: true,
   relativePath: true,

@@ -1,19 +1,19 @@
-# 主页 :id=index <!-- {docsify-ignore-all} -->
+# 全栈成长之路 :id=index <!-- {docsify-ignore-all} -->
 
 一个前端崽
 
-## 文档
+养成好习惯，先写方案，伪代码，再动手撸代码。
 
-<!-- [Html](html/) -->
+## 目录
 
-<!-- [Html5](html5/) -->
+[网络](network/)
 
-<!-- [git](git-docs/) -->
+[Html](html/)
 
-<!-- [Css](css/) -->
+[Html5](html5/)
 
-<!-- [Vim](vim-docs/) -->
+[Css](css/)
 
-<!-- [Markdown语法](markdown/) -->
+[Markdown语法](markdown/)
 
-<!-- [MarkdownLint规则](markdown-lint/) -->
+[MarkdownLint规则](markdown-lint/)

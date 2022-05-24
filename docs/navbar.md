@@ -1,4 +1,6 @@
-* [首页](/#index)
+* [首页](/)
+
+* [网络](/network/)
 
 * 前端
   * [html](/html/)
@@ -6,6 +8,6 @@
   * [css](/css/)
 
 * 技能
-  * [vim](/vim-docs/)
+  <!-- * [vim](/vim-docs/) -->
   * [Markdown](/markdown/)
   * [MarkdownLint](/markdown-lint/)

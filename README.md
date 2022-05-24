@@ -24,7 +24,3 @@ ohyes-notes.github.io/
 ├── package.json
 └── README.md
 ```
-
-## 代办事项
-
-- [ ] 侧边栏目录展开和折叠
