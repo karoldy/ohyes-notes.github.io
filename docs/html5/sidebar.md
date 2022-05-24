@@ -1,6 +1,5 @@
 * Html5
 
-  * [返回上一级](/#index)
   * [新特性](/html5/new)
   * [新元素](/html5/new-element)
   * [Canvas](/html5/canvas)
