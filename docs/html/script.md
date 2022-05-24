@@ -1,3 +1,5 @@
+[首页](/) / [html](/html/) / [脚本](/html/script)
+
 # 脚本
 
 JavaScript 是可插入HTML页面的编程代码
