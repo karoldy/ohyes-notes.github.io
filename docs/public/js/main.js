@@ -6,7 +6,7 @@ window.$docsify = {
   themeColor: 'rgb(30, 140, 189)',
   homepage: 'index.md',
   // coverpage: 'covepage.md',
-  // loadNavbar: 'navbar.md',
+  loadNavbar: 'navbar.md',
   loadSidebar: 'sidebar.md',
   // routerMode: 'history',
   auto2top: true,
