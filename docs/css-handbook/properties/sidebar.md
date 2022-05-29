@@ -1,7 +1,6 @@
 * 属性
 
-  * [返回上一级](/css-handbook/)
-  * [定位](position)
+  * [定位](positioning)
   * [布局](layout)
   * [尺寸与补白](dimension)
   * [背景与边框](background-and-border)
