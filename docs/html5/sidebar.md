@@ -17,3 +17,4 @@
   * [Web SQL](/html5/web-sql)
   * [Web Workers](/html5/web-workers)
   * [Web Socket](/html5/web-socket)
+  * [Web IndexDB](/html5/indexeddb)
