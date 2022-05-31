@@ -1434,6 +1434,3 @@ upperBound(upper, open);
 |:---|:---|:---|:---|
 |upper|Any|Y|指定IDBKeyRange范围的上限|
 |open|Boolean|N|指示上限是否闭合。默认值为false|
-
-
-

@@ -102,15 +102,15 @@
 
 ### 语法
 
-**z-index**: auto | \<integer>
+**z-index**: auto | [\<integer>](/css-handbook/value-and-units/numeric?id=integer)
 
 **默认值**：auto
 
-**适用于**：定位元素。即定义了position为非static的元素
+**适用于**：定位元素。即定义了[position](#position)为非static的元素
 
 **继承性**：无
 
-**动画性**：当值为\<integer>时
+**动画性**：当值为[\<integer>](/css-handbook/value-and-units/numeric?id=integer)时
 
 **计算值**：指定的值
 
@@ -120,7 +120,7 @@
 
 **auto**：元素在当前层叠上下文中的层叠级别是0。元素不会创建新的局部层叠上下文，除非它是根元素
 
-<strong>\<integer></strong>：用整数值来定义堆叠级别。可以为负值
+<strong>[\<integer>](/css-handbook/value-and-units/numeric?id=integer)</strong>：用整数值来定义堆叠级别。可以为负值
 
 ### 说明
 
@@ -246,7 +246,23 @@ p {
 
 ## top :id=top
 
+### 语法
 
+**top**: auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+
+**默认值**：auto
+
+**适用于**：定位元素。即定义了position为非static的元素
+
+**继承性**：无
+
+**动画性**：当值为[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时
+
+**计算值**：当position为static时，计算值是auto。
+为relative时，如果top和bottom都是auto，则它们的计算值是0；如果top和bottom其中一个为auto，则auto相当于另一个的负值，即top = -bottom；如果top和bottom的值都不为auto，则忽略bottom。
+否则在其它情况下，当指定值为[\<length>](/css-handbook/value-and-units/length?id=length)时，计算值为指定值，当指定值为[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时，计算值为计算后的绝对值。除去这些情况，都为auto
+
+**媒　体**：视觉
 
 ## right :id=right
 
