@@ -19,7 +19,7 @@
     "ie >= 10"
   ],
   "scripts": {
-    "start": "docsify serve docs -p 8080",
+    "dev": "docsify serve docs -p 8080",
     "lint:md": "markdownlint ./docs"
   },
   "devDependencies": {
