@@ -143,7 +143,7 @@ _斜体文本_
 ```
 
 <output>
-	<img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+	<img src="https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/overflow.png" alt="image">
 </output>
 
 带链接的图片
@@ -154,7 +154,7 @@ _斜体文本_
 
 <output>
 	<a href="https://github.com/karoldy/" target="_blank" rel="noopener">
-    <img src="https://karoldy.github.io/ohyes-notes.github.io/public/image/favicon.png" data-origin="../public/image/favicon.png" alt="image">
+    <img src="https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/overflow.png" alt="image">
   </a>
 </output>
 

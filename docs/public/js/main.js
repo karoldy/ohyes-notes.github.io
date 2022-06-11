@@ -70,5 +70,13 @@ window.$docsify = {
         return this.origin.code.apply(this, arguments);
       }
     }
-  }
+  },
+  vueComponents: {
+    'vue-link': {
+      template: `
+        <a :href="href">{{ label }}</a>
+      `,
+      props: ['href', 'label']
+    },
+  },
 }
