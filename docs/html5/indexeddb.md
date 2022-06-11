@@ -16,7 +16,7 @@ IndexedDB 是一种轻量级 NOSQL 数据库，是由浏览器自带。相比Web
 
 1. 键值对存储
 
-IndexedDB内部采用对象仓库（object store）存放数据。所有类型的数据都可以直接存入，包括JavaScript对象。在对象仓库中，数据以“键值对”的形式保存，每一个数据都有对应的键名，键名是独一无二的，不能有重复，否则会抛出一个错误
+IndexedDB内部采用对象仓库（object store）存放数据。所有类型的数据都可以直接存入，包括JavaScript对象。在对象仓库中，数据以`键值对`的形式保存，每一个数据都有对应的键名，键名是独一无二的，不能有重复，否则会抛出一个错误
 
 2. 异步
 
@@ -24,7 +24,7 @@ IndexedDB操作时不会锁死浏览器，用户依然可以进行其他操作�
 
 3. 支持事务
 
-IndexedDB支持事务（transaction），这意味着一系列操作步骤之中，只要有一步失败，整个事务就都取消，数据库回到事务发生之前的状态，不存在只改写一部分数据的情况
+IndexedDB支持事务(transaction)，这意味着一系列操作步骤之中，只要有一步失败，整个事务就都取消，数据库回到事务发生之前的状态，不存在只改写一部分数据的情况
 
 4. 同域限制
 
@@ -60,13 +60,13 @@ IndexedDB API 的 IDBOpenDBRequest 接口提供了访问打开或删除数据库
 
 **创建数据库**
 
-```js
+```typescript
 let db;
 
 // 兼容性处理
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
-let request = indexedDB.open(dbName, version);
+let request: IDBOpenDBRequest = indexedDB.open(dbName, version);
 
 request.onerror = function (e) {
 	console.log('创建数据库失败')
@@ -115,7 +115,7 @@ IDBDatabase接口的close()方法立即返回并在单独的线程中关闭连�
 **语法**
 
 ```js
-close()
+IDBDatabase.close();
 ```
 
 ---
@@ -124,11 +124,13 @@ close()
 
 IDBDatabase接口的createObjectStore()方法创建并返回一个新的IDBObjectStore对象
 
+!> createObjectStore() 只能在 版本升级的回调中执行，其他地方调用会报错
+
 **语法**
 
-```js
-createObjectStore(name)
-createObjectStore(name, options)
+```ts
+const store: IDBObjectStore = IDBDatabase.createObjectStore(name);
+const store: IDBObjectStore = IDBDatabase.createObjectStore(name, options);
 ```
 
 |参数|类型|必传|描述|
@@ -136,7 +138,7 @@ createObjectStore(name, options)
 |name|String|Y|要创建的新对象存储的名称。请注意，可以使用空名称创建对象存储|
 |options|Object|N|一个选项对象，其属性是该方法的可选参数|
 
-options属性说明
+**options属性说明**
 
 |属性|值|描述|
 |:---|:---|:---|
@@ -154,7 +156,7 @@ IDBDatabase接口的deleteObjectStore()方法销毁连接数据库中具有给�
 **语法**
 
 ```js
-deleteObjectStore(name)
+IDBDatabase.deleteObjectStore(name);
 ```
 
 |参数|类型|必传|描述|
@@ -169,10 +171,10 @@ IDBDatabase接口的transaction方法立即返回包含IDBTransation的事务对
 
 **语法**
 
-```js
-transaction(storeNames)
-transaction(storeNames, mode)
-transaction(storeNames, mode, options)
+```ts
+const t: IDBTransation = IDBDatabase.transaction(storeNames);
+const t: IDBTransation = IDBDatabase.transaction(storeNames, mode);
+const t: IDBTransation = IDBDatabase.transaction(storeNames, mode, options);
 ```
 
 |参数|类型|必传|描述|
@@ -181,7 +183,7 @@ transaction(storeNames, mode, options)
 |mode|String<readonly \| readwrite \| readwriteflush>|Y|可以在事务中执行的访问类型。事务以三种模式之一打开：`readonly`、`readwrite`和`readwriteflush`(非标准，仅限Firefox)此处无法指定versionchange模式。如果不提供参数，则默认访问模式为只读。为了避免减慢速度，除非确实需要写入数据库，否则不要打开读写事务，(默认`readonly`)|
 |options|Object|N|其他参数|
 
-options属性说明
+**options属性说明**
 
 |属性|值|描述|
 |:---|:---|:---|
@@ -189,15 +191,15 @@ options属性说明
 
 以下几行是等效的：
 
-```js
-let transaction = db.transaction([storeName]);
-let transaction = db.transaction(storeName);
+```ts
+const t: IDBTransation = IDBDatabase.transaction([storeName]);
+const t: IDBTransation = IDBDatabase.transaction(storeName);
 ```
 
 获取全部数据表
 
 ```js
-let transaction = db.transaction(db.objectStoreNames);
+const t: IDBTransation = IDBDatabase.transaction(db.objectStoreNames);
 ```
 
 ---
@@ -211,7 +213,7 @@ let transaction = db.transaction(db.objectStoreNames);
 **语法**
 
 ```js
-db.addEventListener('close', function (event) {
+IDBDatabase.addEventListener('close', function (event) {
 	// do something
 });
 ```
@@ -219,7 +221,7 @@ db.addEventListener('close', function (event) {
 or
 
 ```js
-db.onclose = function (event) {
+IDBDatabase.onclose = function (event) {
 	// do something
 };
 ```
@@ -233,7 +235,7 @@ db.onclose = function (event) {
 **语法**
 
 ```js
-db.addEventListener('versionchange', function (event) {
+IDBDatabase.addEventListener('versionchange', function (event) {
 	// do something
 });
 ```
@@ -241,7 +243,7 @@ db.addEventListener('versionchange', function (event) {
 or
 
 ```js
-db.onversionchange = function (event) {
+IDBDatabase.onversionchange = function (event) {
 	// do something
 };
 ```
@@ -254,8 +256,8 @@ IDBTransacation接口由IndexedDB API提供，异步事务使用数据库中的�
 
 **创建事务**
 
-```js
-let transaction = db.transaction(storeName, mode);
+```ts
+const transaction: IDBTransaction = IDBDatabase.transaction(storeName, mode);
 ```
 
 ### 属性
@@ -279,17 +281,17 @@ IDBTransation接口的abort()方法回滚对数据库中与此事务关联的对
 **语法**
 
 ```js
-abort();
+IDBTransaction.abort();
 ```
 
 示例
 
-```js
-let transaction = db.transaction(storeName, 'readwrite');
-let store = transaction.objectStore(storeName);
-let request = store.add({ ... });
+```ts
+const transaction: IDBTransaction = IDBDatabase.transaction(storeName, 'readwrite');
+const store: IDBObjectStore = transaction.objectStore(storeName);
+const request: IDBRequest = store.add({ ... });
 
-request.onerror = function (event) {
+transaction.onerror = function (event) {
 	// 新增失败回滚
 	transaction.abort();
 };
@@ -309,15 +311,15 @@ IDBTransation接口的commit()方法在激活的事务上调用该事务时提�
 **语法**
 
 ```js
-commit()
+IDBTransaction.commit();
 ```
 
 示例
 
-```js
-let transaction = db.transaction(storeName, 'readwrite');
-let store = transaction.objectStore(storeName);
-let request = store.add({ ... });
+```ts
+const transaction: IDBTransaction = IDBDatabase.transaction(storeName, 'readwrite');
+const store: IDBObjectStore = transaction.objectStore(storeName);
+const request: IDBRequest = store.add({ ... });
 
 transaction.commit();
 ```
@@ -332,8 +334,8 @@ IDBTransation接口的objectStore()方法返回已添加到此事务范围的对
 
 **语法**
 
-```js
-objectStore(name)
+```ts
+const store: IDBObjectStore = IDBTransaction.objectStore(name);
 ```
 
 |参数|类型|必传|描述|
@@ -366,14 +368,14 @@ objectStore(name)
 **语法**
 
 ```js
-transaction.addEventListener('abort', function (event) {
+IDBTransaction.addEventListener('abort', function (event) {
 	console.log('发生事务回滚');
 });
 ```
 or
 
 ```js
-transaction.onabort= function (event) {
+IDBTransaction.onabort= function (event) {
 	console.log('发生事务回滚');
 };
 ```
@@ -387,14 +389,14 @@ transaction.onabort= function (event) {
 **语法**
 
 ```js
-transaction.addEventListener('complete', function (event) {
+IDBTransaction.addEventListener('complete', function (event) {
 	console.log('事务完成');
 });
 ```
 or
 
 ```js
-transaction.oncomplete = function (event) {
+IDBTransaction.oncomplete = function (event) {
 	console.log('事务完成');
 };
 ```
@@ -408,14 +410,14 @@ transaction.oncomplete = function (event) {
 **语法**
 
 ```js
-transaction.addEventListener('error', function (event) {
+IDBTransaction.addEventListener('error', function (event) {
 	console.log('事务错误');
 });
 ```
 or
 
 ```js
-transaction.onerror = function (event) {
+IDBTransaction.onerror = function (event) {
 	console.log('事务错误');
 };
 ```
@@ -434,30 +436,6 @@ IndexedDB api中的IDBRequest接口提供了根据绑定事件处理函数访问
 
 用直白的话来说就是：所有的异步方法返回一个request对象。如果request对象成功执行了，结果可以通过result属性访问到，并且该request对象上会触发success事件。如果操作中有错误发生，一个error事件会触发，并且会通过result属性抛出一个异常。
 
-示例:
-
-```js
-let request = window.indexedDB.open('数据库名称');
-request.onsuccess = function (event) {
-  let db = event.target.result;
-  let transaction = db.transaction([]);
-
-  let curRequest = transaction.objectStore('数据表名称').openCursor();
-
-  curRequest.onsuccess = function (event) {
-  	// do something
-  }
-};
-
-request.onerror = function(event) {
-	// do something
-};
-
-request.onupgradeneeded= function(event) {
-	// do something
-};
-```
-
 ---
 
 ### 属性
@@ -474,7 +452,7 @@ request.onupgradeneeded= function(event) {
 
 ### 事件
 
-#### `IDBRequest.error`
+#### `IDBRequest.onerror`
 
 当错误导致请求失败时，将执行错误处理程序，此事件不可取消且不冒泡。
 
@@ -493,6 +471,27 @@ IDBRequest.onerror = function (event) {
 };
 ```
 
+#### `IDBRequest.onsuccess`
+
+请求成功
+
+**语法**
+
+```js
+IDBRequest.addEventListener('success', function (event) {
+	console.log('请求成功');
+  const result = event.target.result;
+});
+```
+or
+
+```js
+IDBRequest.onsuccess = function (event) {
+	console.log('请求成功');
+  const result = event.target.result;
+};
+```
+
 ---
 
 ## IDBObjectStore :id=objectstore
@@ -501,10 +500,8 @@ IDBRequest.onerror = function (event) {
 
 **创建对象存储**
 
-```js
-var transaction = db.transaction(storeName);
-
-var store = transaction.objectStore(storeName);
+```ts
+const store: IDBObjectStore = IDBDataBase.transaction(storeName, 'readonly').objectStore(storeName);
 ```
 
 ---
@@ -532,8 +529,8 @@ IDBObjectStore接口的count()方法返回IDBRequest对象，并在单独的线�
 **语法**
 
 ```js
-count()
-count(query)
+const request: IDBRequest = IDBObjectStore.count();
+const request: IDBRequest = IDBObjectStore.count(query);
 ```
 
 |参数|类型|必传|描述|
@@ -542,9 +539,11 @@ count(query)
 
 示例
 
-```js
-let request = store.count();
-let count = request.result;
+```ts
+const request: IDBRequest = IDBObjectStore.count();
+request.onsuccess = (event) => {
+  const count = event.target.result;
+};
 ```
 
 ---
@@ -555,8 +554,8 @@ IDBObjectStore接口的clear()方法创建并立即返回IDBRequest对象，并�
 
 **语法**
 
-```js
-clear()
+```ts
+const request: IDBRequest = IDBObjectStore.clear();
 ```
 
 ---
@@ -567,8 +566,8 @@ IDBObjectStore 的接口 get()方法 返回 IDBRequest 对象，并在单独的�
 
 **语法**
 
-```js
-get(key)
+```ts
+const request: IDBRequest = IDBObjectStore.get(key);
 ```
 
 |参数|类型|必传|描述|
@@ -577,9 +576,11 @@ get(key)
 
 示例
 
-```js
-let request = store.get(key);
-let result = request.result;
+```ts
+const request: IDBRequest = IDBObjectStore.count();
+request.onsuccess = (event) => {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -590,9 +591,9 @@ IDBObjectStore 接口中的 add() 方法返回一个 IDBRequest 对象，在单�
 
 **语法**
 
-```js
-add(value);
-add(value, key);
+```ts
+const request: IDBRequest = IDBObjectStore.add(value);
+const request: IDBRequest = IDBObjectStore.add(value, key);
 ```
 
 |参数|类型|必传|描述|
@@ -612,9 +613,9 @@ IDBObjectStore 接口的  put() 方法更新一条给定的数据库记录,如�
 
 语法
 
-```js
-put(value);
-put(value, key);
+```ts
+const request: IDBRequest = IDBObjectStore.put(value);
+const request: IDBRequest = IDBObjectStore.put(value, key);
 ```
 
 |参数|类型|必传|描述|
@@ -632,8 +633,8 @@ IDBObjectStore接口的delete()方法返回IDBRequest对象，并在单独的线
 
 **语法**
 
-```js
-delete(key)
+```ts
+const request: IDBRequest = IDBObjectStore.delete(key);
 ```
 
 |参数|类型|必传|描述|
@@ -648,10 +649,10 @@ IDBObjectStore接口的getAll()方法返回一个IDBRequest对象，该对象包
 
 **语法**
 
-```js
-getAll()
-getAll(query)
-getAll(query, count)
+```ts
+const request: IDBRequest = IDBObjectStore.getAll();
+const request: IDBRequest = IDBObjectStore.getAll(query);
+const request: IDBRequest = IDBObjectStore.getAll(query, count);
 ```
 
 |参数|类型|必传|描述|
@@ -661,9 +662,11 @@ getAll(query, count)
 
 示例
 
-```js
-let request = store.getAll();
-let result = request.result;
+```ts
+const request: IDBRequest = IDBObjectStore.getAll();
+request.onsuccess = (event) => {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -674,10 +677,10 @@ IDBObjectStore接口的getAllKeys()方法返回一个IDBRequest对象，该对�
 
 **语法**
 
-```js
-getAllKeys()
-getAllKeys(query)
-getAllKeys(query, count)
+```ts
+const request: IDBRequest = IDBObjectStore.getAllKeys();
+const request: IDBRequest = IDBObjectStore.getAllKeys(query);
+const request: IDBRequest = IDBObjectStore.getAllKeys(query, count);
 ```
 
 |参数|类型|必传|描述|
@@ -687,9 +690,11 @@ getAllKeys(query, count)
 
 示例
 
-```js
-let request = store.getAllKeys();
-let result = request.result;
+```ts
+const request: IDBRequest = IDBObjectStore.getAll();
+request.onsuccess = (event) => {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -700,8 +705,8 @@ IDBObjectStore接口的getKey()方法返回IDBRequest对象，并在单独的线
 
 **语法**
 
-```js
-getKey(key);
+```ts
+const request: IDBRequest = IDBObjectStore.getKey(key);
 ```
 
 |参数|类型|必传|描述|
@@ -710,14 +715,14 @@ getKey(key);
 
 示例
 
-```js
-let today = new Date();
-let yesterday = new Date(today);
+```ts
+const today = new Date();
+const yesterday = new Date(today);
 yesterday.setDate(today.getDate() - 1);
-let request = store.getKey(IDBKeyRange(yesterday, today));
+const request: IDBRequest = IDBObjectStore.getKey(IDBKeyRange(yesterday, today));
 request.onsuccess = (event) => {
-  let when = event.target.result;
-  alert("The 1st activity in last 24 hours was occurred at " + when);
+  const result = event.target.result;
+  alert("The 1st activity in last 24 hours was occurred at " + result);
 };
 ```
 
@@ -729,8 +734,8 @@ IDBObjectStore接口的index()方法在当前对象存储中打开一个命名�
 
 **语法**
 
-```js
-index(name);
+```ts
+const index: IDBIndex = IDBObjectStore.index(name);
 ```
 
 |参数|类型|必传|描述|
@@ -739,9 +744,10 @@ index(name);
 
 示例
 
-```js
-let index = store.index(index_name);
+```ts
+const index: IDBIndex = IDBObjectStore.index(name);
 index.openCursor().onsuccess = function (event) {
+  const cursor = event.target.result;
 	// do something
 };
 ```
@@ -752,20 +758,22 @@ index.openCursor().onsuccess = function (event) {
 
 IDBObjectStore接口的createIndex()方法在连接的数据库中创建并返回一个新的IDBIndex对象。它创建一个新字段/列，为每个要包含的数据库记录定义一个新的数据点
 
+!> 注： createIndex() 只能在版本更新或者创始创建数据库是执行，否则会报错
+
 **语法**
 
-```js
-createIndex(indexName, keyPath)
-createIndex(indexName, keyPath, objectParameters)
+```ts
+const index: IDBIndex = IDBObjectStore.createIndex(name, keyPath);
+const index: IDBIndex = IDBObjectStore.createIndex(name, keyPath, options);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|indexName|String|Y|要创建的索引的名称。请注意，可以使用空名称创建索引|
+|name|String|Y|要创建的索引的名称。请注意，可以使用空名称创建索引|
 |keyPath|String \| [String]|Y|要使用的索引的键路径。请注意，可以使用空键路径创建索引，也可以将序列（数组）作为键路径传递|
-|objectParameters|Object|N|可以包括以下属性的对象|
+|options|Object|N|可以包括以下属性的对象|
 
-objectParameters属性说明
+**options属性说明**
 
 |属性|类型|描述|
 |:---|:---|:---|
@@ -781,7 +789,7 @@ IDBObjectStore接口的deleteIndex()方法将销毁在版本升级期间使用�
 **语法**
 
 ```js
-deleteIndex(indexName);
+IDBObjectStore.deleteIndex(indexName);
 ```
 
 |参数|类型|必传|描述|
@@ -796,10 +804,10 @@ IDBObjectStore接口的openCursor()方法返回IDBRequest对象，并在单独�
 
 **语法**
 
-```js
-openCursor()
-openCursor(query)
-openCursor(query, direction)
+```ts
+const reqeust: IDBRequest = IDBObjectStore.openCursor();
+const reqeust: IDBRequest = IDBObjectStore.openCursor(query);
+const reqeust: IDBRequest = IDBObjectStore.openCursor(query, direction);
 ```
 
 |参数|类型|必传|描述|
@@ -809,12 +817,14 @@ openCursor(query, direction)
 
 示例
 
-```js
-let request = store.openCursor();
-// let cursor = request.result;
+```ts
+const reqeust: IDBRequest = IDBObjectStore.openCursor();
+
 request.onsuccess = function (event) {
-  let cursor = request.result;
-  if(cursor) {
+  const result = [];
+  const cursor: IDBCursorWithValue = event.target.result;
+  if (cursor) {
+    result.push(cursor.value);
     cursor.continue();
   } else {
     // no more results
@@ -830,10 +840,10 @@ IDBObjectStore接口的openKeyCursor()方法返回一个IDBRequest对象，其�
 
 **语法**
 
-```js
-openKeyCursor()
-openKeyCursor(query)
-openKeyCursor(query, direction)
+```ts
+const reqeust: IDBRequest = IDBObjectStore.openKeyCursor();
+const reqeust: IDBRequest = IDBObjectStore.openKeyCursor(query);
+const reqeust: IDBRequest = IDBObjectStore.openKeyCursor(query, direction);
 ```
 
 |参数|类型|必传|描述|
@@ -843,11 +853,14 @@ openKeyCursor(query, direction)
 
 示例
 
-```js
-let request = store.openKeyCursor();
+```ts
+const reqeust: IDBRequest = IDBObjectStore.openKeyCursor();
+
 request.onsuccess = function (event) {
-  let cursor = request.result;
-  if(cursor) {
+  const result = [];
+  const cursor: IDBCursor = event.target.result;
+  if (cursor) {
+    result.push(cursor);
     cursor.continue();
   } else {
     // no more results
@@ -863,14 +876,14 @@ IndexedDB API 中的IDBIndex接口提供了异步获取数据库中一个index�
 
 **创建索引**
 
-```js
-store.createIndex(indexName, keyPath, options);
+```ts
+const index: IDBIndex = IDBObjectStore.createIndex(name, keyPath, options);
 ```
 
 **获取索引**
 
-```js
-let index = store.index(indexName);
+```ts
+const index: IDBIndex = IDBObjectStore.index(name);
 ```
 
 ### 属性
@@ -893,9 +906,9 @@ IDBIndex接口的count()方法返回IDBRequest对象，并在单独的线程中�
 
 **语法**
 
-```js
-count();
-count(key);
+```ts
+const request: IDBRequest = IDBIndex.count();
+const request: IDBRequest = IDBIndex.count(key);
 ```
 
 |参数|类型|必传|描述|
@@ -905,9 +918,11 @@ count(key);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.count();
-let result = request.result;
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.count();
+request.onsuccess = function (event) {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -919,8 +934,8 @@ IDBIndex接口的get()方法返回IDBRequest对象，并在单独的线程中查
 **语法**
 
 ```js
-get();
-get(key);
+const request: IDBRequest = IDBIndex.get();
+const request: IDBRequest = IDBIndex.get(key);
 ```
 
 |参数|类型|必传|描述|
@@ -930,9 +945,11 @@ get(key);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.get();
-let result = request.result;
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.get();
+request.onsuccess = function (event) {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -944,9 +961,9 @@ IDBIndex接口的getAll()方法检索索引中的所有对象，返回IDBRequest
 **语法**
 
 ```js
-getAll();
-getAll(query);
-getAll(query, count);
+const request: IDBRequest = IDBIndex.getAll();
+const request: IDBRequest = IDBIndex.getAll(query);
+const request: IDBRequest = IDBIndex.getAll(query, count);
 ```
 
 |参数|类型|必传|描述|
@@ -957,9 +974,11 @@ getAll(query, count);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.getAll();
-let result = request.result;
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.getAll();
+request.onsuccess = function (event) {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -970,11 +989,11 @@ IDBIndex接口的getAllKeys()方法异步检索索引中所有对象的主键，
 
 **语法**
 
-```js
-getAllKeys();
-getAllKeys(query);
-getAllKeys(query, count);
-````
+```ts
+const request: IDBRequest = IDBIndex.getAllKeys();
+const request: IDBRequest = IDBIndex.getAllKeys(query);
+const request: IDBRequest = IDBIndex.getAllKeys(query, count);
+```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
@@ -984,9 +1003,11 @@ getAllKeys(query, count);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.getAllKeys();
-let result = request.result;
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.getAllKeys();
+request.onsuccess = function (event) {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -998,8 +1019,8 @@ IDBIndex接口的getKey()方法返回一个IDBRequest对象，并在单独的线
 **语法**
 
 ```js
-getKey();
-getKey(key);
+const request: IDBRequest = IDBIndex.getKey();
+const request: IDBRequest = IDBIndex.getKey(key);
 ```
 
 |参数|类型|必传|描述|
@@ -1009,9 +1030,11 @@ getKey(key);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.getKey();
-let result = request.result;
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.getKey();
+request.onsuccess = function (event) {
+  const result = event.target.result;
+};
 ```
 
 ---
@@ -1023,9 +1046,9 @@ IDBIndex接口的openCursor()方法返回IDBRequest对象，并在单独的线�
 **语法**
 
 ```js
-openCursor();
-openCursor(range);
-openCursor(range, direction);
+const request: IDBRequest = IDBIndex.openCursor();
+const request: IDBRequest = IDBIndex.openCursor(range);
+const request: IDBRequest = IDBIndex.openCursor(range, direction);
 ```
 
 |参数|类型|必传|描述|
@@ -1036,8 +1059,11 @@ openCursor(range, direction);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.openCursor();
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.openCursor();
+request.onsuccess = function (event) {
+  const cursor = event.target.result;
+};
 ```
 
 ---
@@ -1049,9 +1075,9 @@ IDBIndex接口的openKeyCursor()方法返回一个IDBRequest对象，并在一�
 **语法**
 
 ```js
-openKeyCursor();
-openKeyCursor(range);
-openKeyCursor(range, direction);
+const request: IDBRequest = IDBIndex.openKeyCursor();
+const request: IDBRequest = IDBIndex.openKeyCursor(range);
+const request: IDBRequest = IDBIndex.openKeyCursor(range, direction);
 ```
 
 |参数|类型|必传|描述|
@@ -1062,8 +1088,11 @@ openKeyCursor(range, direction);
 示例
 
 ```js
-let index = store.index(indexName);
-let request = index.openKeyCursor();
+const index: IDBIndex = IDBObjectStore.index(name);
+const request: IDBRequest = index.openKeyCursor();
+request.onsuccess = function (event) {
+  const cursor = event.target.result;
+};
 ```
 
 ---
@@ -1076,12 +1105,10 @@ IndexedDB API 中的 IDBCursor 接口表示一个游标，用于遍历或迭代�
 **创建游标**
 
 ```js
-let cursor
-let transaction = db.transaction([storeName], "readonly");
-let objectStore = transaction.objectStore(storeName);
+const request: IDBRequst = IDBDataBase.transaction(name, 'readonly').objectStore(name).openCursor();
 
-objectStore.openCursor().onsuccess = function (e) {
-	cursor = e.target.result;
+request.onsuccess = function (e) {
+	const cursor: IDBCursor = e.target.result;
 }
 ```
 
@@ -1106,18 +1133,12 @@ IDBCursor接口的advance()方法设置光标向前移动位置的次数，返�
 **语法**
 
 ```js
-advance(count);
+IDBCursor.advance(count);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |count|Number|Y|向前移动光标的次数|
-
-示例
-
-```js
-cursor.advance(count);
-```
 
 ---
 
@@ -1128,8 +1149,8 @@ IDBCursor接口的continue()方法将光标前进到沿其方向的下一个位�
 **语法**
 
 ```js
-continue();
-continue(key);
+IDBCursor.continue();
+IDBCursor.continue(key);
 ```
 
 |参数|类型|必传|描述|
@@ -1147,7 +1168,7 @@ IDBCursor接口的continuePrimaryKey()方法将光标前进到其键与key参数
 **语法**
 
 ```js
-continuePrimaryKey(key, primaryKey);
+IDBCursor.continuePrimaryKey(key, primaryKey);
 ```
 
 |参数|类型|必传|描述|
@@ -1166,7 +1187,7 @@ IDBCursor接口的delete()方法返回IDBRequest对象，并在单独的线程�
 **语法**
 
 ```js
-delete();
+IDBCursor.delete();
 ```
 
 ---
@@ -1180,18 +1201,12 @@ IDBCursor接口的update()方法返回IDBRequest对象，并在单独的线程�
 **语法**
 
 ```js
-update(value);
+IDBCursor.update(value);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |value|Object|Y|需要修改的对象|
-
-示例
-
-```js
-cursor.update(data);
-```
 
 ---
 
@@ -1214,37 +1229,31 @@ IndexedDB API的IDBCursorWithValue接口表示用于遍历或迭代数据库中�
 
 ### 方法
 
-#### `IDBCursor.advance()`
+#### `IDBCursorWithValue.advance()`
 
-IDBCursor接口的advance()方法设置光标向前移动位置的次数，返回值None(undefined)
+IDBCursorWithValue接口的advance()方法设置光标向前移动位置的次数，返回值None(undefined)
 
 **语法**
 
 ```js
-advance(count);
+.IDBCursorWithValue.advance(count);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |count|Number|Y|向前移动光标的次数|
 
-示例
-
-```js
-cursor.advance(count);
-```
-
 ---
 
-#### `IDBCursor.continue()`
+#### `IDBCursorWithValue.continue()`
 
-IDBCursor接口的continue()方法将光标前进到沿其方向的下一个位置，即其键与可选键参数匹配的项。如果未指定键，光标将根据其方向前进到下一个位置，返回值None(undefined)
+IDBCursorWithValue接口的continue()方法将光标前进到沿其方向的下一个位置，即其键与可选键参数匹配的项。如果未指定键，光标将根据其方向前进到下一个位置，返回值None(undefined)
 
 **语法**
 
 ```js
-continue();
-continue(key);
+IDBCursorWithValue.continue();
+IDBCursorWithValue.continue(key);
 ```
 
 |参数|类型|必传|描述|
@@ -1253,16 +1262,16 @@ continue(key);
 
 ---
 
-#### `IDBCursor.continuePrimaryKey()`
+#### `IDBCursorWithValue.continuePrimaryKey()`
 
-IDBCursor接口的continuePrimaryKey()方法将光标前进到其键与key参数匹配以及主键与主键参数匹配的项，返回值None(undefined)
+IDBCursorWithValue接口的continuePrimaryKey()方法将光标前进到其键与key参数匹配以及主键与主键参数匹配的项，返回值None(undefined)
 
 !> 此方法仅对来自索引的游标有效。将其用于来自对象存储的游标将引发错误
 
 **语法**
 
 ```js
-continuePrimaryKey(key, primaryKey);
+IDBCursorWithValue.continuePrimaryKey(key, primaryKey);
 ```
 
 |参数|类型|必传|描述|
@@ -1272,41 +1281,35 @@ continuePrimaryKey(key, primaryKey);
 
 ---
 
-#### `IDBCursor.delete()`
+#### `IDBCursorWithValue.delete()`
 
-IDBCursor接口的delete()方法返回IDBRequest对象，并在单独的线程中删除光标位置处的记录，而不更改光标位置。删除记录后，光标的值将设置为null
+IDBCursorWithValue接口的delete()方法返回IDBRequest对象，并在单独的线程中删除光标位置处的记录，而不更改光标位置。删除记录后，光标的值将设置为null
 
 !> 不能对从IDBIndex获取的游标调用delete()
 
 **语法**
 
 ```js
-delete();
+IDBCursorWithValue.delete();
 ```
 
 ---
 
-#### `IDBCursor.update()`
+#### `IDBCursorWithValue.update()`
 
-IDBCursor接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象存储中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
+IDBCursorWithValue接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象存储中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
 
 !> 不能对从IDBIndex获取的游标调用update()
 
 **语法**
 
 ```js
-update(value);
+IDBCursorWithValue.update(value);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |value|Object|Y|需要修改的对象|
-
-示例
-
-```js
-cursor.update(data);
-```
 
 ---
 
@@ -1331,8 +1334,8 @@ IndexedDB API 的IDBKeyRange接口表示一些数据类型上的键的连续间�
 **创建游标范围**
 
 ```js
-let range = IDBKeyRange();
-store.openCursor(range);
+const range: IDBKeyRange = IDBKeyRange();
+const request: IDBRequest = IDBObjectStore.openCursor(range);
 ```
 
 ### 属性
@@ -1355,9 +1358,9 @@ IDBKeyRange接口的bound()方法创建具有指定上限和下限的IDBKeyRange
 **语法**
 
 ```js
-bound(lower, upper);
-bound(lower, upper, lowerOpen);
-bound(lower, upper, lowerOpen, upperOpen);
+IDBKeyRange.bound(lower, upper);
+IDBKeyRange.bound(lower, upper, lowerOpen);
+IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
 ```
 
 |参数|类型|必传|描述|
@@ -1376,7 +1379,7 @@ IDBKeyRange接口的includes()方法返回一个布尔值，指示指定的键�
 **语法**
 
 ```js
-includes(key);
+IDBKeyRange.includes(key);
 ```
 
 |参数|类型|必传|描述|
@@ -1392,8 +1395,8 @@ IDBKeyRange接口的lowerBound()方法创建一个仅具有下限的IDBKeyRange�
 **语法**
 
 ```js
-lowerBound(lower);
-lowerBound(lower, open);
+IDBKeyRange.lowerBound(lower);
+IDBKeyRange.lowerBound(lower, open);
 ```
 
 |参数|类型|必传|描述|
@@ -1410,7 +1413,7 @@ IDBKeyRange接口的only()方法创建一个包含单个值的IDBKeyRange对象
 **语法**
 
 ```js
-only(value);
+IDBKeyRange.only(value);
 ```
 
 |参数|类型|必传|描述|
@@ -1426,11 +1429,549 @@ IDBKeyRange接口的upperBound()方法创建一个IDBKeyRange对象。默认情�
 **语法**
 
 ```js
-upperBound(upper);
-upperBound(upper, open);
+IDBKeyRange.upperBound(upper);
+IDBKeyRange.upperBound(upper, open);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |upper|Any|Y|指定IDBKeyRange范围的上限|
 |open|Boolean|N|指示上限是否闭合。默认值为false|
+
+## 封装的IndexedDB
+
+### 使用
+
+```js
+const db = new KaCache.IndexedDB({
+  name: 'local',
+  version: 1,
+  stores: {
+    log: {
+      keyPath: 'id',
+      autoIncrement: false,
+      fields: {
+        id: 'string',
+        name: 'string',
+        code: 'string',
+        time: 'number'
+      },
+      indexs: {
+        time: {
+          keyPath: 'time',
+          unique: false
+        }
+      }
+    }
+  }
+});
+
+db.open()
+db.getStore('log', 'readwrite', (store) => {
+  store.add({ ... });
+});
+```
+
+### 配置项
+
+|参数|类型|必传|默认值|描述|
+|:---|:---|:---|:---|:---|
+|name|String|Y|-|数据库名|
+|version|Number|Y|-|数据库版本号，新的版本号不能比当前版本号低|
+|stores|Object|Y|-|数据表模型|
+
+**数据表模型属性说明**
+
+`key值表示数据表名`
+
+|属性|类型|必传|描述|
+|:---|:---|:---|:---|
+|keyPath|String \| Number \| undefined|Y|数据表主键名称|
+|autoIncrement|Boolean|N|是否自增主键|
+|indexs|Object|N|索引模型(indexedDB是非关系型数据库，建立索引，可以根据索引查找数据，否则只能根据主键查找)|
+
+`注: 一般keyPath和autoIncrement只需要一个，两个都存在并且autoIncrement为true的话，自动生成一个自增主键，并且keyPath设置的字段必须要存在, 且对象不得缺少指定属性`
+
+**索引模型属性说明**
+
+`key值表示索引名`
+
+属性|类型|必传|描述
+:---|:---|:---|:---
+keyPath|String \| Array\<string>|Y|建立索引的键
+unique|Boolean|N|索引是否允许重复键值
+
+使用IndexedDB 注意点
+
+> 当数据库结构发生变化(新增数据表，增删数据表索引)，版本需要更新(否则不起作用)，且新版本号不能比旧版本号低，否则会报错
+> 版本更新时，因为IndexedDB的限制，只能在版本更新的事务中增删数据表和数据表索引，但版本更新的事务，无法获取旧表对象，所以无法操作旧表，只能删除旧表，重新建立索引，这个操作会导致原本的数据丢失
+
+### 方法
+
+### IndexedDB
+
+#### `IndexedDB.open()`
+
+建立IndexedDB连接，返回promise对象
+
+```js
+IndexedDB.open();
+```
+
+---
+
+#### `IndexedDB.close()`
+
+关闭IndexedDB连接，返回值undefined
+
+```js
+IndexedDB.close();
+```
+
+---
+
+#### `IndexedDB.getStore()`
+
+获取数据表对象，返回值 IDBObjectStore
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|name|String|Y|数据表名|
+|mode|String<readwrite \| readonly>|Y|事务执行方式|
+|callback|Function|N|回调函数|
+
+```js
+const store = IndexedDB.getStore('log', 'readonly', (objectStore) => {
+  objectStore.add({ ... });
+});
+```
+
+---
+
+#### Store
+
+> 以log表为例
+
+```js
+await db.open();
+db.stores.log.add({ ... });
+```
+
+---
+
+#### `Store.add()`
+
+新增数据 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|value|Object \| Array\<Object>|Y|新增的数据|
+
+```js
+db.stores.log.add([{ name: '测试', id: '1', time: new Date() }])
+  .then((res) => {
+    console.log(res.data):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+---
+
+#### `Store.delete()`
+
+删除数据 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|id|String \| Number \| Array<string \| number>|Y|删除的数据的主键|
+
+```js
+db.stores.log.delete(['1'])
+  .then((res) => {
+    console.log(res.data):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+---
+
+#### `Store.update()`
+
+修改数据 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|value|Object \| Array\<Object>|Y|修改的数据|
+
+```js
+db.stores.log.update([{ id: '1', code: 'log' }])
+  .then((res) => {
+    console.log(res.data):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+---
+
+#### `Store.findOne()`
+
+查找一条数据 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|value|any|Y|有索引则打开索引来查找，无索引则当作主键查找|
+|index|String|N|索引的名称|
+
+```js
+db.stores.log.findOne('1')
+  .then((res) => {
+    console.log(res.data):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+---
+
+#### `Store.find()`
+
+查找多条数据 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|index|String|N|索引的名称, 为空则查询主键|
+|range|[IDBKeyRange](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)|N|IDBKeyRange范围, 为空则查询全部|
+
+```js
+db.stores.log.find()
+  .then((res) => {
+    console.log(res.data):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+#### `Store.count()`
+
+查询数据量 返回Promise对象
+
+|参数|类型|必传|描述|
+|:---|:---|:---|---|
+|range|[IDBKeyRange](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)|N|IDBKeyRange范围, 为空则查询全部|
+
+```js
+db.stores.log.count()
+  .then((res) => {
+    console.log(res):
+    // do something
+  })
+  .catch((err) => {
+    console.log(err.error);
+  });
+```
+
+### 代码
+
+`index.d.ts`
+
+```ts
+interface Window {
+  readonly mozIndexedDB: any
+  readonly webkitIndexedDB: any
+  readonly msIndexedDB: any
+}
+
+declare namespace KaCache {
+
+  interface Extra {
+    [key: string]: any
+  }
+
+  interface Indexs {
+    keyPath: string | Array<string>,
+    unique?: boolean
+    multiEntry?: boolean
+  }
+
+  interface StoreOptions {
+    keyPath: string,
+    autoIncrement?: boolean,
+    indexs?: {
+      [key: string]: Indexs
+    }
+  }
+
+  interface IndexedDBDriveProps {
+    name: string,
+    version: number,
+    stores: {
+      [key: string]: StoreOptions
+    }
+  }
+
+  interface Store {
+    add (value: Extra): Promise<any>
+
+    find (index?: string, range?: IDBKeyRange): Promise<any>
+
+    count(range?: IDBKeyRange): Promise<any>
+
+    delete (id: string | number | Array<string | number>): Promise<any>
+
+    update (valeu: Extra | Array<Extra>): Promise<any>
+
+    findOne (value: any, index?: string): Promise<any>
+  }
+
+  interface IndexedDBDrive {
+    open (): Promise<IDBDatabase>
+
+    close (): void
+
+    getStore(name: string, mode: 'readwrite' | 'readonly', cb: () => void): IDBObjectStore
+  }
+}
+```
+
+`store.ts`
+
+```ts
+function getKeyPath (id: string, isAuto = false, callback: any) {
+  let _id = id;
+  // 主键兼容
+  if (!isAuto) {
+    if (!getTypeOfKeyPath(_id)) {
+      callback({ error: 'data in wrong format of keyPath' });
+    }
+    if (!_id) {
+      _id = `${new Date().getTime()}`;
+    }
+  } else {
+    _id = undefined;
+  }
+
+  return _id;
+}
+
+function getTypeOfKeyPath (keyPath: any): boolean {
+  return typeof keyPath == 'number'
+    || typeof keyPath === 'string'
+    || typeof keyPath === 'undefined';
+}
+
+class Store implements KaCache.Store {
+  db: IDBDatabase
+  name: string
+
+  constructor (db: IDBDatabase, name: string, options: KaCache.StoreOptions) {
+    this.db = db;
+    this.name = name;
+
+    if (this.db.objectStoreNames.contains(this.name)) {
+      this.db.deleteObjectStore(this.name);
+    }
+
+    const store: IDBObjectStore = this.db.createObjectStore(this.name, {
+      keyPath: options.keyPath || 'id',
+      autoIncrement: options.autoIncrement || false
+    });
+
+    if (options.indexs) {
+      Object.keys(options.indexs).forEach((indexName) => {
+        const index = options.indexs[indexName];
+        store.createIndex(indexName, index.keyPath, { unique: index.unique || false });
+      });
+    }
+  }
+
+  add (value: KaCache.Extra | [KaCache.Extra]): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const _value = Array.isArray(value) ? value : [value];
+      const transaction: IDBTransaction = this.db.transaction(this.name, 'readwrite');
+      const store: IDBObjectStore = transaction.objectStore(this.name);
+      const autoIncrement = store.autoIncrement;
+
+      const result = [];
+
+      _value.forEach((item: KaCache.Extra, index: number) => {
+        const _id = getKeyPath(item[`${store.keyPath}`], autoIncrement, reject);
+        store.add({ ...item, [`${store.keyPath}`]: _id });
+        result.push(_id || index + 1);
+      });
+
+      transaction.onabort = (e: any) => reject({ error: e.target.error });
+      transaction.oncomplete = () => resolve({ data: result });
+    });
+  }
+
+  find (index?: string, range?: IDBKeyRange): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const store: IDBObjectStore = this.db.transaction(this.name, 'readonly').objectStore(this.name);
+
+      let request: IDBRequest;
+      if (index) {
+        const _index: IDBIndex = store.index(index);
+        request = _index.openCursor(range);
+      } else {
+        request = store.openCursor(range);
+      }
+
+      const result = [];
+
+      request.onerror = (e: any) => reject({ error: e.target.error });
+      request.onsuccess = (e: any) => {
+        let cursor: IDBCursorWithValue = e.target.result;
+        if (cursor) {
+          result.push({ ...cursor.value });
+          cursor.continue();
+        } else {
+          cursor = null;
+          resolve({ data: result });
+        }
+      }
+    });
+  }
+
+  count (range?: IDBKeyRange): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const store = this.db.transaction(this.name, 'readonly').objectStore(this.name);
+      const request: IDBRequest = store.count(range);
+      request.onerror = (e: any) => reject({ error: e.target.error });
+      request.onsuccess = (e: any) => resolve(e.target.result);
+    });
+  }
+
+  delete (id: Array<string | number> |string | number): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const _value = Array.isArray(id) ? id : [id];
+      const transaction: IDBTransaction = this.db.transaction(this.name, 'readwrite');
+      const store: IDBObjectStore = transaction.objectStore(this.name);
+
+      const result = [];
+      _value.forEach((_id: string | number) => {
+        if (typeof _id === 'number' || typeof _id === 'string') {
+          store.delete(_id);
+          result.push(_id);
+        } else {
+          reject({ error: 'data in wrong format of keyPath' });
+        }
+      });
+
+      transaction.onabort = (e: any) => reject({ error: e.target.error });
+      transaction.oncomplete = () => resolve({ data: result });
+    });
+  }
+
+  update (value: KaCache.Extra | [KaCache.Extra]) {
+    return new Promise((resolve, reject) => {
+      const _value = Array.isArray(value) ? value : [value];
+      const transaction: IDBTransaction = this.db.transaction(this.name, 'readwrite');
+      const store: IDBObjectStore = transaction.objectStore(this.name);
+
+      const result = [];
+
+      _value.forEach((item: KaCache.Extra) => {
+        store.put({ ...item });
+        result.push(item[`${store.keyPath}`]);
+      });
+
+      transaction.onabort = (e: any) => reject({ error: e.target.error });
+      transaction.oncomplete = () => resolve({ data: result });
+    });
+  }
+
+  findOne (value: any, index?: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const store: IDBObjectStore = this.db.transaction(this.name, 'readonly').objectStore(this.name);
+
+      let request: IDBRequest;
+
+      if (index) {
+        const _index: IDBIndex = store.index(index);
+        request = _index.get(value);
+      } else {
+        request = store.get(value);
+      }
+
+      request.onerror = (e: any) => reject({ error: e.target.error });
+      request.onsuccess = (e: any) => resolve({ data: e.target.result || null });
+    });
+  }
+
+  // 分页查询 TODO
+  // findByIndex (indexName: string, keyRange: IDBKeyRange, offset = 0, limit = 100) {
+
+  // }
+}
+```
+
+`indexeddb.ts`
+
+```ts
+class IndexedDBDrive implements KaCache.IndexedDBDrive {
+  private name: string
+  private version: number
+  private Stores: { [key: string]: KaCache.StoreOptions }
+
+  db: IDBDatabase
+  stores: { [key: string]: Store }
+
+  constructor (props: KaCache.IndexedDBDriveProps) {
+    this.db = null;
+    this.name = props.name;
+    this.version = props.version;
+    this.Stores = props.stores;
+    this.stores = {};
+  }
+
+  open (): Promise<IDBDatabase> {
+    const idb = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+    if (!idb) {
+      throw new Error('错误: 浏览器不支持IndexedDB');
+    }
+
+    return new Promise((resolve, reject) => {
+      const request: IDBOpenDBRequest = idb.open(this.name, this.version);
+
+      request.onerror = (e: any) => reject(e);
+
+      request.onsuccess = (e: any) => {
+        this.db = e.target.result;
+        resolve(e.target.result);
+      }
+
+      request.onupgradeneeded = (e: any) => {
+        const db = e.target.result;
+        Object.keys(this.Stores).forEach((key) => {
+          this.stores[key] = new Store(db, key, this.Stores[key]);
+        });
+      }
+    });
+  }
+
+  close (): void {
+    this.db.close();
+  }
+
+  getStore (name: string, mode: 'readwrite' | 'readonly', callback: (store: IDBObjectStore) => void): IDBObjectStore {
+    const store = this.db.transaction(name, mode).objectStore(name);
+    callback && callback(store);
+
+    return store;
+  }
+}
+```

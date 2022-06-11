@@ -1,4 +1,4 @@
-[首页](/) / [CSS手册](/css-handbook/) / [属性](/css-handbook/properties/) / [定位](/css-handbook/properties/positioning)
+[CSS手册](/css-handbook/) / [属性](/css-handbook/properties/) / [定位](/css-handbook/properties/positioning)
 
 # 定位
 
@@ -49,9 +49,10 @@
 
 ### 说明
 
-用于指定一个元素在文档中的定位方式
-当`position`的值为非`static`时，其层叠级别通过[`z-index`](#z-index)属性定义。
-绝对定位的元素，在[`top`](#top)，[`right`](#right)，[`bottom`](#bottom)，[`left`](#left)属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。
+**用于指定一个元素在文档中的定位方式**
+
+- 当`position`的值为非`static`时，其层叠级别通过[`z-index`](#z-index)属性定义。
+- 绝对定位的元素，在[`top`](#top)，[`right`](#right)，[`bottom`](#bottom)，[`left`](#left)属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。
 
 ### 兼容性
 
@@ -264,10 +265,359 @@ p {
 
 **媒　体**：视觉
 
+### 取值
+
+**auto**：无特殊定位，根据HTML定位规则在文档流中分配
+
+<strong>[\<integer>](/css-handbook/value-and-units/numeric?id=integer)</strong>：用长度值来定义距离顶部的偏移量。可以为负值
+
+</strong>[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)</strong>：用百分比来定义距离顶部的偏移量。百分比参照包含块的高度。可以为负值
+
+### 说明
+
+**定义了元素的上外边距边界与其包含块上边界之间的偏移**
+
+- 该属性用来指定盒子参照相对物顶边界向下偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+- 对应的脚本特性为top
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/top.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">我将出现在浏览器顶部</div>
+```
+
+#### **css**
+
+```css
+.test {
+	position: absolute;
+	top: 0;
+	padding: 5px 10px;
+	color: #c00;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/positioning/04.html"
+>
+  浏览器不支持iframe
+</iframe>
+
+---
+
 ## right :id=right
+
+### 语法
+
+**right**：auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+
+**默认值**：auto
+
+**适用于**：定位元素。即定义了 [`position`](#position) 为非 `static` 的元素
+
+**继承性**：无
+
+**动画性**：当值为[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时
+
+**计算值**：当[`position`](#position)为 `static` 时，计算值是 `auto`。为 `relative` 时，如果 `right` 和 `left` 都是 `auto` ，则它们的计算值是 `0`；如果 `right` 和 `left` 其中一个为 `auto` ，则 `auto` 相当于另一个的负值，即 `left = -right`；如果 `right` 和 `left` 的值都不为 `auto`，则忽略 `right`。否则在其它情况下，当指定值为[\<length>](/css-handbook/value-and-units/length?id=length)时，计算值为指定值，当指定值为[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时，计算值为计算后的绝对值。除去这些情况，都为 `auto`
+
+**媒　体**：视觉
+
+### 取值
+
+**auto**：无特殊定位，根据HTML定位规则在文档流中分配
+
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义距离右边的偏移量。可以为负值。
+
+[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义距离右边的偏移量。百分比参照包含块的宽度。可以为负值。
+
+### 说明
+
+**定义了元素的右外边距边界与其包含块右边界之间的偏移**
+
+- 该属性用来指定盒子参照相对物右边界向左偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+- 对应的脚本特性为right
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/right.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">我将出现在浏览器右上角</div>
+```
+
+#### **css**
+
+```css
+.test {
+	position: absolute;
+	right: 0;
+	padding: 5px 10px;
+	color: #c00;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/positioning/05.html"
+>
+  浏览器不支持iframe
+</iframe>
+
+---
 
 ## bottom :id=bottom
 
+### 语法
+
+**bottom**: auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+
+**默认值**：auto
+
+**适用于**：定位元素。即定义了 [`position`](#position) 为非 `static` 的元素
+
+**继承性**：无
+
+**动画性**：当值为[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时
+
+**计算值**：当 [`position`](#position) 为 `static` 时，计算值是 `auto` 。为 `relative` 时，如果 `top` 和 `bottom` 都是 `auto` ，则它们的计算值是 `0`；如果 `top` 和 `bottom` 其中一个为 `auto` ，则 `auto` 相当于另一个的负值，即 `top = -bottom` ；如果 `top` 和 `bottom` 的值都不为 `auto` ，则忽略 `bottom` 。否则在其它情况下，当指定值为[\<length>](/css-handbook/value-and-units/length?id=length)时，计算值为指定值，当指定值为[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时，计算值为计算后的绝对值。除去这些情况，都为 `auto`
+
+**媒　体**：视觉
+
+### 取值
+
+**auto**：无特殊定位，根据HTML定位规则在文档流中分配
+
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义距离底部的偏移量。可以为负值
+
+[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义距离底部的偏移量。百分比参照包含块的高度。可以为负值
+
+### 说明
+
+**定义了元素的底外边距边界与其包含块底边界之间的偏移**
+
+- 该属性用来指定盒子参照相对物底边界向上偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+- 对应的脚本特性为bottom
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/bottom.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">我将出现在浏览器底部</div>
+```
+
+#### **css**
+
+```css
+.test {
+	position: absolute;
+	bottom: 0;
+	padding: 5px 10px;
+	color: #c00;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/positioning/06.html"
+>
+  浏览器不支持iframe
+</iframe>
+
+---
+
 ## left :id=left
 
+### 语法
+
+**left**: auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+
+**默认值**：auto
+
+**适用于**：定位元素。即定义了 [`position`](#position) 为非 `static` 的元素
+
+**继承性**：无
+
+**动画性**：当值为[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时
+
+**计算值**：当 [`position`](#position) 为 `static` 时，计算值是 `auto`。为 `relative` 时，如果 `right` 和 `left` 都是 `auto`，则它们的计算值是 `0`；如果 `right` 和 `left` 其中一个为 `auto`，则 `auto` 相当于另一个的负值，即 `left = -right`；如果 `right` 和 `left` 的值都不为 `auto`，则忽略 `right`。否则在其它情况下，当指定值为[\<length>](/css-handbook/value-and-units/length?id=length)时，计算值为指定值，当指定值为[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)时，计算值为计算后的绝对值。除去这些情况，都为 `auto`
+
+**媒　体**：视觉
+
+### 取值
+
+**auto**：无特殊定位，根据HTML定位规则在文档流中分配
+
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义距离左边的偏移量。可以为负值
+
+[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义距离左边的偏移量。百分比参照包含块的宽度。可以为负值
+
+### 说明
+
+**定义了元素的左外边距边界与其包含块左边界之间的偏移**
+
+- 该属性用来指定盒子参照相对物左边界向右偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+- 对应的脚本特性为left
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/left.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">我将出现在浏览器左上角</div>
+```
+
+#### **css**
+
+```css
+.test {
+	position: absolute;
+	left: 0;
+	padding: 5px 10px;
+	color: #c00;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/positioning/07.html"
+>
+  浏览器不支持iframe
+</iframe>
+
+---
+
 ## clip :id=clip
+
+### 语法
+
+**clip**：auto | \<shape>
+
+<strong>\<shape></strong>：rect([\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto)
+
+**默认值**：auto
+
+**适用于**：绝对定位元素
+
+**继承性**：无
+
+**动画性**：当值为<strong>\<shape></strong>时
+
+**计算值**：指定的值
+
+**媒　体**：视觉
+
+### 取值
+
+**auto**：对象无剪切
+
+**rect**([\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto [\<number>](/css-handbook/value-and-units/numeric?id=number)|auto)：依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用auto替换，即此边不剪切。
+上-左 方位的裁剪：从0开始剪裁直到设定值，即 上-左 方位的 `auto` 值等同于0；
+右-下 方位的裁剪：从设定值开始剪裁直到最右边和最下边，即 右-下 方位的 `auto` 值为盒子的实际宽度和高度；
+
+**示例**：`clip: rect(auto 50px 20px auto)`
+
+**说明**：上边不剪切，右边从左起第50个像素开始剪切直至最右边，下边从上起第20个像素开始剪切直至最底部，左边不剪切
+
+!> CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新
+
+### 说明
+
+**定义了元素的哪一部分是可见的。区域外的部分是透明的**
+
+- <span style="color: red;">这个属性将被废弃，推荐使用 `clip-path` 代替，在过渡阶段，仍然会存在一段时间</span>
+- 必须将 [`position`](#position) 的值设为 `absolute` 或者 `fixed`，此属性方可使用
+- 对应的脚本特性为clip
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/clip.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">看看被剪切后的效果</div>
+```
+
+#### **css**
+
+```css
+.test {
+	position: absolute;
+	height: 50px;
+	line-height: 50px;
+	clip: rect(0 auto 35px 10px);
+	background: #eee;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/positioning/08.html"
+>
+  浏览器不支持iframe
+</iframe>
+
+---

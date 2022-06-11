@@ -37,7 +37,7 @@ key() 作为 Storage 接口的方法，接受一个数值 n 作为参数，返�
 **语法**
 
 ```js
-key(key);
+Storage.key(key);
 ```
 
 |参数|类型|必传|描述|
@@ -53,7 +53,7 @@ Storage 接口的 setItem() 方法，接受一个键名和值作为参数，将�
 **语法**
 
 ```js
-setItem(keyName, keyValue);
+Storage.setItem(keyName, keyValue);
 ```
 
 |参数|类型|必传|描述|
@@ -70,7 +70,7 @@ getItem() 作为 Storage 接口的方法，接受一个键名（key name）作�
 **语法**
 
 ```js
-getItem(keyName);
+Storage.getItem(keyName);
 ```
 
 |参数|类型|必传|描述|
@@ -86,12 +86,14 @@ Storage 接口的 removeItem() 方法，接受一个键名作为参数，会从�
 **语法**
 
 ```js
-removeItem(keyName);
+Storage.removeItem(keyName);
 ```
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
 |keyName|String|Y|表示要删除的键名|
+
+---
 
 #### `Storage.clear()`
 
@@ -100,5 +102,5 @@ clear() 是 Storage 接口的一个方法，调用它可以清空存储对象里
 **语法**
 
 ```js
-clear();
+Storage.clear();
 ```
