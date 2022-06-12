@@ -103,7 +103,7 @@
 
 ### 语法
 
-**z-index**: auto | [\<integer>](/css-handbook/value-and-units/numeric?id=integer)
+**z-index**: auto | [\<integer>](/css-handbook/value-and-units/length?id=length)
 
 **默认值**：auto
 
@@ -111,7 +111,7 @@
 
 **继承性**：无
 
-**动画性**：当值为[\<integer>](/css-handbook/value-and-units/numeric?id=integer)时
+**动画性**：当值为[\<integer>](/css-handbook/value-and-units/length?id=length)时
 
 **计算值**：指定的值
 
@@ -121,7 +121,7 @@
 
 **auto**：元素在当前层叠上下文中的层叠级别是0。元素不会创建新的局部层叠上下文，除非它是根元素
 
-<strong>[\<integer>](/css-handbook/value-and-units/numeric?id=integer)</strong>：用整数值来定义堆叠级别。可以为负值
+<strong>[\<integer>](/css-handbook/value-and-units/length?id=length)</strong>：用整数值来定义堆叠级别。可以为负值
 
 ### 说明
 
@@ -269,7 +269,7 @@ p {
 
 **auto**：无特殊定位，根据HTML定位规则在文档流中分配
 
-<strong>[\<integer>](/css-handbook/value-and-units/numeric?id=integer)</strong>：用长度值来定义距离顶部的偏移量。可以为负值
+<strong>[\<integer>](/css-handbook/value-and-units/length?id=length)</strong>：用长度值来定义距离顶部的偏移量。可以为负值
 
 </strong>[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)</strong>：用百分比来定义距离顶部的偏移量。百分比参照包含块的高度。可以为负值
 
