@@ -10,8 +10,6 @@
 3、write packages
 ```
 
-my-token=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
-
 2. 接下来将Token添加至~/.npmrc
 
 ```

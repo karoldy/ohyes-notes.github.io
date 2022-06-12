@@ -22,7 +22,7 @@
 
 ### 语法
 
-**width**：auto | [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+**width**：auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
 
 **默认值**：auto
 
@@ -30,7 +30,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -40,7 +40,7 @@
 
 **auto**：无特定宽度值，取决于其它属性值
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义宽度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义宽度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义宽度。百分比参照包含块宽度。不允许负值
 
@@ -94,7 +94,7 @@
 
 ### 语法
 
-**min-width**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+**min-width**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
 
 **默认值**：0
 
@@ -102,7 +102,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -110,7 +110,7 @@
 
 ### 取值
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义最小宽度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义最小宽度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义最小宽度。不允许负值
 
@@ -166,7 +166,7 @@
 
 ### 语法
 
-**max-width**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | none
+**max-width**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | none
 
 **默认值**：none
 
@@ -174,7 +174,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -184,7 +184,7 @@
 
 **none**：无最大宽度限制
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义最大宽度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义最大宽度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义最大宽度。不允许负值
 
@@ -239,7 +239,7 @@
 
 ### 语法
 
-**height**：auto | [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+**height**：auto | [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
 
 **默认值**：auto
 
@@ -247,7 +247,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -257,7 +257,7 @@
 
 **auto**：无特定高度值，取决于其它属性值
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义高度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义高度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义高度。不允许负值
 
@@ -311,7 +311,7 @@
 
 ### 语法
 
-**min-height**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+**min-height**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
 
 **默认值**：0
 
@@ -319,7 +319,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -327,7 +327,7 @@
 
 ### 取值
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义最小高度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义最小高度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义最小高度。不允许负值
 
@@ -382,7 +382,7 @@
 
 ### 语法
 
-**max-height**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | none
+**max-height**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | none
 
 **默认值**：none
 
@@ -390,7 +390,7 @@
 
 **继承性**：无
 
-**动画性**：当值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的值
 
@@ -400,7 +400,7 @@
 
 **none**：无最小高度限制
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义最大高度。不允许负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义最大高度。不允许负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义最大高度。不允许负值
 
@@ -458,7 +458,7 @@
 
 ### 简写属性语法
 
-**margin**：[ [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto ]{1,4}
+**margin**：[ [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto ]{1,4}
 
 **默认值**：看每个独立属性
 
@@ -474,7 +474,7 @@
 
 ### 分拆纵向独立属性语法
 
-**vertical-margin**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto
+**vertical-margin**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto
 
 **vertical-margin** = `margin-top`, `margin-bottom`
 
@@ -484,7 +484,7 @@
 
 **继承性**：无
 
-**动画性**：当取值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当取值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的百分比或绝对长度值
 
@@ -492,7 +492,7 @@
 
 ### 分拆横向独立属性语法
 
-**horizontal-margin**：[\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto
+**horizontal-margin**：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) | auto
 
 **horizontal-margin** = `margin-right`, `margin-left`
 
@@ -502,7 +502,7 @@
 
 **继承性**：无
 
-**动画性**：当取值为 [\<length>](/css-handbook/value-and-units/numeric?id=integer) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
+**动画性**：当取值为 [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) 时
 
 **计算值**：指定的百分比或绝对长度值
 
@@ -512,7 +512,7 @@
 
 **auto**：水平（默认）书写模式下，`vertical-margin` 计算值为 0，`horizontal-margin` 取决于包含块的剩余可用空间。详见：[margin系列之keyword auto](http://blog.doyoe.com/2013/11/29/css/margin%E7%B3%BB%E5%88%97%E4%B9%8Bkeyword%20auto/)
 
-[\<length>](/css-handbook/value-and-units/numeric?id=integer)：用长度值来定义外补白。可以为负值
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义外补白。可以为负值
 
 [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义外补白。水平（默认）书写模式下，参照其包含块的 `width` 进行计算，其它情况参照 `height`，可以为负值
 
@@ -652,3 +652,92 @@
 ---
 
 ## padding :id=padding
+
+### 简写属性语法
+
+**padding**：[ [\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage) ]{1,4}
+
+**默认值**：看每个独立属性
+
+**适用于**：所有元素，除 `display: table-row-group | table-header-group | table-footer-group | table-column-group | table-row; ` 外
+
+**继承性**：无
+
+**动画性**：看每个独立属性
+
+**计算值**：看每个独立属性
+
+**媒　体**：视觉
+
+### 分拆独立属性语法
+
+**padding-\***：[\<length>](/css-handbook/value-and-units/length?id=length) | [\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)
+
+**padding-\*** = `padding-top`, `padding-right`, `padding-bottom`, `padding-left`
+
+**默认值**：0
+
+**适用于**：所有元素，除 `display: table-row-group | table-header-group | table-footer-group | table-column-group | table-row; ` 外
+
+**继承性**：无
+
+**动画性**：是
+
+**计算值**：指定的百分比或绝对长度值
+
+**媒　体**：视觉
+
+### 取值
+
+[\<length>](/css-handbook/value-and-units/length?id=length)：用长度值来定义内补白。不允许负值
+
+[\<percentage>](/css-handbook/value-and-units/numeric?id=percentage)：用百分比来定义内补白。水平（默认）书写模式下，参照其包含块的width进行计算，其它情况参照height，不允许负值
+
+### 说明
+
+**简写属性。为元素设置所有四个方向（上右下左）的内边距**
+
+- `padding` 属性接受1~4个参数值。如果提供四个参数值，将按上、右、下、左的顺序作用于四边；提供三个，第一个用于上，第二个用于左、右，第三个用于下；提供两个，第一个用于上、下，第二个用于左、右；只提供一个，同时用于四边
+- 需要注意的是，当我们为行内元素定义纵向内补白 `padding-top/padding-bottom` 时，虽然不需要将之转化为行内块或者块级，但是给行内元素设置纵向内补白并不会影响布局。内补白会在当前元素的行框基础上向顶部和顶部外延，但是这些外延不会拓展新的布局大小，你甚至可以把它想象成类似[outline](/css-handbook/user-interface?id=outline)
+- 对应的脚本特性为：padding
+
+**分拆独立属性。为元素单独设置上、右、下、左4个方向的内边距**
+
+- 对应的脚本特性分别为：`paddingTop`, `paddingRight`, `paddingBottom`, `paddingLeft`
+
+### 兼容性
+
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/padding.png)
+
+### 示例
+
+<!-- tabs:start -->
+
+#### **html**
+
+```html
+<div class="test">注意我离4条边框线的距离</div>
+```
+
+#### **css**
+
+```css
+.test {
+	float: left;
+	padding: 10px;
+	border: 1px solid #000;
+}
+```
+
+<!-- tabs:end -->
+
+运行结果
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/properties/dimension/10.html"
+>
+  浏览器不支持iframe
+</iframe>

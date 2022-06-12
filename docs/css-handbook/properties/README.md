@@ -7,7 +7,7 @@
   * [定位](positioning)
   * [布局](layout)
   * [尺寸与补白](dimension)
-  * [背景与边框](background-and-border)
+  * [背景与边框](bab)
   * [颜色](color)
   * [字体](font)
   * [文本](text)

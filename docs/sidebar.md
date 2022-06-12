@@ -11,7 +11,7 @@
   * [Html5](/html5/)
   * [Css](/css/)
   * [JavaScript](/javascript/)
-  * [JQuery](/)
+  * [JQuery](/jquery/)
 
 * 前端进阶
 
