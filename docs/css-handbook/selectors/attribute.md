@@ -32,58 +32,17 @@ E[att] {
 
 **选择具有att属性的E元素**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div title="1">1</div>
-<div>2</div>
-```
-
-#### **css**
-
-```css
-div[title] {
-  color: #f00;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/1.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例，将会命中第一个div，因为匹配到了 title 属性
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/9.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -94,7 +53,7 @@ div[title] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 a[class] {
@@ -102,18 +61,18 @@ a[class] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/2.html"
+  src="css-handbook/example/selectors/12.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -131,59 +90,17 @@ E[att="val"] {
 
 **选择具有att属性且属性值等于val的E元素**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<input type="text" />
-<input type="submit" />
-```
-
-#### **css**
-
-```css
-input[type="text"] {
-	border: 2px solid #000;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<output>
-  <style>
-    input[type="text"] {
-      border: 2px solid #f00;
-    }
-  </style>
-  <input type="text" />
-  <input type="submit" />
-</output>
-
-!> 此例，将会命中第一个input，因为匹配到了type属性，并且属性值为text
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/10.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -194,7 +111,7 @@ input[type="text"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 a[class="external"] {
@@ -202,18 +119,18 @@ a[class="external"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/3.html"
+  src="css-handbook/example/selectors/13.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -231,59 +148,17 @@ E[att~="val"] {
 
 **选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素(包含只有一个值且该值等于val的情况)**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="a">1</div>
-<div class="b">2</div>
-<div class="a b">3</div>
-```
-
-#### **css**
-
-```css
-div[class~="a"] {
-	border: 2px solid #000;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/4.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值中有一个值为a
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -294,7 +169,7 @@ div[class~="a"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 a[class~="external"] {
@@ -302,18 +177,18 @@ a[class~="external"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/5.html"
+  src="css-handbook/example/selectors/15.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -333,60 +208,17 @@ E[att|="val"] {
 
 这样理解会更简单：如果元素E拥有att属性，并且值为val，或者值是以val-开头的，那么E将会被选择
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="a">0</div>
-<div class="a-test">1</div>
-<div class="b-test">2</div>
-<div class="c-test">3</div>
-```
-
-#### **css**
-
-```css
-div[class|="a"] {
-	border: 2px solid #000;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/6.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 在这个例子中，前2个div将会被命中：<br/>第1个div，拥有class属性，并且值为a，所以被命中；<br/>第2个div，拥有class属性，值是a开头并紧跟着连接符“-”，所以被命中；
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -400,7 +232,7 @@ div[class|="a"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 li[class|="test3"] {
@@ -408,18 +240,18 @@ li[class|="test3"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/7.html"
+  src="css-handbook/example/selectors/16.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -437,59 +269,17 @@ E[att^="val"] {
 
 **选择具有att属性且属性值为以val开头的字符串的E元素**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="abc">1</div>
-<div class="acb">2</div>
-<div class="bac">3</div>
-```
-
-#### **css**
-
-```css
-div[class^="a"] {
-	border: 2px solid #f00;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/8.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例，将会命中1, 2两个div，因为匹配到了class属性，且属性值以a开头
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -502,7 +292,7 @@ div[class^="a"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 li[class^="a"] {
@@ -510,18 +300,18 @@ li[class^="a"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/9.html"
+  src="css-handbook/example/selectors/17.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -539,59 +329,17 @@ E[att$="val"] {
 
 **选择具有att属性且属性值为以val结尾的字符串的E元素**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="abc">1</div>
-<div class="acb">2</div>
-<div class="bac">3</div>
-```
-
-#### **css**
-
-```css
-div[class$="c"] {
-	border: 2px solid #000;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/10.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例，将会命中1, 3两个div，因为匹配到了class属性，且属性值以c结尾
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -604,7 +352,7 @@ div[class$="c"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 li[class$="a"] {
@@ -612,18 +360,18 @@ li[class$="a"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/11.html"
+  src="css-handbook/example/selectors/18.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -641,59 +389,17 @@ E[att*="val"] {
 
 **选择具有att属性且属性值为包含val的字符串的E元素**
 
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="abc">1</div>
-<div class="acb">2</div>
-<div class="bac">3</div>
-```
-
-#### **css**
-
-```css
-div[class*="b"] {
-	border: 2px solid #000;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="yes"
-  frameborder="0"
-  src="css-handbook/example/selectors/attribute/12.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例，将会命中所有div，因为匹配到了class属性，且属性值中都包含了b
-
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -706,7 +412,7 @@ div[class*="b"] {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 li[class*="a"] {
@@ -714,15 +420,15 @@ li[class*="a"] {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/attribute/13.html"
+  src="css-handbook/example/selectors/19.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->

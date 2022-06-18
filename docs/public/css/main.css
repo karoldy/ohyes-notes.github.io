@@ -120,6 +120,10 @@ table td:last-child {
   color: #f60 !important;
 }
 
+.g-color-css3-new:hover {
+  color: #f60 !important;
+}
+
 /* 输出iframe的样式 */
 .output-iframe {
   padding: 0 !important;

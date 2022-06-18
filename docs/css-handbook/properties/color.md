@@ -46,7 +46,7 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/color/color.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/42.png)
 
 ### 示例
 
@@ -121,7 +121,7 @@
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/color/01.html"
+  src="css-handbook/example/properties/48.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -175,7 +175,7 @@ div {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/color/opacity.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/43.png)
 
 ### 示例
 
@@ -222,11 +222,9 @@ h1 {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/color/02.html"
+  src="css-handbook/example/properties/49.html"
 >
   浏览器不支持iframe
 </iframe>
 
 <!-- tabs:end -->
-
----

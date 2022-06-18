@@ -48,10 +48,10 @@ IndexedDB不仅可以储存字符串，还可以储存二进制数据
 |[IDBDatabase](#idbdatabase)|表示一个数据库连接。这是在数据库中获取事务的唯一方式|
 |[IDBTransaction](#transaction)|表示一个事务。在数据库上创建一个事务，指定作用域(例如要访问的存储对象)，并确定所需的访问类型(只读或读写)|
 |[IDBRequest](#idbrequest)|处理数据库请求并提供对结果访问的通用接口|
-|[IDBObjectStore](#objectstore)|表示允许访问通过主键查找的 IndexedDB 数据库中的一组数据的对象存储区|
+|[IDBObjectStore](#objectstore)|表示允许访问通过主键查找的 IndexedDB 数据库中的一组数据的对象仓库区|
 |[IDBIndex](#idbindex)|也是为了允许访问 IndexedDB 数据库中的数据子集，但使用索引来检索记录而不是主键。这有时比使用 IDBObjectStore 更快|
-|[IDBCursor](#cursor)|迭代对象存储和索引|
-|[IDBCursorWithValue](#cursorwithvalue)|迭代对象存储和索引并返回游标的当前值|
+|[IDBCursor](#cursor)|迭代对象仓库和索引|
+|[IDBCursorWithValue](#cursorwithvalue)|迭代对象仓库和索引并返回游标的当前值|
 |[IDBKeyRange](#idbkeyrange)|定义可用于从特定范围内的数据库检索数据的键范围|
 
 ## IDBOpenDBRequest :id=idbopendbrequest
@@ -92,7 +92,7 @@ request.onupgradeneeded = function (e) {
 
 ## IDBDatabase :id=idbdatabase
 
-?> 对象存储 可以理解成数据表
+?> 对象仓库 可以理解成数据表
 
 IndexedDB 中的 IDBDatabase 接口提供一个到 数据库的连接; 你可以使用 IDBDatabase 对象在数据库中打开一个transaction , 然后进行操作或者删除数据库中的对象。这是唯一一个能够访问和管理数据库版本的接口
 
@@ -101,7 +101,7 @@ IndexedDB 中的 IDBDatabase 接口提供一个到 数据库的连接; 你可以
 |属性|返回类型|只读|描述|
 |:---|:---|:---|:---|
 |`IDBDatabase.name`|String|Y|IDBDatabase接口的名称只读属性是一个字符串，其中包含所连接数据库的名称|
-|`IDBDatabase.objectStoreNames`|Array\<string>|Y|一个字符串数组，其中包含连接数据库中当前对象存储的名称列表|
+|`IDBDatabase.objectStoreNames`|Array\<string>|Y|一个字符串数组，其中包含连接数据库中当前对象仓库的名称列表|
 |`IDBDatabase.version`|Number|Y|IDBDatabase接口的version属性是一个64位整数，其中包含所连接数据库的版本。首次创建数据库时，此属性为空字符串|
 
 ---
@@ -135,15 +135,15 @@ const store: IDBObjectStore = IDBDatabase.createObjectStore(name, options);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|name|String|Y|要创建的新对象存储的名称。请注意，可以使用空名称创建对象存储|
+|name|String|Y|要创建的新对象仓库的名称。请注意，可以使用空名称创建对象仓库|
 |options|Object|N|一个选项对象，其属性是该方法的可选参数|
 
 **options属性说明**
 
 |属性|值|描述|
 |:---|:---|:---|
-|keyPath|String \| Array\<string>|新对象存储要使用的密钥路径。如果为空或未指定，则创建对象存储时不使用键路径，并使用脱机键。还可以将数组作为键路径传入|
-|autoIncrement|Boolean<true\|false>|如果为true，则对象存储具有密钥生成器。默认为false|
+|keyPath|String \| Array\<string>|新对象仓库要使用的密钥路径。如果为空或未指定，则创建对象仓库时不使用键路径，并使用脱机键。还可以将数组作为键路径传入|
+|autoIncrement|Boolean<true\|false>|如果为true，则对象仓库具有密钥生成器。默认为false|
 
 ?> 注: 一般keyPath和autoIncrement只需要一个，两个都存在的话，自动生成一个自增主键，并且keyPath设置的字段必须要存在, 且对象不得缺少指定属性
 
@@ -151,7 +151,7 @@ const store: IDBObjectStore = IDBDatabase.createObjectStore(name, options);
 
 #### `IDBDatabase.deleteObjectStore()`
 
-IDBDatabase接口的deleteObjectStore()方法销毁连接数据库中具有给定名称的对象存储以及引用它的任何索引，返回值None(undefined)
+IDBDatabase接口的deleteObjectStore()方法销毁连接数据库中具有给定名称的对象仓库以及引用它的任何索引，返回值None(undefined)
 
 **语法**
 
@@ -161,13 +161,13 @@ IDBDatabase.deleteObjectStore(name);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|name|String|Y|要删除的对象存储的名称。名称区分大小写|
+|name|String|Y|要删除的对象仓库的名称。名称区分大小写|
 
 ---
 
 #### `IDBDatabase.transaction()`
 
-IDBDatabase接口的transaction方法立即返回包含IDBTransation的事务对象(IDBTransation)。objectStore方法，可用于访问对象存储
+IDBDatabase接口的transaction方法立即返回包含IDBTransation的事务对象(IDBTransation)。objectStore方法，可用于访问对象仓库
 
 **语法**
 
@@ -179,7 +179,7 @@ const t: IDBTransation = IDBDatabase.transaction(storeNames, mode, options);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|storeNames|String \| Array\<string>|Y|新事务范围内的对象存储的名称，声明为字符串数组。仅指定需要访问的对象存储。如果只需要访问一个对象存储，可以将其名称指定为字符串|
+|storeNames|String \| Array\<string>|Y|新事务范围内的对象仓库的名称，声明为字符串数组。仅指定需要访问的对象仓库。如果只需要访问一个对象仓库，可以将其名称指定为字符串|
 |mode|String<readonly \| readwrite \| readwriteflush>|Y|可以在事务中执行的访问类型。事务以三种模式之一打开：`readonly`、`readwrite`和`readwriteflush`(非标准，仅限Firefox)此处无法指定versionchange模式。如果不提供参数，则默认访问模式为只读。为了避免减慢速度，除非确实需要写入数据库，否则不要打开读写事务，(默认`readonly`)|
 |options|Object|N|其他参数|
 
@@ -267,7 +267,7 @@ const transaction: IDBTransaction = IDBDatabase.transaction(storeName, mode);
 |`IDBTransaction.db`|Object\<IDBDatabase>|Y|返回该事务所属的数据库连接|
 |`IDBTransaction.durability`|String|Y|IDBTransation接口的耐久性只读属性返回创建事务时使用的耐久性提示。这是向用户代理提示在提交事务时是优先考虑性能还是持久性|
 |`IDBTransaction.error`|Object<DomeException \| null>|Y|IDBTransation接口的error属性返回存在不成功事务时的错误类型|
-|`IDBTransaction.mode`|String|Y|IDBTransation接口的mode属性返回访问事务范围内对象存储中数据的当前模式(即，该模式是只读模式，还是要写入对象存储？)默认值为只读|
+|`IDBTransaction.mode`|String|Y|IDBTransation接口的mode属性返回访问事务范围内对象仓库中数据的当前模式(即，该模式是只读模式，还是要写入对象仓库？)默认值为只读|
 |`IDBTransaction.objectStoreNames`|Array\<string>|Y|IDBTransation接口的objectStoreNames属性返回IDBObjectStore对象名称的字符串数组|
 
 ---
@@ -328,7 +328,7 @@ transaction.commit();
 
 #### `IDBTransaction.objectStore()`
 
-IDBTransation接口的objectStore()方法返回已添加到此事务范围的对象存储，返回值IDBObjectStore对象
+IDBTransation接口的objectStore()方法返回已添加到此事务范围的对象仓库，返回值IDBObjectStore对象
 
 ?> 对相同名称的相同事务对象调用此方法时，都会返回相同的IDBObjectStore实例。如果在不同的事务对象上调用此方法，则返回不同的IDBObjectStore实例
 
@@ -340,7 +340,7 @@ const store: IDBObjectStore = IDBTransaction.objectStore(name);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|name|String|Y|请求的对象存储的名称|
+|name|String|Y|请求的对象仓库的名称|
 
 ---
 
@@ -445,7 +445,7 @@ IndexedDB api中的IDBRequest接口提供了根据绑定事件处理函数访问
 |`IDBRequest.error`|Object<DOMException \| null>|Y|IDBRequest接口的error只读属性在请求失败时返回错误|
 |`IDBRequest.readyState`|String<pending \| done>|Y|请求的状态。每个请求都以挂起状态(pending)启动。当请求成功完成或发生错误时，状态变为"done"|
 |`IDBRequest.result`|Any|Y|IDBRequest接口的result属性返回请求的结果。如果请求失败且结果不可用，则引发InvalidStateError异常|
-|`IDBRequest.source`|Object<IDBIndex \| IDBObjectStore \| IDBCursor \| null>|Y|请求的源，例如索引或对象存储。如果不存在源(例如调用indexedDB.open()时)，它将返回null|
+|`IDBRequest.source`|Object<IDBIndex \| IDBObjectStore \| IDBCursor \| null>|Y|请求的源，例如索引或对象仓库。如果不存在源(例如调用indexedDB.open()时)，它将返回null|
 |`IDBRequest.transaction`|Object<IDBTransaction \| null>|Y|IDBRequest接口的事务属性返回请求的事务，即请求在其中进行的事务|
 
 ---
@@ -498,7 +498,7 @@ IDBRequest.onsuccess = function (event) {
 
  IndexedDB API  的 IDBObjectStore 接口表示数据库中的 一个 对象库(object store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索
 
-**创建对象存储**
+**创建对象仓库**
 
 ```ts
 const store: IDBObjectStore = IDBDataBase.transaction(storeName, 'readonly').objectStore(storeName);
@@ -511,10 +511,10 @@ const store: IDBObjectStore = IDBDataBase.transaction(storeName, 'readonly').obj
 |属性|返回类型|只读|描述|
 |:---|:---|:---|:---|
 |`IDBObjectStore.autoIncrement`|Boolean|Y|IDBObjectStore的属性autoIncrement接口返回当前objectStore的自增标记值|
-|`IDBObjectStore.indexNames`|Array<string>|Y|IDBObjectStore的属性indexNames 返回此对象存储中对象的 indexes(索引) 名称(name)列表|
+|`IDBObjectStore.indexNames`|Array<string>|Y|IDBObjectStore的属性indexNames 返回此对象仓库中对象的 indexes(索引) 名称(name)列表|
 |`IDBObjectStore.keyPath`|Any|Y|IDBObjectStore的属性keyPath接口返回当前objectStore的key path|
-|`IDBObjectStore.name`|String|Y|IDBObjectStore接口的name属性指示此对象存储的名称|
-|`IDBObjectStore.transaction`|Object\<IDBTransaction>|Y|IDBObjectStore接口的事务属性返回此对象存储所属的事务对象|
+|`IDBObjectStore.name`|String|Y|IDBObjectStore接口的name属性指示此对象仓库的名称|
+|`IDBObjectStore.transaction`|Object\<IDBTransaction>|Y|IDBObjectStore接口的事务属性返回此对象仓库所属的事务对象|
 
 ?> 什么是keyPath呢？在indexedDB中，一条记录就是一个object，object里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是keyPath，属性值就是key。在用indexedDB的get方法时，提供key，而不需要指定keyPath，因为get方法把参数作为这个最主要的属性的值，在数据库中进行查询
 
@@ -550,7 +550,7 @@ request.onsuccess = (event) => {
 
 #### `IDBObjectStore.clear()`
 
-IDBObjectStore接口的clear()方法创建并立即返回IDBRequest对象，并在单独的线程中清除此对象存储。用于从对象存储中删除所有当前数据
+IDBObjectStore接口的clear()方法创建并立即返回IDBRequest对象，并在单独的线程中清除此对象仓库。用于从对象仓库中删除所有当前数据
 
 **语法**
 
@@ -587,7 +587,7 @@ request.onsuccess = (event) => {
 
 #### `IDBObjectStore.add()`
 
-IDBObjectStore 接口中的 add() 方法返回一个 IDBRequest 对象，在单独的线程中创建一个结构(structured clone)化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录
+IDBObjectStore 接口中的 add() 方法返回一个 IDBRequest 对象，在单独的线程中创建一个结构(structured clone)化克隆值，并且在对象仓库中存储这个克隆值。这个方法用作在一个对象仓库中添加一条新的记录
 
 **语法**
 
@@ -645,7 +645,7 @@ const request: IDBRequest = IDBObjectStore.delete(key);
 
 #### `IDBObjectStore.getAll()`
 
-IDBObjectStore接口的getAll()方法返回一个IDBRequest对象，该对象包含与指定参数匹配的对象存储中的所有对象，或者如果没有给定参数，则返回存储中的所有对象
+IDBObjectStore接口的getAll()方法返回一个IDBRequest对象，该对象包含与指定参数匹配的对象仓库中的所有对象，或者如果没有给定参数，则返回存储中的所有对象
 
 **语法**
 
@@ -657,7 +657,7 @@ const request: IDBRequest = IDBObjectStore.getAll(query, count);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |count|Number|N|指定找到多个值时要返回的值数。如果小于0或大于2^32-1，将引发TypeError异常|
 
 示例
@@ -673,7 +673,7 @@ request.onsuccess = (event) => {
 
 #### `IDBObjectStore.getAllKeys()`
 
-IDBObjectStore接口的getAllKeys()方法返回一个IDBRequest对象，该对象检索对象存储中与指定参数匹配的所有对象的记录键，如果未给定参数，则检索存储中的所有对象的记录键
+IDBObjectStore接口的getAllKeys()方法返回一个IDBRequest对象，该对象检索对象仓库中与指定参数匹配的所有对象的记录键，如果未给定参数，则检索存储中的所有对象的记录键
 
 **语法**
 
@@ -685,7 +685,7 @@ const request: IDBRequest = IDBObjectStore.getAllKeys(query, count);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |count|Number|N|指定找到多个值时要返回的值数。如果小于0或大于2^32-1，将引发TypeError异常|
 
 示例
@@ -701,7 +701,7 @@ request.onsuccess = (event) => {
 
 #### `IDBObjectStore.getKey()`
 
-IDBObjectStore接口的getKey()方法返回IDBRequest对象，并在单独的线程中返回指定查询选择的键。这用于从对象存储中检索特定记录
+IDBObjectStore接口的getKey()方法返回IDBRequest对象，并在单独的线程中返回指定查询选择的键。这用于从对象仓库中检索特定记录
 
 **语法**
 
@@ -730,7 +730,7 @@ request.onsuccess = (event) => {
 
 #### `IDBObjectStore.index()`
 
-IDBObjectStore接口的index()方法在当前对象存储中打开一个命名索引，然后可以使用该索引返回一系列记录，例如，使用游标按该索引排序，返回 IDBIndex 对象
+IDBObjectStore接口的index()方法在当前对象仓库中打开一个命名索引，然后可以使用该索引返回一系列记录，例如，使用游标按该索引排序，返回 IDBIndex 对象
 
 **语法**
 
@@ -800,7 +800,7 @@ IDBObjectStore.deleteIndex(indexName);
 
 #### `IDBObjectStore.openCursor()`
 
-IDBObjectStore接口的openCursor()方法返回IDBRequest对象，并在单独的线程中返回新的IDBCursorWithValue对象。用于使用光标遍历对象存储
+IDBObjectStore接口的openCursor()方法返回IDBRequest对象，并在单独的线程中返回新的IDBCursorWithValue对象。用于使用光标遍历对象仓库
 
 **语法**
 
@@ -812,7 +812,7 @@ const reqeust: IDBRequest = IDBObjectStore.openCursor(query, direction);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果传递了单个有效密钥，则默认为仅包含该密钥的范围。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果传递了单个有效密钥，则默认为仅包含该密钥的范围。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |direction|String<next \| nextunique \| prev \| prevunique>|N|告诉光标移动的方向, 有效值为next、nextunique、prev和prevunique。默认值为next|
 
 示例
@@ -836,7 +836,7 @@ request.onsuccess = function (event) {
 
 #### `IDBObjectStore.openKeyCursor()`
 
-IDBObjectStore接口的openKeyCursor()方法返回一个IDBRequest对象，其结果将设置为IDBCursor，可用于迭代匹配结果。用于使用光标遍历对象存储区的键
+IDBObjectStore接口的openKeyCursor()方法返回一个IDBRequest对象，其结果将设置为IDBCursor，可用于迭代匹配结果。用于使用光标遍历对象仓库区的键
 
 **语法**
 
@@ -848,7 +848,7 @@ const reqeust: IDBRequest = IDBObjectStore.openKeyCursor(query, direction);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果传递了单个有效密钥，则默认为仅包含该密钥的范围。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果传递了单个有效密钥，则默认为仅包含该密钥的范围。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |direction|String<next \| nextunique \| prev \| prevunique>|N|告诉光标移动的方向, 有效值为"next"、"nextunique"、"prev"和"prevunique"。默认值为"next"|
 
 示例
@@ -893,7 +893,7 @@ const index: IDBIndex = IDBObjectStore.index(name);
 |`IDBIndex.keyPath`|Any|Y|IDBIndex接口的keyPath属性返回当前索引的键路径。如果为null，则此索引不会自动填充|
 |`IDBIndex.multiEntry`|Boolean|Y|IDBDINDEX接口的multiEntry属性返回一个布尔值，当计算索引键路径的结果生成一个数组时，该布尔值会影响索引的行为|
 |`IDBIndex.name`|String|Y|IDBIndex接口的name属性包含一个为索引命名的字符串|
-|`IDBIndex.objectStore`|Object\<IDBObjectStore>|Y|IDBIndex接口的objectStore属性返回当前索引引用的对象存储的名称|
+|`IDBIndex.objectStore`|Object\<IDBObjectStore>|Y|IDBIndex接口的objectStore属性返回当前索引引用的对象仓库的名称|
 |`IDBIndex.unique`|Boolean|Y|唯一只读属性返回一个布尔值，该布尔值表示索引是否允许重复键|
 
 ---
@@ -929,7 +929,7 @@ request.onsuccess = function (event) {
 
 #### `IDBIndex.get()`
 
-IDBIndex接口的get()方法返回IDBRequest对象，并在单独的线程中查找与给定键对应的引用对象存储中的值，或者如果键设置为IDBKeyRange，则查找第一个对应的值
+IDBIndex接口的get()方法返回IDBRequest对象，并在单独的线程中查找与给定键对应的引用对象仓库中的值，或者如果键设置为IDBKeyRange，则查找第一个对应的值
 
 **语法**
 
@@ -968,7 +968,7 @@ const request: IDBRequest = IDBIndex.getAll(query, count);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |count|Number|N|指定找到多个值时要返回的值数。如果小于0或大于2^32-1，将引发TypeError异常|
 
 示例
@@ -997,7 +997,7 @@ const request: IDBRequest = IDBIndex.getAllKeys(query, count);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|query|String \| IDBKeyRange|N|要查询的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |count|Number|N|指定找到多个值时要返回的值数。如果小于0或大于2^32-1，将引发TypeError异常|
 
 示例
@@ -1053,7 +1053,7 @@ const request: IDBRequest = IDBIndex.openCursor(range, direction);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|range|String \| IDBKeyRange|N|要用作光标范围的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|range|String \| IDBKeyRange|N|要用作光标范围的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |direction|String<next \| nextunique \| prev \| prevunique>|N|光标的方向, 有效值为next、nextunique、prev和prevunique。默认值为next|
 
 示例
@@ -1082,7 +1082,7 @@ const request: IDBRequest = IDBIndex.openKeyCursor(range, direction);
 
 |参数|类型|必传|描述|
 |:---|:---|:---|:---|
-|range|String \| IDBKeyRange|N|要用作光标范围的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象存储中所有记录的键范围|
+|range|String \| IDBKeyRange|N|要用作光标范围的键或IDBKeyRange。如果未传递任何内容，则默认为选择此对象仓库中所有记录的键范围|
 |direction|String<next \| nextunique \| prev \| prevunique>|N|光标的方向, 有效值为next、nextunique、prev和prevunique。默认值为next|
 
 示例
@@ -1100,7 +1100,7 @@ request.onsuccess = function (event) {
 ## IDBCursor :id=cursor
 
 IndexedDB API 中的 IDBCursor 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
-游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录健（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录
+游标有一个源，指示需要遍历哪一个索引或者对象仓库区。它在所属区间范围内有一个位置，根据记录健（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录
 
 **创建游标**
 
@@ -1163,7 +1163,7 @@ IDBCursor.continue(key);
 
 IDBCursor接口的continuePrimaryKey()方法将光标前进到其键与key参数匹配以及主键与主键参数匹配的项，返回值None(undefined)
 
-!> 此方法仅对来自索引的游标有效。将其用于来自对象存储的游标将引发错误
+!> 此方法仅对来自索引的游标有效。将其用于来自对象仓库的游标将引发错误
 
 **语法**
 
@@ -1194,7 +1194,7 @@ IDBCursor.delete();
 
 #### `IDBCursor.update()`
 
-IDBCursor接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象存储中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
+IDBCursor接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象仓库中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
 
 !> 不能对从IDBIndex获取的游标调用update()
 
@@ -1266,7 +1266,7 @@ IDBCursorWithValue.continue(key);
 
 IDBCursorWithValue接口的continuePrimaryKey()方法将光标前进到其键与key参数匹配以及主键与主键参数匹配的项，返回值None(undefined)
 
-!> 此方法仅对来自索引的游标有效。将其用于来自对象存储的游标将引发错误
+!> 此方法仅对来自索引的游标有效。将其用于来自对象仓库的游标将引发错误
 
 **语法**
 
@@ -1297,7 +1297,7 @@ IDBCursorWithValue.delete();
 
 #### `IDBCursorWithValue.update()`
 
-IDBCursorWithValue接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象存储中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
+IDBCursorWithValue接口的update()方法返回IDBRequest对象，并在单独的线程中更新对象仓库中光标当前位置的值。如果光标指向刚刚删除的记录，则会创建一条新记录
 
 !> 不能对从IDBIndex获取的游标调用update()
 

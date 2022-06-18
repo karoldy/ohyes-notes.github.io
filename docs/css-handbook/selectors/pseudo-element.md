@@ -41,24 +41,22 @@ E:first-letter/E::first-letter {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/1.png)
-
-1. E:first-letter选择符不能紧挨着规则集大括号，需留有空格或换行
-
-2. 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::first-letter
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/16.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>杂志常用的首字下沉效果</h1>
 <p>今天，阳光明媚，晴空万里，非常适合户外活动，如踏青、远足之类的。长期坐在办公室的同学们要多注意运动。</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -84,18 +82,18 @@ p::first-letter {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/1.html"
+  src="css-handbook/example/selectors/72.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -121,24 +119,22 @@ E:first-line/E::first-line {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/1.png)
-
-1. E:first-line选择符不能紧挨着规则集大括号，需留有空格或换行
-
-2. 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::first-line
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/17.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>第一行文字的颜色与其它不同</h1>
 <p>今天，阳光明媚，晴空万里，非常适合户外活动，如踏青、远足之类的。长期坐在办公室的同学们要多注意运动。</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -161,18 +157,18 @@ p::first-line {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/2.html"
+  src="css-handbook/example/selectors/73.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -194,7 +190,7 @@ CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修�
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/2.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/18.png)
 
 1. 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::before
 
@@ -213,13 +209,15 @@ CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修�
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <p>Sorry, 你的浏览器不支持E:before和E::before</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 p {
@@ -247,9 +245,7 @@ p::before {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
@@ -259,6 +255,8 @@ p::before {
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -343,7 +341,7 @@ p::after {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/4.html"
+  src="css-handbook/example/selectors/74.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -405,7 +403,7 @@ input::-moz-placeholder { /*Firefox19+*/
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/5.html"
+  src="css-handbook/example/selectors/75.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -414,7 +412,7 @@ input::-moz-placeholder { /*Firefox19+*/
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/3.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/20.png)
 
 1. ::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类
 
@@ -422,13 +420,15 @@ input::-moz-placeholder { /*Firefox19+*/
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <input id="test" placeholder="Placeholder text!">
 ```
 
-#### **css**
+**css**
 
 ```css
 input::-webkit-input-placeholder {
@@ -445,18 +445,20 @@ input::-moz-placeholder { /*Firefox19+*/
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/5.html"
+  src="css-handbook/example/selectors/76.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
+
+---
 
 ## E::selection :id=_6
 
@@ -472,22 +474,11 @@ E::selection {
 
 **设置对象被选择时的样式**
 
-需要注意的是，::selection只能定义被选择时的[background-color](#)，[color](#)及[text-shadow](#)(IE11尚不支持定义该属性)
+需要注意的是，::selection只能定义被选择时的[background-color]()，[color]()及[text-shadow]()(IE11尚不支持定义该属性)
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/21.png)
 
 ### 示例
 
@@ -514,15 +505,15 @@ p::selection {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-element/6.html"
+  src="css-handbook/example/selectors/77.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->

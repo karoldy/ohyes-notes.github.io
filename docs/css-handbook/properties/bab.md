@@ -91,20 +91,22 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/21.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">定义边框特性</div>
 <div class="test2">边框颜色默认使用文本颜色</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -117,18 +119,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/01.html"
+  src="css-handbook/example/properties/24.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -190,13 +192,15 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-width.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/22.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">提供1个参数</div>
@@ -205,7 +209,7 @@
 <div class="test4">提供4个参数</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -237,18 +241,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/02.html"
+  src="css-handbook/example/properties/25.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -322,13 +326,15 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-style.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/23.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="none">none</div>
@@ -343,7 +349,7 @@
 <div class="outset">outset</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 div {
@@ -402,18 +408,18 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/03.html"
+  src="css-handbook/example/properties/26.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -468,13 +474,15 @@ div {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-color.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/24.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">提供1个参数</div>
@@ -483,7 +491,7 @@ div {
 <div class="test4">提供4个参数</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -515,18 +523,18 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/04.html"
+  src="css-handbook/example/properties/27.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -576,13 +584,15 @@ div {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/box-shadow.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/25.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul class="test">
@@ -594,7 +604,7 @@ div {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test li {
@@ -624,18 +634,18 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/05.html"
+  src="css-handbook/example/properties/28.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -697,13 +707,15 @@ div {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-radius.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/26.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h2>水平与垂直半径相同时：</h2>
@@ -722,7 +734,7 @@ div {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 ul {
@@ -761,18 +773,18 @@ li {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/06.html"
+  src="css-handbook/example/properties/29.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -816,19 +828,21 @@ li {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/27.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">用图片来做边框</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -839,18 +853,18 @@ li {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/07.html"
+  src="css-handbook/example/properties/30.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -908,7 +922,7 @@ li {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/08.html"
+  src="css-handbook/example/properties/31.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -921,19 +935,21 @@ li {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image-source.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/28.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">用图片来做边框</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -945,18 +961,18 @@ li {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/09.html"
+  src="css-handbook/example/properties/32.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -996,7 +1012,7 @@ li {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image-slice.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/29.png)
 
 ### 示例
 
@@ -1037,7 +1053,7 @@ li {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/10.html"
+  src="css-handbook/example/properties/33.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1108,7 +1124,7 @@ li {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/11.html"
+  src="css-handbook/example/properties/34.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1186,7 +1202,7 @@ border-image-width 属性值为10px；
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/12.html"
+  src="css-handbook/example/properties/35.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1199,7 +1215,7 @@ border-image-width 属性值为10px；
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image-width.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/30.png)
 
 ### 示例
 
@@ -1231,7 +1247,7 @@ border-image-width 属性值为10px；
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/13.html"
+  src="css-handbook/example/properties/36.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1274,7 +1290,7 @@ border-image-width 属性值为10px；
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image-outset.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/31.png)
 
 ### 示例
 
@@ -1307,7 +1323,7 @@ border-image-width 属性值为10px；
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/14.html"
+  src="css-handbook/example/properties/37.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1353,7 +1369,7 @@ border-image-width 属性值为10px；
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/border-image-repeat.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/32.png)
 
 ### 示例
 
@@ -1400,7 +1416,7 @@ border-image-width 属性值为10px；
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/15.html"
+  src="css-handbook/example/properties/38.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1505,7 +1521,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/33.png)
 
 ### 示例
 
@@ -1537,7 +1553,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/16.html"
+  src="css-handbook/example/properties/39.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1578,7 +1594,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-color.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/34.png)
 
 ### 示例
 
@@ -1608,7 +1624,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/17.html"
+  src="css-handbook/example/properties/40.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1653,7 +1669,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-image.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/35.png)
 
 ### 示例
 
@@ -1714,7 +1730,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/18.html"
+  src="css-handbook/example/properties/41.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1766,7 +1782,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-repeat.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/36.png)
 
 ### 示例
 
@@ -1796,7 +1812,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/19.html"
+  src="css-handbook/example/properties/42.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1841,7 +1857,7 @@ background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-attachment.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/37.png)
 
 ### 示例
 
@@ -1910,7 +1926,7 @@ body {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/20.html"
+  src="css-handbook/example/properties/43.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1982,7 +1998,7 @@ background: url(test1.jpg) no-repeat left bottom 10px;
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-position.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/38.png)
 
 ### 示例
 
@@ -2015,7 +2031,7 @@ background: url(test1.jpg) no-repeat left bottom 10px;
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/21.html"
+  src="css-handbook/example/properties/44.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2060,7 +2076,7 @@ background: url(test1.jpg) no-repeat left bottom 10px;
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-origin.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/39.png)
 
 ### 示例
 
@@ -2121,7 +2137,7 @@ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/22.html"
+  src="css-handbook/example/properties/45.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2168,7 +2184,7 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-clip.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/40.png)
 
 ### 示例
 
@@ -2244,7 +2260,7 @@ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/23.html"
+  src="css-handbook/example/properties/46.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2322,7 +2338,7 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/bab/background-size.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/41.png)
 
 ### 示例
 
@@ -2383,7 +2399,7 @@ p {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/bab/24.html"
+  src="css-handbook/example/properties/47.html"
 >
   浏览器不支持iframe
 </iframe>

@@ -28,94 +28,19 @@ E F {
 
 **选择所有被E元素包含的F元素**
 
-与 [子选择器(E>F)](#2) 不同的是，包含选择器将会命中所有器合条件的后代，包括儿子，孙子，孙子的孙子\...
-
-<!-- tabs:start -->
-
-#### **包含选择器(E F)**
-
-```html
-<div class="demo">
-  <div>
-    0
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-  <div>
-</div>
-```
-
-```css
-.demo div {
-  border: 1px solid #f00;
-}
-```
-
-运行结果:
-
-<iframe
-  class="output-iframe"
-  scrolling="no"
-  frameborder="0"
-  src="css-handbook/example/selectors/relationship/1.html"
->
-  浏览器不支持iframe
-</iframe>
-
-#### **子选择器(E>F)**
-
-```html
-<div class="demo">
-  <div>
-    0
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-  <div>
-</div>
-```
-
-```css
-.demo > div {
-  border: 1px solid #f00;
-}
-```
-
-运行结果:
-
-<iframe
-  class="output-iframe"
-  scrolling="no"
-  frameborder="0"
-  src="css-handbook/example/selectors/relationship/2.html"
->
-  浏览器不支持iframe
-</iframe>
-
-<!-- tabs:end -->
-
-!> 此例，如果是包含选择器，那么 0, 1, 2, 3 都有边框；如果是子选择器，那么只有 0 有边框，即只有子元素会被命中；
+- 与 [子选择器(E>F)](#_2) 不同的是，包含选择器将会命中所有器合条件的后代，包括儿子，孙子，孙子的孙子\...
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|6.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/5.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -126,7 +51,7 @@ E F {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 ul li {
@@ -134,18 +59,18 @@ ul li {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果:
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/3.html"
+  src="css-handbook/example/3.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -163,63 +88,19 @@ E>F {
 
 选择所有作为E元素的子元素F
 
-与 [包含选择器(E F)](#1) 不同的是，子选择器只能命中子元素，而不能命中孙辈
-
-<!-- tabs:start -->
-
-#### **html**
-
-```html
-<div class="demo">
-	<div class="a">
-		<div class="b">b</div>
-	</div>
-</div>
-```
-
-#### **css**
-
-```css
-.demo > div {
-  border: 1px solid #f00;
-}
-```
-
-<!-- tabs:end -->
-
-运行结果
-
-<iframe
-  class="output-iframe"
-  scrolling="no"
-  frameborder="0"
-  src="css-handbook/example/selectors/relationship/4.html"
->
-  浏览器不支持iframe
-</iframe>
-
-!> 此例只有 .a 会被命中，因为它是 .demo 的子元素；
+- 与 [包含选择器(E F)](#_1) 不同的是，子选择器只能命中子元素，而不能命中孙辈
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/6.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul class="test">
@@ -242,7 +123,7 @@ E>F {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test > li > a {
@@ -250,18 +131,18 @@ E>F {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/5.html"
+  src="css-handbook/example/selectors/4.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -279,11 +160,13 @@ E+F {
 
 **选择紧贴在E元素之后F元素，元素E与F必须同属一个父级**
 
-与 [兄弟选择器(E~F)](#4) 相同的是，相邻选择器也是选择同级的元素F；不同的是，相邻选择器只会命中器合条件的那个毗邻的兄弟元素(即紧挨着E元素之后的第一个F元素)
+与 [兄弟选择器(E~F)](#_4) 相同的是，相邻选择器也是选择同级的元素F；不同的是，相邻选择器只会命中器合条件的那个毗邻的兄弟元素(即紧挨着E元素之后的第一个F元素)
 
 <!-- tabs:start -->
 
 #### **相邻选择器**
+
+**html**
 
 ```html
 <h3>这是一个标题</h3>
@@ -291,6 +174,8 @@ E+F {
 <p>p2</p>
 <p>p3</p>
 ```
+
+**css**
 
 ```css
 h3 + p {
@@ -298,18 +183,20 @@ h3 + p {
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/6.html"
+  src="css-handbook/example/selectors/5.html"
 >
   浏览器不支持iframe
 </iframe>
 
 #### **兄弟选择器**
+
+**html**
 
 ```html
 <h3>这是一个标题</h3>
@@ -318,19 +205,21 @@ h3 + p {
 <p>p3</p>
 ```
 
+**css**
+
 ```css
 h3 ~ p {
   color: #f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/7.html"
+  src="css-handbook/example/selectors/6.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -341,22 +230,15 @@ h3 ~ p {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/7.png)
 
 ### 示例
 
 <!-- tabs:start -->
+
+#### **代码**
+
+**html**
 
 ```html
 <h3>这是一个标题</h3>
@@ -369,24 +251,26 @@ h3 ~ p {
 <p>p2</p>
 ```
 
+**css**
+
 ```css
 p + p {
 	color: #f00;
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/8.html"
+  src="css-handbook/example/selectors/7.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -410,6 +294,8 @@ E~F {
 
 需要注意的是，选择的只是同级的元素F，后代中的元素F不会被选择
 
+**html**
+
 ```html
 <h3>这是一个标题</h3>
 <p>p1</p>
@@ -419,19 +305,21 @@ E~F {
 </div>
 ```
 
+**css**
+
 ```css
 h3 ~ p {
   color: #f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/9.html"
+  src="css-handbook/example/selectors/8.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -442,6 +330,8 @@ h3 ~ p {
 
 只选择E元素之后的元素F，出现在E元素之前的元素F，不会被选择到
 
+**html**
+
 ```html
 <p>p0</p>
 <h3>这是一个标题</h3>
@@ -450,19 +340,21 @@ h3 ~ p {
 <p>p3</p>
 ```
 
+**css**
+
 ```css
 h3 ~ p {
   color: #f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/10.html"
+  src="css-handbook/example/selectors/9.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -471,7 +363,9 @@ h3 ~ p {
 
 #### **例子3**
 
-与 [相邻选择器(E+F)](#3) 不同的是，兄弟选择器会命中所有器合条件的兄弟元素，而不强制是紧邻的元素
+与 [相邻选择器(E+F)](#_3) 不同的是，兄弟选择器会命中所有器合条件的兄弟元素，而不强制是紧邻的元素
+
+**html**
 
 ```html
 <h3>这是一个标题</h3>
@@ -479,6 +373,8 @@ h3 ~ p {
 <p>p2</p>
 <p>p3</p>
 ```
+
+**css**
 
 ```css
 /* 相邻选择器(E+F) */
@@ -492,13 +388,13 @@ h3 ~ p {
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/11.html"
+  src="css-handbook/example/selectors/10.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -509,26 +405,15 @@ h3 ~ p {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
-
-在Android Browser4.2.*及以下，伪元素:checked与该选择器一起使用会有一个bug，[查看详情](https://github.com/doyoe/trip#user-content-checked-sibling-bug)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/8.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -543,7 +428,7 @@ h3 ~ p {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 p ~ p {
@@ -551,15 +436,15 @@ p ~ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/relationship/12.html"
+  src="css-handbook/example/selectors/11.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->

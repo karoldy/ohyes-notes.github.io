@@ -54,19 +54,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/width.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/13.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我的宽度为200</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -75,18 +77,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/01.html"
+  src="css-handbook/example/properties/14.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -125,19 +127,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/min-width.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/13.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我的最小宽度为200</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -147,18 +151,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/02.html"
+  src="css-handbook/example/properties/15.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -199,19 +203,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/max-width.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我的最大宽度为200</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -220,18 +226,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/03.html"
+  src="css-handbook/example/properties/16.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -271,19 +277,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/height.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/15.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我的高度为200</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -292,18 +300,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/04.html"
+  src="css-handbook/example/properties/17.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -342,19 +350,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/min-height.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/16.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我的最小高度为200</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -363,18 +373,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/05.html"
+  src="css-handbook/example/properties/18.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -415,13 +425,15 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/max-height.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/17.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -430,7 +442,7 @@
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -439,18 +451,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/06.html"
+  src="css-handbook/example/properties/19.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -551,7 +563,7 @@
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/07.html"
+  src="css-handbook/example/properties/20.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -584,7 +596,7 @@
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/08.html"
+  src="css-handbook/example/properties/21.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -615,19 +627,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/margin.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/18.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">注意我距上、右、下、左的距离</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -636,18 +650,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/09.html"
+  src="css-handbook/example/properties/22.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -707,19 +721,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/dimension/padding.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/19.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">注意我离4条边框线的距离</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -729,15 +745,15 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/dimension/10.html"
+  src="css-handbook/example/properties/23.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->

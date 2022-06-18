@@ -11,8 +11,8 @@
 |:---|:---|:---|:---|
 |[*](#universal)|通配选择器|CSS2|所有元素对象|
 |[E](#type)|标签选择器|CSS1|以文档语言对象类型作为选择器|
-|[E#myid](#_id)|id选择器|CSS1|以唯一标识器id属性等于myid的E对象作为选择器|
-|[E.myclass](#_class)|class选择器|CSS1|以class属性包含myclass的E对象作为选择器|
+|[E#myid](#myid)|id选择器|CSS1|以唯一标识器id属性等于myid的E对象作为选择器|
+|[E.myclass](#myclass)|class选择器|CSS1|以class属性包含myclass的E对象作为选择器|
 
 ## 通配选择器 :id=universal
 
@@ -28,51 +28,46 @@
 
 **选定所有对象**
 
-通常不建议使用通配选择器，因为它会遍历并命中文档中所有的元素，出于性能考虑，需酌情使用
+- 通配选择符(Universal Selector)
+- 通常不建议使用通配选择符，因为它会遍历并命中文档中所有的元素，出于性能考虑，需酌情使用
 
 ### 兼容性
 
-IE6及更早浏览器并不支持通配选择器(*)，而是将它忽略了，所以也变相的能看到效果
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0<sup>#1</sup>;</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/1.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>标题</h1>
 <p>正文内容</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 * {
-  color: #f00;
+	color: #f00;
 }
 ```
 
+**运行结果**
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/selectors/1.html"
+>
+  浏览器不支持iframe
+</iframe>
+
 <!-- tabs:end -->
-
-运行结果:
-
-<output>
-  <h1 style="color: #f00;">标题</h1>
-  <p style="color: #f00;">正文内容</p>
-</output>
-
 
 ---
 
@@ -92,56 +87,52 @@ E {
 
 **以文档语言对象类型作为选择器**
 
+类型选择符(Type Selector)
+
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|6.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/2.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>标题</h1>
 <p>正文内容</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
-	color: #f00;
+	font-size: 20px;
 }
 p {
-	color: #f00;
+	font-size: 13px;
 }
 ```
 
+**运行结果**
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/selectors/1.html"
+>
+  浏览器不支持iframe
+</iframe>
+
 <!-- tabs:end -->
-
-运行结果:
-
-<output>
-  <h1 style="color: #f00;">标题</h1>
-  <p style="color: #f00;">正文内容</p>
-</output>
-
 
 ---
 
-## id选择器 :id=_id
+## id选择器 :id=myid
 
 ### 语法
 
@@ -155,56 +146,52 @@ E#myid {
 
 **以唯一标识器id属性等于myid的E对象作为选择器**
 
+ID选择符(ID Selector)
+
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|6.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/3.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
-<h1 id="title">标题</h1>
+<h1 id="subtitle">标题</h1>
 <p id="content">正文内容</p>
 ```
 
-#### **css**
+**css**
 
 ```css
-#title {
-	color: #f00;
+#subtitle {
+	font-size: 20px;
 }
-
 p#content {
-	color: #f00;
+	font-size: 13px;
 }
 ```
 
+**运行结果**
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/selectors/1.html"
+>
+  浏览器不支持iframe
+</iframe>
+
 <!-- tabs:end -->
-
-运行结果:
-
-<output>
-  <h1 style="color: #f00;">标题</h1>
-  <p style="color: #f00;">正文内容</p>
-</output>
 
 ---
 
-## 类选择器 :id=_class
+## 类选择器 :id=myclass
 
 ### 语法
 
@@ -218,95 +205,50 @@ E.myclass {
 
 **以class属性包含myclass的E对象作为选择器**
 
-不同于ID选择器的唯一性，类选择器可以同时定义多个, 如:
-
-<!-- tabs:start -->
-
-#### **定义多个类**
-
-```html
-<div class="a b">给某个div元素定义.a和.b两个类</div>
-```
-
-```css
-.a {
-  color: #f00;
-}
-
-.b {
-  font-weight: 700;
-}
-```
-
-!> 注意，id选择器不能在同个元素上定义多个，比如id="a b"就是错误的写法
-
-
-#### **多类选择器**
-
-```html
-<div class="a b">多类选择器使用方法</div>
-```
-
-```css
-.a.b {
-	color: #f00;
-}
-```
-
-!> 此例命中同时拥有.a和.b两个类的元素。需要注意的是IE6并不支持多类选择器，如：.a.b{}将会被视为：.b{}
-
-<!-- tabs:end -->
+- 类选择符(Class Selector)
+- 不同于ID选择器的唯一性，类选择器可以同时定义多个
 
 ### 兼容性
 
-IE6及更早浏览器并不支持多类选择器，形如：.a.b {}
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/4.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1 class="title">标题</h1>
 <p class="content">正文内容</p>
-<p class="content note">多类选择器的使用</p>
+<p class="content note">多类选择符的使用</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 .title {
-  color: #f00;
+	font-size: 20px;
 }
-
 p.content {
-  color: #f00;
+	font-size: 13px;
 }
-
 .content.note {
-  font-size: 30px;
-  font-weight: 700;
+	font-size: 30px;
 }
 ```
 
+**运行结果**
+
+<iframe
+  class="output-iframe"
+  scrolling="yes"
+  frameborder="0"
+  src="css-handbook/example/selectors/2.html"
+>
+  浏览器不支持iframe
+</iframe>
+
 <!-- tabs:end -->
-
-运行结果:
-
-<output>
-  <h1 style="color: #f00;">标题</h1>
-  <p style="color: #f00;">正文内容</p>
-  <p style="color: #f00;font-size: 30px;font-weight:700;">多类选择器的使用</p>
-</output>

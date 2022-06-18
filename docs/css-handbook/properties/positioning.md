@@ -25,7 +25,7 @@
 
 **默认值**：static
 
-**适用于**：除[display](/css-handbook/properties/layout?id=display)属性定义为`table-column-group | table-column`之外的所有元素
+**适用于**：除[display](/css-handbook/properties/layout#=display)属性定义为`table-column-group | table-column`之外的所有元素
 
 **继承性**：无
 
@@ -56,19 +56,21 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/position.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/1.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div id="position">水平垂直居中的对象</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 #position {
@@ -84,18 +86,18 @@
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/01.html"
+  src="css-handbook/example/properties/01.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -134,11 +136,11 @@
 - 不同层叠上下文中，元素的显示顺序依据祖先的层叠级别来决定，与自身的层叠级别无关
 - 当`z-index`未定义或者值为`auto`时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文
 
-例子
-
 <!-- tabs:start -->
 
-#### **html**
+#### **例子**
+
+**html**
 
 ```html
 <div class="test">
@@ -149,7 +151,7 @@
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 div {
@@ -168,30 +170,32 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/02.html"
+  src="css-handbook/example/properties/02.html"
 >
   浏览器不支持iframe
 </iframe>
 
 !> 细心的你会发现上述代码在IE6,7下的呈现与高级浏览器下不同。.test1和.test2未设置z-index，在高级浏览器下不会产生新的局部层叠上下文，也就是说它们的子元素没有被新的局部层叠上下文包裹，那么它们的子元素就处在同一个层叠上下文中，可以直接通过自身的层叠级别来决定显示顺序，所以结果是.a 覆盖了.b，因为.a的层叠级别比.b高；而在IE6,7下，.test1和.test2会产生新的局部层叠上下文，即它们的子元素被新的局部层叠上下文包裹，于是子元素显示顺序只能依赖.test1和.test2层叠级别来确定。所以结果是.b 覆盖了.a，因为.b的父元素.test2在HTML文档流中排在.test1之后，后来者居上覆盖前者
 
+<!-- tabs:end -->
+
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/z-index.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/2.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="z1">z-index:1</div>
@@ -199,7 +203,7 @@ p {
 <div class="z3">z-index:3</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .z1,
@@ -230,18 +234,18 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/03.html"
+  src="css-handbook/example/properties/03.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -282,19 +286,21 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/top.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/3.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在浏览器顶部</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -305,18 +311,18 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/04.html"
+  src="css-handbook/example/properties/04.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -355,19 +361,21 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/right.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/4.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在浏览器右上角</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -378,18 +386,18 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/05.html"
+  src="css-handbook/example/properties/05.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -428,19 +436,21 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/bottom.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/5.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在浏览器底部</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -451,18 +461,18 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/06.html"
+  src="css-handbook/example/properties/06.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -501,19 +511,21 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/left.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/6.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在浏览器左上角</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -524,18 +536,18 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/07.html"
+  src="css-handbook/example/properties/07.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -583,7 +595,7 @@ p {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/positioning/clip.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/7.png)
 
 ### 示例
 
@@ -607,17 +619,15 @@ p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/positioning/08.html"
+  src="css-handbook/example/properties/08.html"
 >
   浏览器不支持iframe
 </iframe>
 
----
+<!-- tabs:end -->
