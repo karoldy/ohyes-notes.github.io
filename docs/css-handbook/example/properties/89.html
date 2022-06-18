@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>document</title>
+	<style type="text/css">
+		h1 {
+			font-size:16px;
+			font-family:Arial;
+		}
+		.separate {
+			border-collapse: separate;
+		}
+		.collapse {
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<h1>separate: 边框独立</h1>
+	<table border="1" class="separate">
+	<tbody>
+		<tr>
+			<td>独立边框</td>
+			<td>独立边框</td>
+			<td>独立边框</td>
+		</tr>
+		<tr>
+			<td>独立边框</td>
+			<td>独立边框</td>
+			<td>独立边框</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h1>collapse: 相邻边框被合并</h1>
+	<table border="1" class="collapse">
+	<tbody>
+		<tr>
+			<td>合并边框</td>
+			<td>合并边框</td>
+			<td>合并边框</td>
+		</tr>
+		<tr>
+			<td>合并边框</td>
+			<td>合并边框</td>
+			<td>合并边框</td>
+		</tr>
+	</tbody>
+	</table>
+</body>
+</html>

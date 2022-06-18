@@ -65,24 +65,15 @@ E:link {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|6.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/2.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -93,7 +84,7 @@ E:link {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 a:link {
@@ -104,18 +95,19 @@ a:link {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/1.html"
+  src="css-handbook/example/selectors/20.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
+
 
 ---
 
@@ -148,24 +140,15 @@ E:visited {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|6.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/2.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h3>点击下面链接</h3>
@@ -174,7 +157,7 @@ E:visited {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 a:link {
@@ -185,18 +168,18 @@ a:visited {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/2.html"
+  src="css-handbook/example/selectors/21.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -229,25 +212,16 @@ E:hover {
 
 ### 兼容性
 
-IE6及更早浏览器只支持a元素的:hover，从IE7开始支持其它元素的:hover
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0<sup>#1</sup>;</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/12.png)
 
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>请将鼠标分别移动到下面2个元素上</h1>
@@ -255,7 +229,7 @@ IE6及更早浏览器只支持a元素的:hover，从IE7开始支持其它元素�
 <div>我是一个div标签</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -275,18 +249,18 @@ div:hover {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/3.html"
+  src="css-handbook/example/selectors/22.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -319,24 +293,15 @@ E:active {
 
 ### 兼容性
 
-IE7及更早浏览器只支持a元素的:active，从IE8开始支持其它元素的:active
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-7.0<sup>#1</sup>;</span> 8.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/12.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>请将分别激活(点击与释放之间)下面2个元素</h1>
@@ -344,7 +309,7 @@ IE7及更早浏览器只支持a元素的:active，从IE8开始支持其它元素
 <div>我是一个div</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -364,19 +329,20 @@ div:active {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/4.html"
+  src="css-handbook/example/selectors/23.html"
 >
   浏览器不支持iframe
 </iframe>
 
+<!-- tabs:end -->
+
+---
 
 ## E:focus :id=focus
 
@@ -392,28 +358,21 @@ E:focus {
 
 **设置对象在成为输入焦点（该对象的onfocus事件发生）时的样式**
 
-webkit内核浏览器会默认给:focus状态的元素加上outline的样式
+webkit内核浏览器会默认给`:focus`状态的元素加上 [outline]() 的样式
 
 ### 兼容性
 
 <br />
 
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-7.0;</span> 8.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/13.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>请聚焦到以下输入框</h1>
@@ -427,7 +386,7 @@ webkit内核浏览器会默认给:focus状态的元素加上outline的样式
 </form>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -446,18 +405,18 @@ input:focus {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/5.html"
+  src="css-handbook/example/selectors/24.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -477,31 +436,22 @@ E:lang(fr) {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-7.0;</span> 8.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/13.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <p lang="zh-cmn-Hans">大段测试文字</p>
 <p lang="en">english</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 p:lang(zh-cmn-Hans) {
@@ -512,18 +462,18 @@ p:lang(en) {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/6.html"
+  src="css-handbook/example/selectors/25.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -545,7 +495,9 @@ E:not(s) {
 
 <!-- tabs:start -->
 
-#### **html**
+#### **例子**
+
+**html**
 
 ```html
 <ul class="demo">
@@ -556,7 +508,7 @@ E:not(s) {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 .demo li {
@@ -568,41 +520,34 @@ E:not(s) {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/7.html"
+  src="css-handbook/example/selectors/26.html"
 >
   浏览器不支持iframe
 </iframe>
 
+
 !> 上述代码的意思是：给该列表中除最后一项外的所有列表项加一条底边线
+
+<!-- tabs:end -->
+
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <p class="abc">否定伪类选择符 E:not(s)</p>
@@ -611,7 +556,7 @@ E:not(s) {
 <p>否定伪类选择符 E:not(s)</p>
 ```
 
-#### **css**
+**css**
 
 ```css
 p:not(.abc) {
@@ -619,18 +564,18 @@ p:not(.abc) {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/8.html"
+  src="css-handbook/example/selectors/27.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -652,13 +597,15 @@ E:root {
 
 <!-- tabs:start -->
 
-#### **html**
+#### **例子**
+
+**html**
 
 ```html
 <p>段落颜色<p>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -672,41 +619,32 @@ html:root .test {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/9.html"
+  src="css-handbook/example/selectors/28.html"
 >
   浏览器不支持iframe
 </iframe>
 
 !> 上述代码：非IE文本将为black，IE9及以上为purple，IE8为yellow，IE7为blue，IE6为red
 
+<!-- tabs:end -->
+
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <ul>
@@ -716,7 +654,7 @@ html:root .test {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 html:root {
@@ -724,18 +662,18 @@ html:root {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/10.html"
+  src="css-handbook/example/selectors/29.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -761,6 +699,8 @@ E:first-child选择符，E必须是它的兄弟元素中的第一个元素，换
 
 #### **例子1**
 
+**html**
+
 ```html
 <ul>
 	<li>列表项一</li>
@@ -770,19 +710,21 @@ E:first-child选择符，E必须是它的兄弟元素中的第一个元素，换
 </ul>
 ```
 
+**css**
+
 ```css
 li:first-child {
   color: #f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/11.html"
+  src="css-handbook/example/selectors/30.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -791,11 +733,15 @@ li:first-child {
 
 #### **例子2**
 
+**html**
+
 ```html
 <div>
 	<p>我是一个p</p>
 </div>
 ```
+
+**css**
 
 ```css
 p:first-child {
@@ -803,13 +749,13 @@ p:first-child {
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/12.html"
+  src="css-handbook/example/selectors/31.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -820,6 +766,8 @@ p:first-child {
 
 假设将例子2的代码简单地修改一下
 
+**html**
+
 ```html
 <div>
 	<h2>我是一个标题</h2>
@@ -827,19 +775,21 @@ p:first-child {
 </div>
 ```
 
+**css**
+
 ```css
 p:first-child {
   color:#f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/13.html"
+  src="css-handbook/example/selectors/32.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -850,24 +800,15 @@ p:first-child {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0;</span> 7.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/6.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>注意的是li:first-child，而不是ul:first-child</h1>
@@ -879,7 +820,7 @@ p:first-child {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -890,18 +831,18 @@ li:first-child {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/14.html"
+  src="css-handbook/example/selectors/33.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -930,6 +871,8 @@ E:last-child选择符，E必须是它的兄弟元素中的最后一个元素，�
 
 #### **有效的代码**
 
+**html**
+
 ```html
 <div>
 	<h2>我是一个标题</h2>
@@ -937,25 +880,29 @@ E:last-child选择符，E必须是它的兄弟元素中的最后一个元素，�
 </div>
 ```
 
+**css**
+
 ```css
 p:last-child {
   color:#f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/15.html"
+  src="css-handbook/example/selectors/34.html"
 >
   浏览器不支持iframe
 </iframe>
 
 #### **无效的代码**
 
+**html**
+
 ```html
 <div>
 	<p>我是一个p</p>
@@ -963,19 +910,21 @@ p:last-child {
 </div>
 ```
 
+**css**
+
 ```css
 p:last-child {
   color:#f00;
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/16.html"
+  src="css-handbook/example/selectors/35.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -986,24 +935,15 @@ p:last-child {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/6.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>注意的是li:last-child，而不是ul:last-child</h1>
@@ -1015,7 +955,7 @@ p:last-child {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -1026,18 +966,18 @@ li:last-child {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/17.html"
+  src="css-handbook/example/selectors/36.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -1059,24 +999,15 @@ E:only-child {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/6.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>只有唯一一个子元素</h1>
@@ -1091,7 +1022,7 @@ E:only-child {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -1102,18 +1033,20 @@ li:only-child {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/18.html"
+  src="css-handbook/example/selectors/37.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
+
+---
 
 ## E:nth-child(n) :id=nth-child
 
@@ -1133,11 +1066,11 @@ E:nth-child(n) {
 
 该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中所有的偶数子元素E，那么选择符可以写成：E:nth-child(2n)
 
-- **使用使用E:nth-child(n)实现奇偶**
+**使用使用E:nth-child(n)实现奇偶**
 
 <!-- tabs:start -->
 
-#### **代码**
+#### **例子**
 
 **html**
 
@@ -1178,14 +1111,14 @@ E:nth-child(n) {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/19.html"
+  src="css-handbook/example/selectors/38.html"
 >
   浏览器不支持iframe
 </iframe>
 
 <!-- tabs:end -->
 
-- **使用odd, even实现奇偶**
+**使用odd, even实现奇偶**
 
 <!-- tabs:start -->
 
@@ -1230,14 +1163,14 @@ E:nth-child(n) {
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/20.html"
+  src="css-handbook/example/selectors/39.html"
 >
   浏览器不支持iframe
 </iframe>
 
 <!-- tabs:end -->
 
-- **有一点需要注意的是**
+**有一点需要注意的是**
 
 <!-- tabs:start -->
 
@@ -1271,7 +1204,7 @@ p:nth-child(2) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/21.html"
+  src="css-handbook/example/selectors/40.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1294,7 +1227,7 @@ p:nth-child(3) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/22.html"
+  src="css-handbook/example/selectors/41.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1317,7 +1250,7 @@ p:nth-child(4) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/23.html"
+  src="css-handbook/example/selectors/42.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1326,7 +1259,7 @@ p:nth-child(4) {
 
 <!-- tabs:end -->
 
-- **假设不确定第1个子元素是否为E，但是又想命中第1个E，应该这样写：**
+**假设不确定第1个子元素是否为E，但是又想命中第1个E，应该这样写：**
 
 <!-- tabs:start -->
 
@@ -1368,7 +1301,7 @@ p:nth-of-type(1) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/24.html"
+  src="css-handbook/example/selectors/43.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1379,24 +1312,15 @@ p:nth-of-type(1) {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>第二行要变成红色 <code>li:nth-child(2){color:#f00;}</code></h1>
@@ -1407,7 +1331,7 @@ p:nth-of-type(1) {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -1418,18 +1342,18 @@ li:nth-child(2) {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/25.html"
+  src="css-handbook/example/selectors/44.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -1451,7 +1375,7 @@ E:nth-last-child(n) {
 
 该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中倒数第一个子元素E，那么选择符可以写成：E:nth-last-child(1)
 
-- **有一点需要注意的是**
+**有一点需要注意的是**
 
 <!-- tabs:start -->
 
@@ -1487,14 +1411,14 @@ p:nth-last-child(2) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/26.html"
+  src="css-handbook/example/selectors/45.html"
 >
   浏览器不支持iframe
 </iframe>
 
 <!-- tabs:end -->
 
-- **假设不确定倒数第1个子元素是否为E，但是又想命中倒数第1个E，应该这样写:**
+**假设不确定倒数第1个子元素是否为E，但是又想命中倒数第1个E，应该这样写:**
 
 <!-- tabs:start -->
 
@@ -1536,7 +1460,7 @@ p:nth-last-of-type(1) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/27.html"
+  src="css-handbook/example/selectors/46.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1547,24 +1471,15 @@ p:nth-last-of-type(1) {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>最后一行要变成红色 <code>li:nth-last-child(1){color:#f00;}</code></h1>
@@ -1575,7 +1490,7 @@ p:nth-last-of-type(1) {
 </ul>
 ```
 
-#### **css**
+**css**
 
 ```css
 h1 {
@@ -1586,18 +1501,18 @@ li:nth-last-child(1) {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/28.html"
+  src="css-handbook/example/selectors/47.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -1621,7 +1536,7 @@ E:first-of-type {
 
 <!-- tabs:start -->
 
-#### **代码**
+#### **例子**
 
 **html**
 
@@ -1651,7 +1566,7 @@ E:first-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/29.html"
+  src="css-handbook/example/selectors/48.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1660,11 +1575,11 @@ E:first-of-type {
 
 <!-- tabs:end -->
 
-- 再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素, 来看下面这个例子
+**再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素, 来看下面这个例子**
 
 <!-- tabs:start -->
 
-#### **代码**
+#### **例子**
 
 **html**
 
@@ -1695,7 +1610,7 @@ E:first-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/30.html"
+  src="css-handbook/example/selectors/49.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1706,24 +1621,15 @@ E:first-of-type {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="demo">
@@ -1733,7 +1639,7 @@ E:first-of-type {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .demo p:first-of-type {
@@ -1741,18 +1647,18 @@ E:first-of-type {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/31.html"
+  src="css-handbook/example/selectors/50.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -1776,7 +1682,7 @@ E:last-of-type {
 
 <!-- tabs:start -->
 
-#### **代码**
+#### **例子**
 
 **html**
 
@@ -1800,13 +1706,13 @@ E:last-of-type {
 }
 ```
 
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/32.html"
+  src="css-handbook/example/selectors/51.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1815,7 +1721,7 @@ E:last-of-type {
 
 <!-- tabs:end -->
 
-- 再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素，来看下面这个例子：
+**再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素，来看下面这个例子：**
 
 <!-- tabs:start -->
 
@@ -1850,7 +1756,7 @@ E:last-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/33.html"
+  src="css-handbook/example/selectors/52.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1861,24 +1767,15 @@ E:last-of-type {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -1888,7 +1785,7 @@ E:last-of-type {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 p:last-of-type {
@@ -1896,18 +1793,18 @@ p:last-of-type {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/34.html"
+  src="css-handbook/example/selectors/53.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -1935,7 +1832,6 @@ E:only-of-type {
 
 **html**
 
-
 ```html
 <div class="demo">
 	<span>span1</span>
@@ -1956,7 +1852,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/35.html"
+  src="css-handbook/example/selectors/54.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -1988,7 +1884,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/36.html"
+  src="css-handbook/example/selectors/55.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2021,7 +1917,7 @@ E:only-of-type {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/37.html"
+  src="css-handbook/example/selectors/56.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2033,24 +1929,15 @@ E:only-of-type {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -2058,7 +1945,7 @@ E:only-of-type {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 p:only-of-type {
@@ -2066,18 +1953,18 @@ p:only-of-type {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/38.html"
+  src="css-handbook/example/selectors/57.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2131,7 +2018,7 @@ E:nth-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/39.html"
+  src="css-handbook/example/selectors/58.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2140,7 +2027,7 @@ E:nth-of-type(n) {
 
 <!-- tabs:end -->
 
-- 再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素
+再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素
 
 <!-- tabs:start -->
 
@@ -2175,7 +2062,7 @@ E:nth-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/40.html"
+  src="css-handbook/example/selectors/59.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2186,24 +2073,15 @@ E:nth-of-type(n) {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="demo">
@@ -2214,7 +2092,7 @@ E:nth-of-type(n) {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .demo p:nth-of-type(2) {
@@ -2222,18 +2100,18 @@ E:nth-of-type(n) {
 }
 ```
 
-<!-- tabs:end -->
-
 运行结果
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/41.html"
+  src="css-handbook/example/selectors/60.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2289,7 +2167,7 @@ E:nth-last-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/42.html"
+  src="css-handbook/example/selectors/61.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2335,7 +2213,7 @@ E:nth-last-of-type(n) {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/43.html"
+  src="css-handbook/example/selectors/62.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2346,24 +2224,15 @@ E:nth-last-of-type(n) {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="demo">
@@ -2374,7 +2243,7 @@ E:nth-last-of-type(n) {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .demo p:nth-last-of-type(1) {
@@ -2382,18 +2251,18 @@ E:nth-last-of-type(n) {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/44.html"
+  src="css-handbook/example/selectors/63.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2413,24 +2282,15 @@ E:empty {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -2440,7 +2300,7 @@ E:empty {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 p:empty {
@@ -2450,18 +2310,18 @@ p:empty {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/45.html"
+  src="css-handbook/example/selectors/64.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2481,24 +2341,15 @@ E:checked {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <form method="post" action="#">
@@ -2521,7 +2372,7 @@ E:checked {
 </form>
 ```
 
-#### **css**
+**css**
 
 ```css
 input:checked + span {
@@ -2532,18 +2383,18 @@ input:checked + span:after {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/46.html"
+  src="css-handbook/example/selectors/65.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2563,24 +2414,15 @@ E:enabled {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <form method="post" action="#">
@@ -2596,7 +2438,7 @@ E:enabled {
 </form>
 ```
 
-#### **css**
+**css**
 
 ```css
 li {
@@ -2614,18 +2456,18 @@ input[type="text"]:disabled {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/47.html"
+  src="css-handbook/example/selectors/66.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2645,24 +2487,15 @@ E:disabled {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <form method="post" action="#">
@@ -2678,7 +2511,7 @@ E:disabled {
 </form>
 ```
 
-#### **css**
+**css**
 
 ```css
 li {
@@ -2696,18 +2529,20 @@ input[type="text"]:disabled {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/47.html"
+  src="css-handbook/example/selectors/66.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
+
+---
 
 ## E:target :id=target
 
@@ -2751,7 +2586,7 @@ E:target {
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/48.html"
+  src="css-handbook/example/selectors/67.html"
 >
   浏览器不支持iframe
 </iframe>
@@ -2762,24 +2597,15 @@ E:target {
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|2.0+|
-|Chrome|4.0+|
-|Safari|3.1+|
-|Opera|3.5+|
-|iOS Safari|3.2+|
-|Android Browser|2.1+|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/14.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">
@@ -2815,7 +2641,7 @@ E:target {
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test .hd {
@@ -2858,18 +2684,18 @@ h2,p {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/49.html"
+  src="css-handbook/example/selectors/68.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2885,39 +2711,30 @@ h2,p {
 
 ### 说明
 
-**设置在打印时页面容器第一页使用的样式。仅用于[@page](/css/rules/page)规则**
+**设置在打印时页面容器第一页使用的样式。仅用于[@page]()规则**
 
-- 该伪类选择符只允许定义margin, orphans, widows 和 page breaks相关属性
+- 该伪类选择符只允许定义 [margin](/css-handbook/properties/dimension#margin), orphans, widows 和 page breaks相关属性
 
-- 相关查看：[@page](/css/rules/page), [:left](#page-left), [:right](#page-right)
+- 相关查看：[@page](), [:left](#page-left), [:right](#page-right)
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|<span style="color: red;">2.0-38.0;</span>|
-|Chrome|4.0+|
-|Safari|<span style="color: red;">3.1-8.1;</span>|
-|Opera|3.5+|
-|iOS Safari|<span style="color: red;">3.1-8.1;</span>|
-|Android Browser|<span style="color: grey;">2.1-4.4.4;</span>|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/15.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div>页面容器中第一页的外边距为100px 200px</div>
 <div>页面容器中第二页的外边距为默认值</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 @page :first {
@@ -2928,18 +2745,18 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/50.html"
+  src="css-handbook/example/selectors/69.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -2955,32 +2772,23 @@ div {
 
 ### 说明
 
-**设置页面容器位于装订线左边的所有页面使用的样式。仅用于[@page](/css/rules/page)规则**
+**设置页面容器位于装订线左边的所有页面使用的样式。仅用于[@page]()规则**
 
-- 该伪类选择符只允许定义[margin](#), [padding](#), [border](#) 和 [background](#)属性
+- 该伪类选择符只允许定义[margin](/css-handbook/properties/dimension#margin), [padding](/css-handbook/properties/dimension#padding), [border](/css-handbook/properties/bab#border) 和 [background](/css-handbook/properties/bab#background)属性
 
-- 相关查看：[@page](/css/rules/page), [:first](#page-first), [:right](#page-right)
+- 相关查看：[@page](), [:first](#page-first), [:right](#page-right)
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|<span style="color: red;">2.0-38.0;</span>|
-|Chrome|4.0+|
-|Safari|<span style="color: red;">3.1-8.1;</span>|
-|Opera|3.5+|
-|iOS Safari|<span style="color: red;">3.1-8.1;</span>|
-|Android Browser|<span style="color: grey;">2.1-4.4.4;</span>|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/15.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div>页面容器位于装订线左边的所有页面左外边距为300px</div>
@@ -2988,7 +2796,7 @@ div {
 <div>页面容器位于装订线左边的所有页面左外边距为300px</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 @page :left {
@@ -2999,18 +2807,18 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/51.html"
+  src="css-handbook/example/selectors/70.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -3026,32 +2834,23 @@ div {
 
 ### 说明
 
-**设置页面容器位于装订线右边的所有页面使用的样式。仅用于[@page](/css/rules/page)规则**
+**设置页面容器位于装订线右边的所有页面使用的样式。仅用于[@page]()规则**
 
-- 该伪类选择符只允许定义[margin](#), [padding](#), [border](#) 和 [background](#)属性
+- 该伪类选择符只允许定义[margin](/css-handbook/properties/dimension#margin), [padding](/css-handbook/properties/dimension#padding), [border](/css-handbook/properties/bab#border) 和 [background](/css-handbook/properties/bab#background)属性
 
-- 相关查看：[@page](/css/rules/page), [:first](#page-first), [:left](#page-left)
+- 相关查看：[@page](), [:first](#page-first), [:left](#page-left)
 
 ### 兼容性
 
-<br />
-
-|浏览器|版本
-|:---|:---|
-|IE|<span style="color: red;">6.0-8.0;</span> 9.0+|
-|Firefox|<span style="color: red;">2.0-38.0;</span>|
-|Chrome|4.0+|
-|Safari|<span style="color: red;">3.1-8.1;</span>|
-|Opera|3.5+|
-|iOS Safari|<span style="color: red;">3.1-8.1;</span>|
-|Android Browser|<span style="color: grey;">2.1-4.4.4;</span>|
-|Android Chrome|18.0+|
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/selectors/15.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div>有很长的一句话来测试页面容器位于装订线右边的所有页面左外边距为300px</div>
@@ -3059,7 +2858,7 @@ div {
 <div>有很长的一句话来测试页面容器位于装订线右边的所有页面左外边距为300px</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 @page :right {
@@ -3070,15 +2869,15 @@ div {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="no"
   frameborder="0"
-  src="css-handbook/example/selectors/pseudo-classes/52.html"
+  src="css-handbook/example/selectors/71.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->

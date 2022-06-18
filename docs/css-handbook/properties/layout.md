@@ -91,13 +91,15 @@
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/display.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/8.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <h1>display构造的table小例子，IE7及以下浏览器不支持本示例</h1>
@@ -142,7 +144,7 @@
 </div>
 ```
 
-#### **css**
+**css**
 
 ```css
 body {
@@ -211,18 +213,18 @@ ul {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/layout/01.html"
+  src="css-handbook/example/properties/09.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -262,19 +264,21 @@ ul {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/float.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/9.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在屏幕右方</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -283,18 +287,18 @@ ul {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/layout/02.html"
+  src="css-handbook/example/properties/10.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -335,20 +339,22 @@ ul {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/clear.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/10.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我将出现在屏幕右方</div>
 <div class="test2">注意我出现的位置</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -362,18 +368,18 @@ ul {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/layout/03.html"
+  src="css-handbook/example/properties/11.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -412,19 +418,21 @@ ul {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/visibility.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/11.png)
 
 ### 示例
 
 <!-- tabs:start -->
 
-#### **html**
+#### **代码**
+
+**html**
 
 ```html
 <div class="test">我不会出现在屏幕上</div>
 ```
 
-#### **css**
+**css**
 
 ```css
 .test {
@@ -432,18 +440,18 @@ ul {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/layout/04.html"
+  src="css-handbook/example/properties/12.html"
 >
   浏览器不支持iframe
 </iframe>
+
+<!-- tabs:end -->
 
 ---
 
@@ -510,7 +518,7 @@ ul {
 
 ### 兼容性
 
-![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/layout/overflow.png)
+![兼容性](https://cdn.jsdelivr.net/gh/karoldy/public-bed/image/css-handbook/properties/12.png)
 
 ### 示例
 
@@ -539,18 +547,15 @@ ul {
 }
 ```
 
-<!-- tabs:end -->
-
-运行结果
+**运行结果**
 
 <iframe
   class="output-iframe"
   scrolling="yes"
   frameborder="0"
-  src="css-handbook/example/properties/layout/05.html"
+  src="css-handbook/example/properties/13.html"
 >
   浏览器不支持iframe
 </iframe>
 
----
-
+<!-- tabs:end -->
