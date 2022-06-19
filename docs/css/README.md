@@ -96,3 +96,44 @@
 
 ---
 
+[<span class="g-color-css3-new">zoom</span>](/css-handbook/properties/ui#zoom)
+
+[<span class="g-color-css3-new">pointer-events</span>](/css-handbook/properties/ui#pe)
+
+---
+
+[cursor](/css-handbook/properties/ui#cursor)
+
+[<span class="g-color-css3-new">zoom</span>](/css-handbook/properties/ui#zoom)
+
+[<span class="g-color-css3-new">pointer-events</span>](/css-handbook/properties/ui#pe)
+
+---
+
+[scrollbar-3dlight-color](/css-handbook/properties/oi#s3c)
+
+[scrollbar-darkshadow-color](/css-handbook/properties/oi#sdc)
+
+[scrollbar-highlight-color](/css-handbook/properties/oi#shc)
+
+[scrollbar-shadow-color](/css-handbook/properties/oi#ssc)
+
+[scrollbar-arrow-color](/css-handbook/properties/oi#sac)
+
+[scrollbar-face-color](/css-handbook/properties/oi#sfc)
+
+[scrollbar-track-color](/css-handbook/properties/oi#stc)
+
+[scrollbar-base-color](/css-handbook/properties/oi#sbc)
+
+---
+
+[<span class="g-color-css3-new">-webkit-text-fill-color</span>](/css-handbook/properties/ow#wtfc)
+
+[<span class="g-color-css3-new">-webkit-text-stroke</span>](/css-handbook/properties/ow#wts)
+
+[<span class="g-color-css3-new">-webkit-text-stroke-width</span>](/css-handbook/properties/ow#wtsw)
+
+[<span class="g-color-css3-new">-webkit-text-stroke-color</span>](/css-handbook/properties/ow#wtsc)
+
+[<span class="g-color-css3-new">-webkit-box-reflect</span>](/css-handbook/properties/ow#wbr)

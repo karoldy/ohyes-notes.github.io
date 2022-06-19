@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>document</title>
+	<style type="text/css">
+		body {
+			background:#090;
+		}
+		div {
+			width:200px;
+			height:80px;
+			margin-top:20px;
+			border:10px solid #000;
+			background:#ddd;
+		}
+		.test {
+			filter:alpha(opacity=30);
+		}
+		.test2 {
+			filter:blur(strength=50) flipv();
+		}
+	</style>
+</head>
+<body>
+	<div class="test">透明度为30%的box</div>
+	<div class="test2">模糊和翻转的box</div>
+</body>
+</html>
